@@ -5,7 +5,7 @@ date:   2014-09-29 21:42:00
 author: Nicholas Zwart
 ---
 
-<span class="image featured"><img src="/images/banner_v02.jpg" alt=""></span>
+<span class="image featured"><img src="{filename}/images/banner_v02.jpg" alt=""></span>
 This release is available in native packages for OSX and Linux as well as a
 Linux virtual machine. The package is built upon the multi-platform Python
 distribution “Anaconda”, from Continuum Analytics. The packages also contains

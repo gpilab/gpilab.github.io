@@ -5,12 +5,12 @@ date:   2015-02-27 15:39:00
 author: Nicholas Zwart
 ---
 
-<span class="image featured"><img src="/images/banner_v05.jpg" alt=""></span>
+<span class="image featured"><img src="{filename}/images/banner_v05.jpg" alt=""></span>
 GPI v0.5 is now available for download in its first public release!
 
 <div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;">
 <div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"><img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.com/wp-content/uploads/2014/09/logo-300x113.png" alt="logo" width="300" height="113" /></div>
-<div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"><img class="noborder aligncenter size-medium wp-image-324" src="/images/confetti.gif" alt="confetti" width="300" /></div>
+<div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"><img class="noborder aligncenter size-medium wp-image-324" src="{filename}/images/confetti.gif" alt="confetti" width="300" /></div>
 </div>
 &nbsp;
 

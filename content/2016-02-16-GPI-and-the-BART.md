@@ -5,7 +5,7 @@ date:   2016-02-16 12:56:00
 author: Nicholas Zwart
 ---
 
-<span class="image featured"><img src="/images/borg.jpg" alt=""></span>
+<span class="image featured"><img src="{filename}/images/borg.jpg" alt=""></span>
 Recently, the BORG has been used to wrap the <a
 href="http://mrirecon.github.io/bart/" target="_blank">Berkeley Advanced
 Reconstruction Toolbox (BART)</a> into a GPI node library for the purpose of
