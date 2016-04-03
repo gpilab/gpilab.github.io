@@ -8,6 +8,11 @@ SITEURL = ''
 
 PATH = 'content'
 
+THEME = "./theme/clean-blog"
+
+HEADER_COVER = '/images/banner.jpg'
+
+
 TIMEZONE = 'America/Phoenix'
 
 DEFAULT_LANG = 'en'
