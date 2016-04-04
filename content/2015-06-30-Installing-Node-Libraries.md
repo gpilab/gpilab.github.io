@@ -1,9 +1,6 @@
----
-layout: post
-title:  "Installing Node Libraries"
-date:   2015-06-30 14:21:00
-author: Ashley Anderson
----
+Title:  Installing Node Libraries
+Date:   2015-06-30 14:21:00
+Author: Ashley Anderson
 
 One of the nicest features of GPI is how easy it is to add a library and begin
 using new nodes. Whether the library contains nodes and networks you created,

@@ -1,13 +1,8 @@
----
-layout: post
-title:  "Editor's Pick!"
-date:   2015-12-18 20:30:00
-author: Nicholas Zwart
----
+Title:  Editor's Pick!
+Date:   2015-12-18 20:30:00
+Author: Nicholas Zwart
+Header_Cover: http://www.ismrm.org/wp-content/uploads/mrm-highlights-logo-2-4.png
 
-<span class="image featured"><img
-src="http://www.ismrm.org/wp-content/uploads/mrm-highlights-logo-2-4.png"
-alt=""></span>
 The GPI article entitled <a
 href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
 target="_blank">"Graphical programming interface: A development environment for

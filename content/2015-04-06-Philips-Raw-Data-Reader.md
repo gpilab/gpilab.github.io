@@ -1,11 +1,8 @@
----
-layout: post
-title:  "Philips Raw Data Reader"
-date:   2015-04-06 13:27:00
-author: Nicholas Zwart
----
+Title:  Philips Raw Data Reader
+Date:   2015-04-06 13:27:00
+Author: Nicholas Zwart
+Header_Cover: http://gpilab.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-4.50.31-PM.png
 
-<span class="image featured"><img src="http://gpilab.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-4.50.31-PM.png" alt=""></span>
 The Philips raw data reader node, for MR data, is now available as a binary
 release. Users of the Philips raw data formats can directly import the raw data
 into GPI and start investigating. Thanks to the tenacious efforts of Ryan

@@ -1,10 +1,7 @@
----
-layout: post
-title:  "GPI and the BART"
-date:   2016-02-16 12:56:00
-author: Nicholas Zwart
+Title: GPI and the BART
+Date: 2016-02-16 12:56:00
+Author: Nicholas Zwart
 Header_Cover: /images/borg.jpg
----
 
 Recently, the BORG has been used to wrap the <a
 href="http://mrirecon.github.io/bart/" target="_blank">Berkeley Advanced

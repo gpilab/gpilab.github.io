@@ -1,9 +1,6 @@
----
-layout: post
-title:  "New Tutorial Screencasts"
-date:   2014-10-10 15:06:00
-author: Nicholas Zwart
----
+Title:  New Tutorial Screencasts
+Date:   2014-10-10 15:06:00
+Author: Nicholas Zwart
 
 New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.
 

@@ -1,11 +1,8 @@
----
-layout: post
-title:  "GPI v1 Release"
-date:   2016-01-13 13:56:00
-author: Nicholas Zwart
----
+Title:  GPI v1 Release
+Date:   2016-01-13 13:56:00
+Author: Nicholas Zwart
+Header_Cover: /images/banner_v1.jpg
 
-<span class="image featured"><img src="{filename}/images/banner_v1.jpg" alt=""></span>
 The GPI version 1-beta is available for download!  This version marks some
 major framework changes with the transition to <a
 href="https://docs.python.org/3/" target="_blank">Python 3</a>, packaging via

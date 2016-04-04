@@ -1,11 +1,8 @@
----
-layout: post
-title:  "GPI v½ Release"
-date:   2015-02-27 15:39:00
-author: Nicholas Zwart
----
+Title:  GPI v½ Release
+Date:   2015-02-27 15:39:00
+Author: Nicholas Zwart
+Header_Cover: /images/banner_v05.jpg
 
-<span class="image featured"><img src="{filename}/images/banner_v05.jpg" alt=""></span>
 GPI v0.5 is now available for download in its first public release!
 
 <div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;">
