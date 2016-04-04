@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab</title><link href="http://gpilab.github.io/" rel="alternate"></link><link href="http://gpilab.github.io/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.github.io/</id><updated>2016-02-16T12:56:00-07:00</updated><entry><title>GPI and the BART</title><link href="http://gpilab.github.io/2016/Feb/16/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2016-02-16:2016/Feb/16/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the BORG has been used to wrap the &lt;a
-href="http://mrirecon.github.io/bart/" target="_blank"&gt;Berkeley Advanced
-Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI node library for the purpose of
-allowing GPI users to easily explore and utilize this new compressed sensing
-library.  This &lt;a href="https://github.com/nckz/bart/blob/master/gpi/README.md"
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab</title><link href="http://gpilab.github.io/" rel="alternate"></link><link href="http://gpilab.github.io/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.github.io/</id><updated>2016-02-16T12:56:00-07:00</updated><entry><title>GPI and the BART</title><link href="http://gpilab.github.io/2016/Feb/16/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2016-02-16:2016/Feb/16/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
+has been used to wrap the &lt;a href="http://mrirecon.github.io/bart/"
+target="_blank"&gt;Berkeley Advanced Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI
+node library for the purpose of allowing GPI users to easily explore and
+utilize this new compressed sensing library.  This &lt;a
+href="https://github.com/nckz/bart/blob/master/gpi/README.md"
 target="_blank"&gt;GPI-BART library&lt;/a&gt; is accompanied by some example networks
 that demonstrate basic wavelet based compressed sensing as well as some of the
 advanced joint compressed sensing and parallel imaging techniques that the BART
