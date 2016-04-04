@@ -3,11 +3,12 @@ Date: 2016-02-16 12:56:00
 Author: Nicholas Zwart
 Header_Cover: /images/borg.jpg
 
-Recently, the BORG has been used to wrap the <a
-href="http://mrirecon.github.io/bart/" target="_blank">Berkeley Advanced
-Reconstruction Toolbox (BART)</a> into a GPI node library for the purpose of
-allowing GPI users to easily explore and utilize this new compressed sensing
-library.  This <a href="https://github.com/nckz/bart/blob/master/gpi/README.md"
+Recently, the <a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)">BORG</a>
+has been used to wrap the <a href="http://mrirecon.github.io/bart/"
+target="_blank">Berkeley Advanced Reconstruction Toolbox (BART)</a> into a GPI
+node library for the purpose of allowing GPI users to easily explore and
+utilize this new compressed sensing library.  This <a
+href="https://github.com/nckz/bart/blob/master/gpi/README.md"
 target="_blank">GPI-BART library</a> is accompanied by some example networks
 that demonstrate basic wavelet based compressed sensing as well as some of the
 advanced joint compressed sensing and parallel imaging techniques that the BART
