@@ -6,6 +6,9 @@ from __future__ import unicode_literals
 AUTHOR = 'Nicholas Zwart'
 SITENAME = 'gpilab'
 SITEURL = ''
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = PAGE_URL
+
 PATH = 'content'
 TIMEZONE = 'America/Phoenix'
 DEFAULT_LANG = 'en'

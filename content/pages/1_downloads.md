@@ -1,4 +1,11 @@
-title: downloads
+Title: Downloads
+Date: 2016-04-03 19:25
+Modified: 2016-04-03 19:25
+Category: downloads
+Tags: downloads
+Slug: downloads
+Authors: Nicholas Zwart
+Summary:
 
 > Dignity Health makes this software available for download via this website
 subject to the [license terms and conditions](/license.html), available also on

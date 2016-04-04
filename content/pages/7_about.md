@@ -1,4 +1,11 @@
-title: about
+Title: About
+Date: 2016-04-03 19:25
+Modified: 2016-04-03 19:25
+Category: about
+Tags: about
+Slug: about
+Authors: Nicholas Zwart
+Summary: 
 
 ## GPI is a development environment for scientific algorithms
 

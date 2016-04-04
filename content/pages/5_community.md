@@ -1,4 +1,11 @@
-title: community
+Title: Community
+Date: 2016-04-03 19:25
+Modified: 2016-04-03 19:25
+Category: community
+Tags: community, resources, issues, bugs, libraries, bibliography
+Slug: community
+Authors: Nicholas Zwart
+Summary: An index of node libraries, links, and scientific articles that reference GPI.
 
 ## Node Libraries
 

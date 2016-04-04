@@ -1,5 +1,12 @@
-title: license
-status: hidden
+Title: License
+Date: 2016-04-03 19:25
+Modified: 2016-04-03 19:25
+Category: license 
+Tags: license, GPLv3, LGPLv3, LGPL, GPL
+Slug: license
+Authors: Nicholas Zwart
+Summary:
+Status: hidden
 
 <h3>Copyright (c) 2014 Dignity Health</h3>
 This program is free software: you can redistribute it and/or modify it under the terms of the <strong>GNU Lesser General Public License</strong> as published by the Free Software Foundation, either <strong>version 3</strong> of the License, or (at your option) any later version.

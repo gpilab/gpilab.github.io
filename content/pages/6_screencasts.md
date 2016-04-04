@@ -1,4 +1,11 @@
-title: screencasts
+Title: Screencasts
+Date: 2016-04-03 19:25
+Modified: 2016-04-03 19:25
+Category: screencasts
+Tags: screencasts
+Slug: screencasts
+Authors: Nicholas Zwart
+Summary:
 
 ## Tutorial Playlist
 The GPI introduction, quick-start and training tutorials can be accessed by
