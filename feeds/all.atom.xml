@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2016-02-16T12:56:00-07:00</updated><entry><title>GPI and the BART</title><link href="http://gpilab.com/gpi-and-the-bart.html" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:gpi-and-the-bart.html</id><summary type="html">&lt;p&gt;Recently, the BORG has been used to wrap the &lt;a
+href="http://mrirecon.github.io/bart/" target="_blank"&gt;Berkeley Advanced
+Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI node library for the purpose of
+allowing GPI users to easily explore and utilize this new compressed sensing
+library.  This &lt;a href="https://github.com/nckz/bart/blob/master/gpi/README.md"
+target="_blank"&gt;GPI-BART library&lt;/a&gt; is accompanied by some example networks
+that demonstrate basic wavelet based compressed sensing as well as some of the
+advanced joint compressed sensing and parallel imaging techniques that the BART
+package provides for MR reconstruction.  This post gives an introductory
+overview of how the BART was wrapped in GPI and how the &lt;a
+href="https://github.com/nckz/bart/blob/master/gpi/README.md"
+target="_blank"&gt;GPI-BART node library&lt;/a&gt; can be installed using the latest &lt;a
+href="http://dev.gpilab.com" target="_blank"&gt;GPI v1&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;The BORG&lt;/h2&gt;
+&lt;p&gt;One of the new features in &lt;a href="/downloads" target="_blank"&gt;GPI
+v1&lt;/a&gt; is the BORG interface which allows node developers to easily assimilate
+command-line tools for native use in GPI.  The BORG, which stands for Building
+Outside Relationships with GPI, provides a simple wrapper interface that takes
+care of the file I/O required to communicate with external binaries.  In the
+case of the BART, most of the tools require an input data file to process and
+subsequently produce a data file as an output.  The BORG simply manages the
+temporary files required for this I/O.  Reader and writer functions are
+required to translate the Python object (in GPI) to the appropriate file format
+for the command-line tool.  In this case the BART comes with a Python library
+that translates their CFL/HDR file format to Numpy complex float arrays.  This
+can be observed in the following code snippet of a GPI node that wraps the
+BART's &lt;code&gt;traj&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# load commandline tools&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bart.gpi.borg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;IFilePath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;OFilePath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Command&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bart.python.cfl&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cfl&lt;/span&gt; &lt;span class="c1"&gt;# BART file format&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="c1"&gt;# grab user input from UI widgets&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;readout samples&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;phase encoding lines&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;acceleration&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;radial&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;golden-ratio sampling&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# assemble the argument string&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;base_path&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/traj&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-x &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-y &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-a &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-G&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# setup temp file for getting data back&lt;/span&gt;
+    &lt;span class="c1"&gt;# from the external command&lt;/span&gt;
+    &lt;span class="n"&gt;out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OFilePath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cfl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readcfl&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;asuffix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.cfl&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.hdr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# run commandline and echo full command string&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# set GPI node output&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;trajectory&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The example above starts with a local import of the BORG tools, which were
+developed in tandem with this node library.  The GPI widgets values are then
+translated to command-line arguments, which are held as strings in a Python
+&lt;code&gt;list&lt;/code&gt; object.  Since the &lt;code&gt;Traj&lt;/code&gt; node generates k-space trajectory coordinates,
+it requires an output file path to write out the trajectory data.  The
+&lt;code&gt;OFilePath&lt;/code&gt; object takes a reference to the file format reader function and
+generates a random temporary filename which is included in the arguments list.
+When the &lt;code&gt;Command&lt;/code&gt; object executes with the argument list, it spawns a &lt;code&gt;traj&lt;/code&gt;
+process and waits for it to finish and then it uses the reader function to
+convert the file to a Numpy array.  The &lt;code&gt;OFilePath&lt;/code&gt; object provides a reference
+to the Numpy via its &lt;code&gt;data()&lt;/code&gt; method.  Finally, when the &lt;code&gt;OFilePath&lt;/code&gt; object
+falls out of scope it cleans up the temporary file on disk.  The random
+filenames are important since the GPI canvas may contain multiple instances of
+the &lt;code&gt;Traj&lt;/code&gt; node.  The BORG interface simplifies this process which can save
+time when wrapping a large library like the BART.&lt;/p&gt;
+&lt;p&gt;For more examples, check out the wrapper nodes to the
+&lt;a href="https://github.com/nckz/bart/tree/master/gpi"&gt;BART&lt;/a&gt; and
+&lt;a href="https://github.com/aganders3/gpi-neurotools/tree/master/FSL/GPI"&gt;FSL&lt;/a&gt;
+libraries.&lt;/p&gt;
+&lt;h2&gt;Why a Fork?&lt;/h2&gt;
+&lt;p&gt;The &lt;a href="https://github.com/nckz/bart/blob/master/gpi/README.md"
+target="_blank"&gt;GPI-BART library&lt;/a&gt; is built off of a fork of the actual &lt;a
+href="http://mrirecon.github.io/bart/" target="_blank"&gt;BART project&lt;/a&gt;.  While
+the GPI wrappers could be considered a separate project, the BART project is
+currently undergoing a lot of development and the fork effectively ensures that
+the interface between the GPI wrappers and the BART is compatible.  Another
+advantage is that this library can coexist with other BART installations on the
+same machine without interfering.&lt;/p&gt;
+&lt;h2&gt;BART Data Conventions&lt;/h2&gt;
+&lt;p&gt;The BART and GPI projects have a few key organizational differences in how they
+convey numeric arrays and k-space coordinates.  In order to pass the data
+between nodes from each library, the data need to be manipulated to fit the
+each node's requirements. This is easily accomplished with the core GPI nodes.
+Lets start with an example of the worst case scenario: the &lt;code&gt;traj&lt;/code&gt; node.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Traj vs. SpiralCoords" src="http://gpilab.com/wp-content/uploads/2016/02/BARTDataConvention.png" /&gt;&lt;/p&gt;
+&lt;p&gt;The image above shows an example gridded 2D radial trajectory (via the BART
+node library) and a gridded 2D spiral trajectory (via the GPI core library).
+Starting from the top nodes, you can see that the &lt;code&gt;Traj&lt;/code&gt; node produces radial
+coordinates with dimensions &lt;code&gt;[3, 256, 32]&lt;/code&gt; which is 3 cartesian coordinates,
+256 sample points and 32 radial arms.  The spiral coordinates from
+&lt;code&gt;SpiralCoords&lt;/code&gt; are ordered &lt;code&gt;[32, 256, 2]&lt;/code&gt; for 32 spiral arms, 256 sample points
+and 2 cartesian coordinates.&lt;/p&gt;
+&lt;h3&gt;Step 1: Reduce Coordinates&lt;/h3&gt;
+&lt;p&gt;Since this is a 2D trajectory, the &lt;code&gt;Traj&lt;/code&gt; node passes zeros for the 'Z'
+coordinate and the &lt;code&gt;SpiralCoords&lt;/code&gt; node passes 2 coordinates per point.  In
+order to use the radial trajectory with the core &lt;code&gt;Grid&lt;/code&gt; node, the 3rd
+coordinate of the array must be cropped out.  This is accomplished with the
+&lt;code&gt;Reduce&lt;/code&gt; node set to &lt;code&gt;B/E&lt;/code&gt; where the '(B)eginning' index is 1 and the
+'(E)nding' index is 2.  You can see that after &lt;code&gt;Reduce&lt;/code&gt;, the &lt;code&gt;Traj&lt;/code&gt; dimensions
+are &lt;code&gt;[2, 256, 32]&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Step 2: Transpose Dimensions&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;Transpose&lt;/code&gt; node is used to flip the order that the trajectory data is
+organized in. After the &lt;code&gt;Transpose&lt;/code&gt; node, the dimensions are &lt;code&gt;[32, 256, 2]&lt;/code&gt;,
+which matches the order of the spiral coordinates.&lt;/p&gt;
+&lt;h3&gt;Step 3: Recast the Data Type&lt;/h3&gt;
+&lt;p&gt;If you hover the mouse cursor over the coordinate port on the &lt;code&gt;Grid&lt;/code&gt; node a
+tooltip will pop up with the data type required by that port. In this case,
+&lt;code&gt;Grid&lt;/code&gt; can take floating point arrays with single or double precision.
+Hovering over the &lt;code&gt;Traj&lt;/code&gt; output port shows that the array is of type &lt;code&gt;complex
+float&lt;/code&gt;.  In this case the trajectory definition only makes use of the real
+component so the imaginary component is set to zero.  This can be directly
+recast into a float array without loss of data.&lt;/p&gt;
+&lt;h3&gt;Step 4: Coordinate Scaling&lt;/h3&gt;
+&lt;p&gt;You have noticed that the first node after &lt;code&gt;Traj&lt;/code&gt; is &lt;code&gt;Math&lt;/code&gt;.  This is because
+the trajectory coordinate convention used in the BART is from N/2-1 to N/2
+where N is the number of points along a dimension of the grid matrix.  The GPI
+core library uses the convention of -0.5 to 0.5.  So the coordinates are
+divided by the target matrix size via element-wise scalar division.&lt;/p&gt;
+&lt;p&gt;This example has shown how the BART and core GPI nodes can be easily adapted to
+communicate data between the two libraries using the stock data manipulation
+nodes in the core library.  The conventions for data between these two
+libraries are different as would be expected between any two libraries that are
+developed independently.  The goal for this example is to show that a cross
+library data transfer may require some extra attention.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Conversion Node" src="http://gpilab.com/wp-content/uploads/2016/02/BARTDataConvention_BNI2BART.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Another approach to this problem would be to integrate these differences into
+the nodes themselves.  An example of this can be seen in the image above.  The
+&lt;code&gt;SpiralCoords&lt;/code&gt; node is generating a trajectory that is reformatted using the
+&lt;code&gt;BNI2BART_Traj&lt;/code&gt; node (included in the wrapper library).  This allows the
+coordinates to be directly used in the BART's &lt;code&gt;NuFFT&lt;/code&gt; node.&lt;/p&gt;
+&lt;h2&gt;GPI-BART Installation&lt;/h2&gt;
+&lt;p&gt;There are two components to the &lt;a
+href="https://github.com/nckz/bart/blob/master/gpi/README.md"
+target="_blank"&gt;GPI-BART node library&lt;/a&gt; installation: the BART compilation
+and the GPI node library installation.  Before starting download or clone the
+GPI-BART fork:&lt;/p&gt;
+&lt;p&gt;First (if you haven't already), make a 'gpi' directory in your home directory.
+If you're not sure why you'd do this, checkout the post &lt;a href="/2015/06/30/Installing-Node-Libraries"&gt;Installing Node
+Libraries&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ cd ~/
+    $ mkdir ~/gpi
+    $ cd ~/gpi
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next, use &lt;a href="https://git-scm.com/"&gt;git&lt;/a&gt; to clone the node library project into a
+directory called 'bart'.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ git clone https://github.com/nckz/bart.git bart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;BART Compilation&lt;/h3&gt;
+&lt;p&gt;The BART compilation instructions can be found in the
+&lt;a href="https://github.com/nckz/bart#22-downloading-and-compilation"&gt;README.md&lt;/a&gt; in the
+base directory of the project source code.  To summarize, the BART has some
+third party library dependencies that are specific to each OS (e.g. &lt;a href="https://github.com/nckz/bart#212-mac-os-x"&gt;Mac
+OSX&lt;/a&gt;).  For OSX, the Xcode and the
+gcc compiler must be installed before the &lt;code&gt;make&lt;/code&gt; command can be issued.  Once
+you've installed the dependencies, make the BART.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ cd ~/gpi/bart
+    $ make
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will make the BART command-line executables, which will be accessible from
+the &lt;code&gt;~/gpi/bart&lt;/code&gt; directory.&lt;/p&gt;
+&lt;h3&gt;Installing Node Libraries&lt;/h3&gt;
+&lt;p&gt;The BART compilation instructions above basically install the BART under a GPI
+node library directory structure.  GPI will look at the &lt;code&gt;~/gpi/bart&lt;/code&gt; directory
+as if it where a Python library.  In our fork, we've included the GPI wrapper
+nodes under the &lt;a href="https://github.com/nckz/bart/tree/master/gpi"&gt;&lt;code&gt;bart/gpi&lt;/code&gt;&lt;/a&gt;
+directory. This fixed directory structure allows the wrapper code to maintain
+the relative paths for the BART executables.  Since the GPI wrappers are pure
+Python, they don't require compilation. If your GPI installation is setup with
+the default paths then GPI-BART library is ready to go.&lt;/p&gt;
+&lt;p&gt;If you have path modifications in your &lt;code&gt;~/.gpirc&lt;/code&gt; file or the nodes are not
+visible in your library menu, consult the
+&lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;Configuration&lt;/a&gt; docs or check out the
+post on &lt;a href="/2015/06/30/Installing-Node-Libraries"&gt;Installing Node
+Libraries&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Events&lt;/h2&gt;
+&lt;p&gt;This work has been presented at the &lt;a href="http://www.ismrm.org/workshops/Data16/"&gt;ISMRM Workshop on Data Sampling &amp;amp; Image
+Reconstruction&lt;/a&gt; in Sedona Arizona this
+last January and will be presented at the &lt;a href="http://www.ismrm.org/2016-annual-meeting-exhibition/"&gt;ISMRM Annual Meeting &amp;amp;
+Exhibition&lt;/a&gt; in Singapore
+this March.&lt;/p&gt;
+&lt;h2&gt;Thanks&lt;/h2&gt;
+&lt;p&gt;We'd like to thanks the BART developers at UC Berkeley for their help in
+building these nodes.&lt;/p&gt;</summary></entry><entry><title>GPI v1 Release</title><link href="http://gpilab.com/gpi-v1-release.html" rel="alternate"></link><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-01-13:gpi-v1-release.html</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
+major framework changes with the transition to &lt;a
+href="https://docs.python.org/3/" target="_blank"&gt;Python 3&lt;/a&gt;, packaging via
+&lt;a href="http://anaconda.org" target="_blank"&gt;Anaconda.org&lt;/a&gt;, PyFI API
+support for the &lt;a href="http://eigen.tuxfamily.org/" target="_blank"&gt;Eigen&lt;/a&gt;
+template library, mmap based node communication, the BORG interface for binary
+encapsulation, and &lt;a href="http://www.json.org/" target="_blank"&gt;JSON&lt;/a&gt;
+based network descriptions to name a few.&lt;/p&gt;
+&lt;h3&gt;Python 3&lt;/h3&gt;
+&lt;p&gt;GPI has moved to Python 3! As GPI development continues we hope to take
+advantage of the new features offered in Python 3 such as the updated fork
+server, coroutines, and maybe even some lighthearted type hinting.  The core
+node library has also been updated to work with Python 3.  Those who are
+interested in porting their code to should pay attention to some of the &lt;a
+href="http://python-future.org/compatible_idioms.html"
+target="_blank"&gt;differences in syntax&lt;/a&gt;, most notably for &lt;code&gt;print&lt;/code&gt; statements
+and &lt;a href="https://www.python.org/dev/peps/pep-0238/" target="_blank"&gt;integer
+division&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many of the improvements made in GPI v1 are also available in a Python 2 branch
+of the framework and core node projects (tagged as GPI version 0.6).  These can
+be found on github &lt;a href="https://github.com/gpilab/framework/tree/v0.6.0-rc"
+target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Conda Packaging&lt;/h3&gt;
+&lt;p&gt;GPI is now available as a conda installer script as well as a preassembled
+conda stack.  GPI can also be installed in an existing conda distro from &lt;a
+href="https://anaconda.org/GPI/packages" target="_blank"&gt;Anaconda.org/gpi&lt;/a&gt;
+using the &lt;code&gt;conda&lt;/code&gt; command.  The move to conda packaging has also given GPI the
+capability to check for framework and core node updates.&lt;/p&gt;
+&lt;h3&gt;Eigen in PyFI&lt;/h3&gt;
+&lt;p&gt;The Eigen template library has been wrapped in PyFI to add some linear algebra
+functionality to the C++ API.  These new interfaces further facilitate the
+translation of PyFI code for use in the Philips online reconstruction platform.&lt;/p&gt;
+&lt;p&gt;Eigen also provides an effective workaround for a &lt;a
+href="https://github.com/obspy/obspy/wiki/Notes-on-Parallel-Processing-with-Python-and-ObsPy"
+target="_blank"&gt;bug in the OSX accelerate framework&lt;/a&gt; when forking processes.&lt;/p&gt;
+&lt;h3&gt;mmap&lt;/h3&gt;
+&lt;p&gt;The use of memory mapped data has further improved the speed and memory usage
+in the multi-processing regime of node execution.  This does not affect the
+main loop or thread based modes of operation.&lt;/p&gt;
+&lt;h3&gt;BORG&lt;/h3&gt;
+&lt;p&gt;The BORG (Building Outside Relationships with GPI) interface has been developed
+to assist in assimilating the functionality of other software projects for
+native use in GPI.  The interface reduces the coding overhead for generating a
+communication layer to external command-line programs.  This is accomplished by
+providing wrappers that handle the inputs, outputs and arguments to the system
+call that executes the external program.  The inputs and outputs are handled
+with temporary files that are managed by the interface.  The result allows a
+GPI developer to quickly encapsulate the functionality of other software
+projects to be used in conjunction with their own GPI node library for fleet
+prototyping.  Examples of the BORG interface can be found in the &lt;a
+href="https://github.com/nckz/bart/tree/master/gpi" target="_blank"&gt;BART
+(Berkeley Advanced Reconstruction Toolbox)&lt;/a&gt; and &lt;a
+href="https://github.com/aganders3/gpi-neurotools" target="_blank"&gt;FSL (FMRIB
+Software Library)&lt;/a&gt; projects.&lt;/p&gt;
+&lt;h3&gt;Download&lt;/h3&gt;
+&lt;p&gt;To view the complete changelog or download the latest release, head over to 
+&lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Editor's Pick!</title><link href="http://gpilab.com/editors-pick.html" rel="alternate"></link><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-12-18:editors-pick.html</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
+href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
+target="_blank"&gt;"Graphical programming interface: A development environment for
+MRI methods"&lt;/a&gt; has been chosen as one of the &lt;a
+href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1522-2594/homepage/editor_s_picks.htm"
+target="_blank"&gt;MRM Editor's Picks&lt;/a&gt; for November!  There is also a short
+interview with Jim Pipe and myself from the folks at &lt;a
+href="http://www.ismrm.org/qa-with-nicholas-zwart-and-james-pipe/"
+target="_blank"&gt;MRM Highlights&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</summary></entry><entry><title>Installing Node Libraries</title><link href="http://gpilab.com/installing-node-libraries.html" rel="alternate"></link><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.com,2015-06-30:installing-node-libraries.html</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
+using new nodes. Whether the library contains nodes and networks you created,
+or code from a collaborator or colleague, installation is the same simple
+process.&lt;/p&gt;
+&lt;p&gt;Here we cover installing an updated version of the Core library. This will
+serve as a general demonstration of how to install additional node libraries.
+&lt;h2&gt;The .gpirc File&lt;/h2&gt;
+GPI searches for libraries (by default) in a &lt;code&gt;~/gpi/&lt;/code&gt; directory
+within your home directory. On Mac OS X, the full path of this folder is
+&lt;code&gt;/Users/&amp;lt;username&amp;gt;/gpi/&lt;/code&gt;, and on Ubuntu (and most flavors of
+Linux) it is &lt;code&gt;/home/&amp;lt;username&amp;gt;/gpi/&lt;/code&gt;. Thus, to install a new
+library, simply move its root directory into this folder. New libraries are
+imported automatically any time GPI is started.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;~/.gpirc&lt;/code&gt; file contains per-user configuration options for GPI.
+Since the file is hidden (begins with a &lt;code&gt;.&lt;/code&gt;), you will not see it in
+a normal directory listing; use &lt;code&gt;ls -a&lt;/code&gt; to see it. If this file does
+not exist on your system, you can generate a basic version from the GPI
+"Config" menu.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/wp-content/uploads/2015/02/Screenshot-2015-02-05-11.21.10-300x80.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Select "Generate Config File" to create a basic .gpirc file.&lt;/p&gt;
+&lt;p&gt;The default GPI library path (&lt;code&gt;~/gpi/&lt;/code&gt;) is stored in the
+&lt;code&gt;LIB_DIRS&lt;/code&gt; variable within the &lt;code&gt;.gpirc&lt;/code&gt; file. You can amend the
+&lt;code&gt;LIB_DIRS&lt;/code&gt; in your &lt;code&gt;.gpirc&lt;/code&gt; file to tell GPI to look for
+libraries in some other directories, if you prefer. Append (or prepend)
+directories to &lt;code&gt;LIB_DIRS&lt;/code&gt; separated by colons.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitwidth" src="http://gpilab.com/wp-content/uploads/2015/06/Screenshot-2015-06-30-14.09.30.png" /&gt;&lt;/p&gt;
+&lt;p&gt;My .gpirc file with modified LIB_DIRS to include additional node libraries.&lt;/p&gt;
+&lt;h2&gt;Installing the Updated Core Library&lt;/h2&gt;
+
+&lt;p&gt;The GPI package includes a snapshot of the Core node library, but new versions
+of the Core nodes are maintained on &lt;a title="GitHub"
+href="https://github.com/gpilab/core-nodes"
+target="_blank"&gt;GitHub&lt;/a&gt;. Installing the updated Core library will &lt;em&gt;not&lt;/em&gt;
+override the default installation of the Core library, so you need to remove
+its path (&lt;code&gt;/opt/gpi/node/core/&lt;/code&gt;) from the &lt;code&gt;LIB_DIRS&lt;/code&gt; variable in
+your &lt;code&gt;.gpirc&lt;/code&gt; file. A current snapshot of the Core library can be downloaded as
+a zip archive from main GitHub page. To install this snapshot, simply unzip the
+archive into &lt;code&gt;~/gpi/core/&lt;/code&gt; as described above.&lt;/p&gt;
+&lt;p&gt;To stay up-to-date with the latest changes, it is recommended to link your
+local Core library with the remote repository by cloning it using &lt;a
+title="Git" href="http://git-scm.com" target="_blank"&gt;Git&lt;/a&gt;. Git is a popular
+version control system, available on all platforms. Using Git makes it easy to
+update your local copy of the source code, and to contribute back your own
+enhancements and bug fixes.&lt;/p&gt;
+&lt;p&gt;To install the Core library using Git, open a terminal session and execute the
+following commands (after installing Git if necessary):&lt;/p&gt;
+&lt;pre&gt;% cd ~/gpi
+% git clone https://github.com/gpilab/core-nodes.git core
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;This will create a copy of the remote &lt;code&gt;core-nodes&lt;/code&gt; repository to
+your computer, inside your default GPI library directory.&lt;/p&gt;
+&lt;h3&gt;Compiling the Core Library&lt;/h3&gt;
+
+&lt;p&gt;GPI includes a Python/C++ interface called PyFI. The Core library uses PyFI to
+implement algorithms in a combination of C++ and Python code. GPI includes a
+script (&lt;code&gt;gpi_make&lt;/code&gt;) to help compile C++ files associated with a GPI
+library.&lt;/p&gt;
+&lt;p&gt;Compiled binary objects are not included in the Git repository, so it's
+necessary to build the library after installation. Once you have downloaded or
+cloned the repository into &lt;code&gt;~/gpi/core/&lt;/code&gt;, run the following commands
+to compile the C++ code:
+&lt;pre&gt;% cd ~/gpi/core
+% gpi_make --all
+&lt;/pre&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Updating the Core Library&lt;/h3&gt;
+
+&lt;p&gt;As mentioned, Git makes it easy to update the Core library with any new changes
+from the developers. If you cloned the repository using Git, you can update
+your copy of the Core library using the following commands:&lt;/p&gt;
+&lt;pre&gt;% cd ~/gpi/core
+% git pull
+% gpi_make --all&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Running &lt;code&gt;git pull&lt;/code&gt; fetches any new changes from the core-nodes
+repository on GitHub, and merges them into your local copy. To finish updating,
+it's also good idea to re-compile the C++ code in case any changes were
+made. Note you may get some warnings or errors if you attempt to "pull" changes
+after modifying the code yourself. If you have changes you'd like to keep (or
+contribute back!) please fork the project on GitHub, or just get in touch!&lt;/p&gt;
+&lt;h4&gt;Branches in the &lt;code&gt;core-nodes&lt;/code&gt; Repository&lt;/h4&gt;
+
+&lt;p&gt;Development in the &lt;code&gt;core-nodes&lt;/code&gt; repository follows the &lt;a
+title="gitflow"
+href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;gitflow&lt;/a&gt; branching
+model. There are two main branches in this model: &lt;em&gt;master&lt;/em&gt;, which
+contains stable releases; and &lt;em&gt;develop&lt;/em&gt;, which contains newer,
+untested changes. Most likely you will want to keep your local copy on
+the &lt;em&gt;master&lt;/em&gt; branch, unless you are planning to make changes to the
+library and contribute them back to the community.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;git branch&lt;/code&gt; to see which branch you are on, and &lt;code&gt;git
+checkout &amp;lt;branch name&amp;gt;&lt;/code&gt; to switch to a different branch. You will
+again want to recompile (&lt;code&gt;gpi_make --all&lt;/code&gt;) any time you change branches.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Hopefully this will help you collaborate and stay up-to-date with the latest
+changes in your GPI node libraries. Check out the
+&lt;a href="http://docs.gpilab.com"&gt;documentation&lt;/a&gt; for more information, and please &lt;a href="/community"&gt;get
+in touch&lt;/a&gt; if you have questions or if you're
+interested in contributing to the project.
+&lt;h2&gt;&lt;/h2&gt;&lt;/p&gt;</summary></entry><entry><title>Philips Raw Data Reader</title><link href="http://gpilab.com/philips-raw-data-reader.html" rel="alternate"></link><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-04-06:philips-raw-data-reader.html</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
+release. Users of the Philips raw data formats can directly import the raw data
+into GPI and start investigating. Thanks to the tenacious efforts of Ryan
+Robison, the reader node supports a plethora of file formats such as .data,
+.list, .lab, .raw, .sin, .par, .xml, .rec, and .cpx at many different release
+levels.  The package releases are available for download on &lt;a
+href="https://github.com/gpilab/philips-data-reader"
+target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Output&lt;/h2&gt;
+&lt;p&gt;&lt;img class=" size-medium wp-image-494 alignright"
+src="http://gpilab.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png"
+alt="Screen Shot 2015-04-03 at 4.55.34 PM" width="300" height="226" /&gt;&lt;/p&gt;
+&lt;p&gt;The ReadPhilips node parses the file contents for MR data, converts the data to
+a numpy numeric array and makes it available as an output port.  Depending on
+the input files and application, there may be multiple output datasets
+corresponding to the sampled k-space, noise measurements, etc...  The reader
+also parses any available header information (which is format dependent) and
+populates a python-dictionary object which is also pushed to an output port.  
+This header information can be viewed via the 'dictionquery' node which
+displays python-dictionary information as a simple list.&lt;/p&gt;
+&lt;h2&gt;Widgets&lt;/h2&gt;
+&lt;p&gt;&lt;img class=" size-medium wp-image-500 alignright"
+src="http://gpilab.com/wp-content/uploads/2015/04/ReadPhilipsUI_ex_head-240x300.jpg"
+alt="ReadPhilipsUI_ex_head" width="240" height="300" /&gt;&lt;/p&gt;
+&lt;p&gt;The ReadPhilips menu provides an interface to browse for the desired files and
+displays basic file system information and a summary of the header information
+(when available).  The interface also provides options for various minor data
+corrections and the ability to load single coils or slices from the file.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="/community"&gt;Community&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The ReadPhilips node is available to the scientific community as a closed
+source binary package allowing users immediate access to this functionality.
+ The source code for this project can be made available to Philips researchers,
+who have signed an NDA, in an effort to foster community development and
+maintenance of the reader as the Philips product software advances.
+ This project provides a model for GPI developers to generate reader tools for
+other closed raw data formats.  In this way, the closed source tools can be
+maintained by developers, who have vendor specific access, allowing the tool to
+be updated with product changes.  The end users benefit by moving forward with
+their research without getting tangled up in the proprietary code.&lt;/p&gt;
+&lt;p&gt;If you have a GPI node project, you are welcome to submit a link for listing on
+the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>GPI v½ Release</title><link href="http://gpilab.com/gpi-v12-release.html" rel="alternate"></link><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-02-27:gpi-v12-release.html</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
+&lt;div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;"&gt;
+&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.com/wp-content/uploads/2014/09/logo-300x113.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
+&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="http://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The GPI project has been able to develop into a robust first release thanks to
+the efforts of the &lt;a
+href="https://github.com/gpilab/core-nodes/blob/develop/AUTHORS"
+target="_blank"&gt;Keller Center for Imaging Innovation&lt;/a&gt; group in Phoenix,
+sponsorship from Philips Healthcare and the collaboration with Phoenix
+Children's Hospital, Vanderbilt University, University of Texas Southwestern,
+Tsinghua University and Cincinnati Children's Hospital as well as those who
+have participated in GPI training.&lt;/p&gt;
+&lt;p&gt;GPI now has native packages for OSX, Linux, and a pre-installed Linux virtual
+machine to run GPI on your PC. The GPI project and node code is also now being
+hosted on GitHub.  Visit &lt;a href="http://github.com/gpilab"
+target="_blank"&gt;github.com/gpilab&lt;/a&gt; to get the latest updates and node
+library releases. There is now a &lt;a
+href="http://gpilab.com/mailman/listinfo/gpi-users_gpilab.com"
+target="_blank"&gt;GPI users&lt;/a&gt; mailing list for users who wish to participate in
+community support.&lt;/p&gt;
+&lt;h2&gt;What's New in Version 0.5&lt;/h2&gt;
+&lt;h3&gt;Features&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Added Support for OSX 10.7&lt;/li&gt;
+    &lt;li&gt;Upgraded to Anaconda 2.1&lt;/li&gt;
+    &lt;li&gt;Improved HDF5 reader node&lt;/li&gt;
+    &lt;li&gt;Added a new Matlab file reader (for old and new HDF5 formats)&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Left-mouse-button port-edge-connect!&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;Right-click downstream ports to delete an edge &lt;br&gt;&lt;a href="http://gpilab.com/wp-content/uploads/2015/02/rightclickdelete.gif"&gt;&lt;img class=" size-full wp-image-184 aligncenter" src="http://gpilab.com/wp-content/uploads/2015/02/rightclickdelete.gif" alt="rightclickdelete" width="244" height="202" /&gt;&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Node reload; just select a node (or multiple nodes), press Ctrl+R and the node will update and reconnect to up and downstream nodes&lt;br&gt;&lt;img class="alignnone size-full wp-image-182 aligncenter" src="http://gpilab.com/wp-content/uploads/2015/02/node_reload.gif" alt="node_reload" width="262" height="212" /&gt;&lt;br&gt;&lt;/li&gt;
+    &lt;li&gt;Auto generate the user library (via the main menu)&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;gpi_make&lt;/code&gt; now does a force recompile on all node .py files&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;LIB_DIRS&lt;/code&gt;, in the &lt;code&gt;.gpirc&lt;/code&gt;, will now search the parent directory for libraries, so now you can easily setup your custom library directory and new libraries will be loaded as they are added
+&lt;ul&gt;
+    &lt;li&gt;By default, the &lt;code&gt;~/gpi&lt;/code&gt; directory is searched&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Bugfixes&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Fixed node updating via drag'n drop, copy/paste, or reload by force recompiling all node .py files&lt;/li&gt;
+    &lt;li&gt;Fixed file association bug for capitalized extensions&lt;/li&gt;
+    &lt;li&gt;Updated numpy to qimage conversions with the qimage2ndarray library&lt;/li&gt;
+    &lt;li&gt;Removed zlib string compression on StringBox widgets to prevent nodes from segfaulting when using the StringBox in Linux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p style="text-align: center;"&gt;&lt;/p&gt;</summary></entry><entry><title>New Tutorial Screencasts</title><link href="http://gpilab.com/new-tutorial-screencasts.html" rel="alternate"></link><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-10-10:new-tutorial-screencasts.html</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
+&lt;table style="width:100%"&gt;
+  &lt;tr&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/X9ddBrbFAWU?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-71" src="http://gpilab.net/wp-content/uploads/2014/10/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
+
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="http://gpilab.net/wp-content/uploads/2014/10/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;  
+  &lt;tr&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="http://gpilab.net/wp-content/uploads/2014/10/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
+
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="http://gpilab.net/wp-content/uploads/2014/10/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.3: SoS Coil Combine&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</summary></entry><entry><title>Whats New in Version 0.2</title><link href="http://gpilab.com/whats-new-in-version-02.html" rel="alternate"></link><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-09-29:whats-new-in-version-02.html</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
+Linux virtual machine. The package is built upon the multi-platform Python
+distribution “Anaconda”, from Continuum Analytics. The packages also contains
+an installer for maximum convenience.&lt;/p&gt;
+&lt;p&gt;The OSX package has been tested on 10.8 and 10.9. The OSX package comes with an
+app launcher that allows OS file associations to be made for GPI. File
+associations that GPI understands by default are .png, .jpg, .csv, .hdf5,
+.data, .list, .raw, .npy, .lab, .par, .rec, .pickle and .sin.&lt;/p&gt;
+&lt;p&gt;The Linux package has been tested on Ubuntu 12.04, 13.04 and 13.10. GPI on
+13.10 requires XFCE or KDE desktop managers for faithful GUI display. The Linux
+VM uses Ubuntu 12.04.&lt;/p&gt;
+&lt;p&gt;Several packaged libraries have been updated including numpy, scipy, and
+matplotlib. Pyopencl has been included in the OSX package.&lt;/p&gt;
+&lt;h2&gt;GUI Updates&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The status bar now contains the canvas walltime and total port memory held by
+  the canvas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://gpilab.net/wp-content/uploads/2014/09/walltime1.jpg"&gt;&lt;img
+class="size-medium wp-image-55"
+src="http://gpilab.net/wp-content/uploads/2014/09/walltime1-300x39.jpg"
+alt="More canvas info." width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More canvas info.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Multi-drag-n-drop is now supported by the canvas. This includes network
+  files, associated files, and GPI node descriptions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A “percent-done” graphic is shown next to long running nodes. This is
+  currently available as an estimate based on previous runtimes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://gpilab.net/wp-content/uploads/2014/09/pdone-300x1161.jpg"&gt;&lt;img
+class="size-full wp-image-54"
+src="http://gpilab.net/wp-content/uploads/2014/09/pdone-300x1161.jpg"
+alt="Percent done." width="300" height="116" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Percent done.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data sharing between GPI processes has been threaded to prevent the GUI from
+  locking up on large data sets.&lt;/li&gt;
+&lt;li&gt;Node menus now have a corner grip (arguably one of the most important updates
+  in Aughty) and a “Close-all” feature located in the main menu.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://gpilab.net/wp-content/uploads/2014/09/grip-300x1951.jpg"&gt;&lt;img
+class="size-full wp-image-53"
+src="http://gpilab.net/wp-content/uploads/2014/09/grip-300x1951.jpg" alt="The
+corner grip." width="300" height="195" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The corner grip.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gpilab.net/wp-content/uploads/2014/09/closeall-300x49.jpg"&gt;&lt;img
+class="size-full wp-image-50"
+src="http://gpilab.net/wp-content/uploads/2014/09/closeall-300x49.jpg"
+alt="Close all menu option." width="350" /&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Close all menu option.&lt;/p&gt;
+&lt;h2&gt;Commandline Interface&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The commandline interface allows GPI to run as a scriptable element in a
+  batch process.&lt;/li&gt;
+&lt;li&gt;String arguments can be passed to String nodes allowing networks to be
+  parameterized with filenames, directories, numbers and anything passable via
+  a string.&lt;/li&gt;
+&lt;li&gt;Multiple networks, nodes, and associated files can be passed as commandline
+  arguments for quick workspace loading.&lt;/li&gt;
+&lt;li&gt;The log level can also be pre-set using this interface. &lt;code&gt;Config File (.gpirc)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A configuration file in the user’s home directory can be used to set
+  node-library paths, file associations and configure the gpi_make.&lt;/li&gt;
+&lt;li&gt;Library paths set in this file will also be included in the gpi_make for
+  cross-library-linking and include file resolution.
+    &lt;i&gt;2-Level Library Scope&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Libraries are now 2-levels allowing developers to have their own library and
+  use sub-library names that alias the ‘core’ packaged library.&lt;/li&gt;
+&lt;li&gt;Nodes are now searched for by scope allowing multiple nodes to have the same
+  name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://gpilab.net/wp-content/uploads/2014/09/library-300x186.jpg"&gt;&lt;img
+class="size-full wp-image-51"
+src="http://gpilab.net/wp-content/uploads/2014/09/library-300x186.jpg"
+alt="2-level library scope." width="400" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2-level library scope.&lt;/p&gt;
+&lt;h2&gt;Network File Upgrade (v2)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The network files now save information about node and canvas timing, machine
+  specs and the new library scope.&lt;/li&gt;
+&lt;li&gt;The new format is mostly backwards compatible with pre-v2 networks (provided
+  that all the nodes are also included in the library path).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;PyFI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The Python Function Interface code has been updated with a new Array package
+  (similar to the R2 arrays). This packages provides slightly faster indexing,
+  and index range check mode (for debugging), stacktraces and a simple FFTW
+  interface.&lt;/li&gt;
+&lt;li&gt;A PyCallable interface object has also been added for embedding Python calls
+  in C++. This provides a simple interface for calling functions that may not
+  yet be available in the C++ interface, but allow the developer to leverage
+  the vast Python library. Included interfaces are Numpy::pinv() (pseudo
+  inverse), Numpy::printArray(), Numpy::fft1() as examples of how this may be
+  used.&lt;/li&gt;
+&lt;li&gt;Error messages now demangle the variable types, for easier error
+  interpretation.&lt;/li&gt;
+&lt;li&gt;Support for C++ templated functions -providing a way of making typed
+  functions available to Python.&lt;/li&gt;
+&lt;li&gt;Updated PyFI macros further reduce the amount of code needed to define a
+  PyMOD. &lt;i&gt;NodeAPI&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Support for initUI() return codes.&lt;/li&gt;
+&lt;li&gt;New event API that keeps all events that initiated execution. Added
+  deprecations warnings to the old interface.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Nodes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;All ‘core’ PyMODs have been updated to use the new PyFI::Array class.&lt;/li&gt;
+&lt;li&gt;ReadPhilips now supports a lab/raw/sin reader, xml/par/rec (with HIFU bug
+  fixes), noise and phase correction outputs and an updated display that
+  includes labels for dimensions.&lt;/li&gt;
+&lt;li&gt;The ‘mathematics’ library has been renamed to ‘math’.&lt;/li&gt;
+&lt;li&gt;Elem_Math node has been renamed to Math.&lt;/li&gt;
+&lt;li&gt;Added ReadImage &amp;amp; WriteImage for .png or .jpg.&lt;/li&gt;
+&lt;li&gt;Added DataQuery for looking through data arrays.&lt;/li&gt;
+&lt;li&gt;Added ImageCompare &amp;amp; ImageRate for performing paired comparisons.&lt;/li&gt;
+&lt;li&gt;Updated DictionQuery to use a search key.&lt;/li&gt;
+&lt;li&gt;Added ReadCSV &amp;amp; WriteCSV for ascii, comma separated values.&lt;/li&gt;
+&lt;li&gt;Added ReadHDF5 &amp;amp; WriteHDF5 (still basic, under development).&lt;/li&gt;
+&lt;li&gt;Added ReadPhysioLog for scanner physiologic sensor recordings.&lt;/li&gt;
+&lt;li&gt;Added DegridDFT for trajectory data simulation.&lt;/li&gt;
+&lt;li&gt;Added Alert for making a noise when a process has finished.&lt;/li&gt;
+&lt;li&gt;Added AutoNum in place of IntegerLoop (does float, int, and has a better UI).&lt;/li&gt;
+&lt;li&gt;Compare (find scale RMS diff between two NPY arrays).&lt;/li&gt;
+&lt;li&gt;Updated Dimensions to handle events.&lt;/li&gt;
+&lt;li&gt;Updated the ToComplex UI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Bugfixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Networks correctly save widget-port connections.&lt;/li&gt;
+&lt;li&gt;Corrected getWidget() error message (the bug threw exception during the error
+  message creation) when using methods like getAttr() or setAttr().&lt;/li&gt;
+&lt;li&gt;Better node-process stability: fixed an issue causing zombie processes.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry></feed>
