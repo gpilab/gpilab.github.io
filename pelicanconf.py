@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 # general config
 AUTHOR = 'Nicholas Zwart'
-SITENAME = 'gpilab'
+SITENAME = 'gpilab.com'
 SITETITLE = 'GPI'
 SITESUBTITLE = 'Graphical Programming Interface'
 SITEURL = ''
