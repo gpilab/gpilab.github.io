@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Community</title>
+        <title>gpilab</title>
 
             <link href="http://gpilab.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab Full Atom Feed" />
+            <link href="http://gpilab.github.io/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="http://gpilab.github.io/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +34,21 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-		<meta property="og:locale" content="en">
+
+
+
+
+
+			<meta property="og:locale" content="en">
 		<meta property="og:site_name" content="gpilab">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="http://gpilab.github.io/2015/Dec/18/editors-pick/">
+	<meta property="og:title" content="Editor's Pick!">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="http://gpilab.github.io/http://www.ismrm.org/wp-content/uploads/mrm-highlights-logo-2-4.png">
+	<meta property="article:published_time" content="2015-12-18 20:30:00-07:00">
 </head>
 
 <body>
@@ -61,10 +75,10 @@
                     <li><a href="http://docs.gpilab.com">documentation</a></li>
 
 
-                            <li><a href="http://gpilab.github.io/downloads.html">Downloads</a></li>
-                            <li class="active"><a href="http://gpilab.github.io/community.html">Community</a></li>
-                            <li><a href="http://gpilab.github.io/screencasts.html">Screencasts</a></li>
-                            <li><a href="http://gpilab.github.io/about.html">About</a></li>
+                            <li><a href="http://gpilab.github.io/downloads/">Downloads</a></li>
+                            <li><a href="http://gpilab.github.io/community/">Community</a></li>
+                            <li><a href="http://gpilab.github.io/screencasts/">Screencasts</a></li>
+                            <li><a href="http://gpilab.github.io/about/">About</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,13 +87,17 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/home-bg.jpg')">
-        <header class="intro-header" style="background-image: url('http://gpilab.github.io/theme/images/home-bg.jpg')">
+        <header class="intro-header" style="background-image: url('http://www.ismrm.org/wp-content/uploads/mrm-highlights-logo-2-4.png')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Community</h1>
+                        <h1>Editor's Pick!</h1>
+                        <span class="meta">Posted by
+                                <a href="http://gpilab.github.io/author/nicholas-zwart.html">Nicholas Zwart</a>
+                             on Fri 18 December 2015
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -90,71 +108,22 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
     <article>
-        <h2>Node Libraries</h2>
-<p>GPI's functionality is easily extended through its node libraries. Nodes can
-provide new algorithms, visualization and I/O.</p>
-<ul>
-<li><strong><a href="https://github.com/gpilab/core-nodes">core-nodes</a></strong><br>
-    The core nodes are a collection of basic data manipulation and
-    visualization algorithms. This node library is the "default library"
-    packaged with the GPI Stack.</li>
-<li><strong><a href="https://github.com/gpilab/philips-data-reader">philips-data-reader</a></strong><br>
-    The philips-data-reader project provides compiled binary packages (closed
-    source) of the ReadPhilips node for reading raw MR data.</li>
-<li><strong><a href="https://github.com/hansenms/gpi_ismrmrd/tree/master/ismrmrd/GPI">gpi-ismrmrd</a></strong><br>
-    Nodes for reading and writing to the ISMRMRD format and nodes that take
-    advantage of the ISMRMRD built-in MR reconstruction toolkit.</li>
-<li><strong><a href="https://github.com/nckz/bart/tree/master/gpi">gpi-bart</a></strong><br>
-    Nodes that wrap the Berkeley Advanced Reconstruction Toolkit.</li>
-<li><strong><a href="https://github.com/aganders3/gpi-neurotools">gpi-neurotools</a></strong><br>
-    For wrapping tools that use the NIfTI file format (e.g. FSL).</li>
-<li><strong>Community Libraries</strong><br>
-    If you, or someone you know, is interested in contributing to the list of
-    known GPI node libraries, let us know by emailing us at
-    <a href="mailto:gpi@gpilab.com">gpi@gpilab.com</a>.</li>
-</ul>
-<h2>Issues and Bugs</h2>
-<p>For questions about software bugs and to see if some one else has already
-reported the same issue, check the issue tracker for each of the GPI projects:</p>
-<ul>
-<li><strong><a href="https://github.com/gpilab/core-nodes/issues">core-nodes</a></strong> - Bugs in
-  specific core nodes.</li>
-<li><strong><a href="https://github.com/gpilab/framework/issues">framework</a></strong> - Issues with the
-  user interface, network canvas and documentation.</li>
-</ul>
-<h2>GPI Bibliography</h2>
-<p>The following work makes use of the GPI project. If you have a publication that
-references GPI, please tell us at <a href="mailto:gpi@gpilab.com">gpi@gpilab.com</a>.</p>
-<ul>
-<li>Schär M, Gabr RE, El-Sharkawy AM, Steinberg A, Bottomley PA, Weiss RG.<br>
-  <strong>Two repetition time saturation transfer (TwiST) with spill-over correction
-  to measure creatine kinase reaction rates in human hearts.</strong><br> J Cardiovasc
-  Magn Reson. 2015;17(1):70. DOI: 10.1186/s12968-015-0175-4.</li>
-<li>Li Z, Wang D, Robison RK, Zwart NR, Schär M, Karis JP, Pipe JG.<br>
-  <strong>Sliding-slab three-dimensional TSE imaging with a spiral-In/Out
-  readout.</strong><br> Magn Reson Med 2015 DOI: 10.1002/mrm.25660</li>
-<li>Schär M, Eggers H, Zwart NR, Chang Y, Bakhru A, and Pipe JG.<br> <strong>Dixon
-  water-fat separation in PROPELLER MRI acquired with two interleaved echoes.</strong>
-  <br>Magn Reson Med 2015 DOI: 10.1002/mrm.25656</li>
-<li>Li Z, Schär M, Wang D, Zwart NR, Madhuranthakam AJ, Karis JP, Pipe JG.<br>
-  <strong>Arterial spin labeled perfusion imaging using three-dimensional turbo spin
-  echo with a distributed spiral-in/out trajectory.</strong><br> Magn Reson Med 2015
-  DOI: 10.1002/mrm.25645</li>
-<li>Wang D, Zwart NR, Li Z, Schär M, Pipe JG.<br> <strong>Analytical three-point Dixon
-  method: With applications for spiral water-fat imaging.</strong><br> Magn Reson Med
-  2015 DOI: 10.1002/mrm.25620</li>
-<li>Chang Y, Pipe JG, Karis JP, Gibbs WN, Zwart NR and Schär M.<br> <strong>The effects
-  of SENSE on PROPELLER imaging.</strong><br> Magn Reson Med 2014 DOI:
-  10.1002/mrm.25557</li>
-<li><a href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract">Zwart NR and Pipe JG.<br> Graphical Programming Interface: A development
-  environment for MRI methods.<br> Magn Reson Med 2014 DOI:
-  10.1002/mrm.25528</a></li>
-<li>Pipe JG, Gibbs WN, Li Z, Karis JP, Schär M and Zwart NR.<br> <strong>Revised motion
-  estimation algorithm for PROPELLER MRI.</strong><br> Magn Reson Med 2014;72:430-437.
-  DOI: 10.1002/mrm.24929</li>
-</ul>
+        <p>The GPI article entitled <a
+href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
+target="_blank">"Graphical programming interface: A development environment for
+MRI methods"</a> has been chosen as one of the <a
+href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1522-2594/homepage/editor_s_picks.htm"
+target="_blank">MRM Editor's Picks</a> for November!  There is also a short
+interview with Jim Pipe and myself from the folks at <a
+href="http://www.ismrm.org/qa-with-nicholas-zwart-and-james-pipe/"
+target="_blank">MRM Highlights</a>.</p>
+<p>This mentioning is coming a little late, but thats better than never ;).</p>
     </article>
+
+    <hr>
+
             </div>
         </div>
     </div>
