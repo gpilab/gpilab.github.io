@@ -16,10 +16,10 @@ package provides for MR reconstruction.  This post gives an introductory
 overview of how the BART was wrapped in GPI and how the <a
 href="https://github.com/nckz/bart/blob/master/gpi/README.md"
 target="_blank">GPI-BART node library</a> can be installed using the latest <a
-href="http://dev.gpilab.com" target="_blank">GPI v1</a>.
+href="https://github.com/gpilab/framework/releases/tag/v1.0.0-rc1" target="_blank">GPI v1</a>.
 
 ## The BORG
-One of the new features in <a href="/downloads" target="_blank">GPI
+One of the new features in <a href="https://github.com/gpilab/framework/releases/tag/v1.0.0-rc1" target="_blank">GPI
 v1</a> is the BORG interface which allows node developers to easily assimilate
 command-line tools for native use in GPI.  The BORG, which stands for Building
 Outside Relationships with GPI, provides a simple wrapper interface that takes
@@ -171,7 +171,7 @@ GPI-BART fork:
 
 First (if you haven't already), make a 'gpi' directory in your home directory.
 If you're not sure why you'd do this, checkout the post [Installing Node
-Libraries](/2015/06/30/Installing-Node-Libraries).
+Libraries]({filename}/posts/2015-06-30-Installing-Node-Libraries.md).
 
 ```
     $ cd ~/
@@ -216,8 +216,7 @@ the default paths then GPI-BART library is ready to go.
 If you have path modifications in your `~/.gpirc` file or the nodes are not
 visible in your library menu, consult the
 [Configuration](http://docs.gpilab.com/en/develop/config.html) docs or check out the
-post on [Installing Node
-Libraries](/2015/06/30/Installing-Node-Libraries).
+post on [Installing Node Libraries]({filename}/posts/2015-06-30-Installing-Node-Libraries.md).
 
 ## Events
 This work has been presented at the [ISMRM Workshop on Data Sampling & Image
