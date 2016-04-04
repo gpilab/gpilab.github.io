@@ -4,6 +4,15 @@
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+/* NRZ - additions */
+    /* markdown fit image width */
+    img[alt=fitwidth] { width: 100%; }
+    img[alt=fitw100] { width: 100%; }
+    img[alt=fitw75] { width: 75%; }
+    img[alt=fitw50] { width: 50%; }
+    img[alt=fitw25] { width: 25%; }
+    img[alt=fitw10] { width: 10%; }
+
 body {
   font-family: 'Open Sans', 'Lora','Times New Roman',serif;
   font-size: 18px;

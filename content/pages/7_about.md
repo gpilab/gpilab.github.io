@@ -13,7 +13,7 @@ GPI provides a visual workspace for assembling algorithms. Algorithm elements
 (i.e. nodes) can be linked together to form a flow diagram. Each node is
 executed according to the hierarchy of the diagram.
 
-![fitw75](./images/SpiralRecon_SliceLoop.gif)
+![fitw100]({filename}/images/SpiralRecon_SliceLoop.gif)
 
 ## Integrated Development Environment
 
@@ -24,7 +24,7 @@ organizing and developing complex scientific algorithms (i.e. in the form of
 GPI nodes). To this end, GPI provides a GUI for a basic set of tools to
 visualize data, manipulate data and I/O for common scientific data formats.
 
-![fitw75](./images/CanvasAsAScript.png)
+![fitw100]({filename}/images/CanvasAsAScript.png)
 
 ## Collaboration Platform
 
@@ -35,7 +35,7 @@ framework. This allows algorithm developers to pick and choose existing nodes
 (either stock or from their collaborators) and focus on the task of prototyping
 their new algorithm.
 
-![fitw75](./images/Developers_SpiralToF.png)
+![fitw100]({filename}/images/Developers_SpiralToF.png)
 
 ## Teaching Tool
 
@@ -45,7 +45,7 @@ algorithm and tap any point to start their own algorithm. This feature allows
 concise communication of your work with your collaborators as it provides an
 intuitive mechanism for others to start interacting with your research.
 
-![fitw75](./images/CompressedSensing.png)
+![fitw100]({filename}/images/CompressedSensing.png)
 
 ## Reconstruction Framework
 
@@ -55,4 +55,4 @@ k-space image reconstructions. However, the GPI framework is simply an event
 driven pipeline that can be used for any data processing. We also use it for
 spin physics simulations and simulating k-space data.
 
-![fitw75](./images/SpinSim.gif)
+![fitw100]({filename}/images/SpinSim.gif)
