@@ -16,6 +16,12 @@ TIMEZONE = 'America/Phoenix'
 DEFAULT_LANG = 'en'
 DEFAULT_PAGINATION = 10
 
+# favicon
+EXTRA_PATH_METADATA = {
+    'images/favicon.ico': {'path': 'favicon.ico'},
+    'images/favicon.png': {'path': 'favicon.png'}
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
