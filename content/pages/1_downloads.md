@@ -9,61 +9,72 @@ Header_Cover: /images/downloads_banner.jpg
 Summary:
 
 > Dignity Health makes this software available for download via this website
-subject to the [license terms and conditions](/license.html), available also on
+subject to the [license terms and conditions](/license), available also on
 this website. You will be required to view and accept these [license terms and
-conditions](/license.html) upon installation of the software. If you do not
-accept or agree to these [license terms](/license.html), you are not permitted
+conditions](/license) upon installation of the software. If you do not
+accept or agree to these [license terms](/license), you are not permitted
 to download, install or otherwise use the software in any way. By continuing
 with this download, you are agreeing to the applicable [license terms and
-conditions](/license.html).
+conditions](/license).
 
 ## GPI v1-beta
 The latest release can be downloaded below.  This is the current development
 release used by the MR Technology Design Group.
 
-<section class="wrapper style3 special">
+<div class="container">
 <div class="row">
 
-<div class="4u">
-<section>
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_1.0.0-rc.dmg"><img src="/images/osx_dl.jpg" width="100%" /></a>
+<div class="col-md-3 col-sm-3">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_1.0.0-rc.dmg">
+<div class="text-center">
+<img src="/images/osx_dl.jpg" width="100%" />
 <header>
 <h3>OSX 10.7+</h3>
 </header>
 GPI_1.0.0-rc.dmg * <br>364MB
-</section>
+</div>
+</a>
 </div>
 
-<div class="4u">
-<section>
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_Install_Latest-rc.sh"><img src="/images/script_dl.jpg" width="100%" /></a>
+<div class="col-md-3 col-sm-3">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_Install_Latest-rc.sh">
+<div class="text-center">
+<img src="/images/script_dl.jpg" width="100%" />
 <header>
 <h3>Ubuntu 12.04+<br>&<br>OSX 10.7+</h3>
 </header>
 GPI_Install_Latest-rc.sh ** <br>3.9KB
-</section>
+</div>
+</a>
 </div>
 
-<div class="4u">
-<section>
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_VM_1.0.0-rc.zip"><img src="/images/vm_dl.jpg" width="100%" /></a>
+<div class="col-md-3 col-sm-3">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_VM_1.0.0-rc.zip">
+<div class="text-center">
+<img src="/images/vm_dl.jpg" width="100%" />
 <header>
 <h3>VMware<br>(Ubuntu 15.10)</h3>
 </header>
 GPI_VM_1.0.0-rc.zip<br>1.2GB
-</section>
+</div>
+</a>
 </div>
 
+<div class="col-md-3 col-sm-3">
 </div>
+
+</div> <!-- row -->
+
 <br>
 <div style="text-align: left;">
-<sup>&nbsp;&nbsp;* </sup> Provides an OSX app that can be launched from your dock.<br>
-<sup>** </sup> Provides the 'gpi' command that can be launched from a terminal.
+<sup>&nbsp;&nbsp;\* </sup> Provides an OSX app that can be launched from your dock.<br>
+<sup>\*\* </sup> Provides the 'gpi' command that can be launched from a terminal.
 </div>
 <br>
 <a href="https://github.com/gpilab/framework/releases/tag/v1.0.0-rc1">MD5SUM</a> |
 <a href="https://github.com/gpilab/framework/releases">Release Archive</a>
-</section>
+
+</div> <!-- container -->
 
 ## <a name="Installation"></a> Installation
 
