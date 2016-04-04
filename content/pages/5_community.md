@@ -67,8 +67,8 @@ references GPI, please tell us at [gpi@gpilab.com](mailto:gpi@gpilab.com).
 * Chang Y, Pipe JG, Karis JP, Gibbs WN, Zwart NR and Schär M.<br> **The effects
   of SENSE on PROPELLER imaging.**<br> Magn Reson Med 2014 DOI:
   10.1002/mrm.25557
-* [Zwart NR and Pipe JG.<br> Graphical Programming Interface: A development
-  environment for MRI methods.<br> Magn Reson Med 2014 DOI:
+* [Zwart NR and Pipe JG.<br> **Graphical Programming Interface: A development
+  environment for MRI methods.**<br> Magn Reson Med 2014 DOI:
   10.1002/mrm.25528](http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract)
 * Pipe JG, Gibbs WN, Li Z, Karis JP, Schär M and Zwart NR.<br> **Revised motion
   estimation algorithm for PROPELLER MRI.**<br> Magn Reson Med 2014;72:430-437.
