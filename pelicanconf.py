@@ -5,6 +5,8 @@ from __future__ import unicode_literals
 # general config
 AUTHOR = 'Nicholas Zwart'
 SITENAME = 'gpilab'
+SITETITLE = 'GPI'
+SITESUBTITLE = 'Graphical Programming Interface'
 SITEURL = ''
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = PAGE_URL
