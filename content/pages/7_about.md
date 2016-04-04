@@ -6,6 +6,7 @@ Tags: about
 Slug: about
 Authors: Nicholas Zwart
 Summary: 
+Header_Cover: /images/about_banner.jpg
 
 ## GPI is a development environment for scientific algorithms
 
