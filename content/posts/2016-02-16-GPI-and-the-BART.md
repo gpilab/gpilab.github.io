@@ -107,7 +107,7 @@ between nodes from each library, the data need to be manipulated to fit the
 each node's requirements. This is easily accomplished with the core GPI nodes.
 Lets start with an example of the worst case scenario: the `traj` node.
 
-![Traj vs. SpiralCoords](http://gpilab.com/wp-content/uploads/2016/02/BARTDataConvention.png)
+![fitw75]({filename}/images/BARTDataConvention.png)
 
 The image above shows an example gridded 2D radial trajectory (via the BART
 node library) and a gridded 2D spiral trajectory (via the GPI core library).
@@ -154,7 +154,7 @@ libraries are different as would be expected between any two libraries that are
 developed independently.  The goal for this example is to show that a cross
 library data transfer may require some extra attention.
 
-![Conversion Node](http://gpilab.com/wp-content/uploads/2016/02/BARTDataConvention_BNI2BART.png)
+![fitw75]({filename}/images/BARTDataConvention_BNI2BART.png)
 
 Another approach to this problem would be to integrate these differences into
 the nodes themselves.  An example of this can be seen in the image above.  The

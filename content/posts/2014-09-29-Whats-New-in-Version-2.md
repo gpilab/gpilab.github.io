@@ -25,9 +25,9 @@ matplotlib. Pyopencl has been included in the OSX package.
 * The status bar now contains the canvas walltime and total port memory held by
   the canvas.
 
-<a href="http://gpilab.net/wp-content/uploads/2014/09/walltime1.jpg"><img
+<a href="{filename}/images/walltime1.jpg"><img
 class="size-medium wp-image-55"
-src="http://gpilab.net/wp-content/uploads/2014/09/walltime1-300x39.jpg"
+src="{filename}/images/walltime1-300x39.jpg"
 alt="More canvas info." width="500" /></a>
 
 More canvas info.
@@ -38,9 +38,9 @@ More canvas info.
 * A “percent-done” graphic is shown next to long running nodes. This is
   currently available as an estimate based on previous runtimes.
 
-<a href="http://gpilab.net/wp-content/uploads/2014/09/pdone-300x1161.jpg"><img
+<a href="{filename}/images/pdone-300x1161.jpg"><img
 class="size-full wp-image-54"
-src="http://gpilab.net/wp-content/uploads/2014/09/pdone-300x1161.jpg"
+src="{filename}/images/pdone-300x1161.jpg"
 alt="Percent done." width="300" height="116" /></a>
 
 Percent done.
@@ -50,16 +50,16 @@ Percent done.
 * Node menus now have a corner grip (arguably one of the most important updates
   in Aughty) and a “Close-all” feature located in the main menu.
 
-<a href="http://gpilab.net/wp-content/uploads/2014/09/grip-300x1951.jpg"><img
+<a href="{filename}/images/grip-300x1951.jpg"><img
 class="size-full wp-image-53"
-src="http://gpilab.net/wp-content/uploads/2014/09/grip-300x1951.jpg" alt="The
+src="{filename}/images/grip-300x1951.jpg" alt="The
 corner grip." width="300" height="195" /></a>
 
 The corner grip.
 
-<a href="http://gpilab.net/wp-content/uploads/2014/09/closeall-300x49.jpg"><img
+<a href="{filename}/images/closeall-300x49.jpg"><img
 class="size-full wp-image-50"
-src="http://gpilab.net/wp-content/uploads/2014/09/closeall-300x49.jpg"
+src="{filename}/images/closeall-300x49.jpg"
 alt="Close all menu option." width="350" /></a> 
 
 Close all menu option.
@@ -84,9 +84,9 @@ Close all menu option.
 * Nodes are now searched for by scope allowing multiple nodes to have the same
   name.
 
-<a href="http://gpilab.net/wp-content/uploads/2014/09/library-300x186.jpg"><img
+<a href="{filename}/images/library-300x186.jpg"><img
 class="size-full wp-image-51"
-src="http://gpilab.net/wp-content/uploads/2014/09/library-300x186.jpg"
+src="{filename}/images/library-300x186.jpg"
 alt="2-level library scope." width="400" /></a>
 
 2-level library scope.

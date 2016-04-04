@@ -1,7 +1,7 @@
 Title:  Philips Raw Data Reader
 Date:   2015-04-06 13:27:00
 Author: Nicholas Zwart
-Header_Cover: http://gpilab.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-4.50.31-PM.png
+Header_Cover: /images/Screen-Shot-2015-04-03-at-4.50.31-PM.png
 
 The Philips raw data reader node, for MR data, is now available as a binary
 release. Users of the Philips raw data formats can directly import the raw data
@@ -13,9 +13,8 @@ href="https://github.com/gpilab/philips-data-reader"
 target="_blank">GitHub</a>.
 
 ## Output
-<img class=" size-medium wp-image-494 alignright"
-src="http://gpilab.com/wp-content/uploads/2015/04/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png"
-alt="Screen Shot 2015-04-03 at 4.55.34 PM" width="300" height="226" />
+
+![fitw75]({filename}/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png)
 
 The ReadPhilips node parses the file contents for MR data, converts the data to
 a numpy numeric array and makes it available as an output port.  Depending on
@@ -27,9 +26,8 @@ This header information can be viewed via the 'dictionquery' node which
 displays python-dictionary information as a simple list.
 
 ## Widgets
-<img class=" size-medium wp-image-500 alignright"
-src="http://gpilab.com/wp-content/uploads/2015/04/ReadPhilipsUI_ex_head-240x300.jpg"
-alt="ReadPhilipsUI_ex_head" width="240" height="300" />
+
+![fitw75]({filename}/images/ReadPhilipsUI_ex_head-240x300.jpg)
 
 The ReadPhilips menu provides an interface to browse for the desired files and
 displays basic file system information and a summary of the header information
