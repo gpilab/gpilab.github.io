@@ -5,6 +5,7 @@ Category: downloads
 Tags: downloads
 Slug: downloads
 Authors: Nicholas Zwart
+Header_Cover: /images/downloads_banner.jpg
 Summary:
 
 > Dignity Health makes this software available for download via this website

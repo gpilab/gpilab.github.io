@@ -5,6 +5,7 @@ Category: screencasts
 Tags: screencasts
 Slug: screencasts
 Authors: Nicholas Zwart
+Header_Cover: /images/screencasts_banner.jpg
 Summary:
 
 ## Tutorial Playlist
