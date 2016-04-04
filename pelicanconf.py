@@ -19,6 +19,10 @@ TIMEZONE = 'America/Phoenix'
 DEFAULT_LANG = 'en'
 DEFAULT_PAGINATION = 10
 
+# links
+GITHUB_URL = 'https://github.com/gpilab'
+YOUTUBE_URL= 'http://www.youtube.com/user/gpilab'
+
 # favicon
 EXTRA_PATH_METADATA = {
     'images/favicon.ico': {'path': 'favicon.ico'},
