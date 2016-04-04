@@ -12,9 +12,9 @@ package provides for MR reconstruction.  This post gives an introductory
 overview of how the BART was wrapped in GPI and how the &lt;a
 href="https://github.com/nckz/bart/blob/master/gpi/README.md"
 target="_blank"&gt;GPI-BART node library&lt;/a&gt; can be installed using the latest &lt;a
-href="http://dev.gpilab.com" target="_blank"&gt;GPI v1&lt;/a&gt;.&lt;/p&gt;
+href="https://github.com/gpilab/framework/releases/tag/v1.0.0-rc1" target="_blank"&gt;GPI v1&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;The BORG&lt;/h2&gt;
-&lt;p&gt;One of the new features in &lt;a href="/downloads" target="_blank"&gt;GPI
+&lt;p&gt;One of the new features in &lt;a href="https://github.com/gpilab/framework/releases/tag/v1.0.0-rc1" target="_blank"&gt;GPI
 v1&lt;/a&gt; is the BORG interface which allows node developers to easily assimilate
 command-line tools for native use in GPI.  The BORG, which stands for Building
 Outside Relationships with GPI, provides a simple wrapper interface that takes
@@ -149,7 +149,7 @@ target="_blank"&gt;GPI-BART node library&lt;/a&gt; installation: the BART compil
 and the GPI node library installation.  Before starting download or clone the
 GPI-BART fork:&lt;/p&gt;
 &lt;p&gt;First (if you haven't already), make a 'gpi' directory in your home directory.
-If you're not sure why you'd do this, checkout the post &lt;a href="/2015/06/30/Installing-Node-Libraries"&gt;Installing Node
+If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.github.io/2015/Jun/30/installing-node-libraries/"&gt;Installing Node
 Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ cd ~/
     $ mkdir ~/gpi
@@ -190,8 +190,7 @@ the default paths then GPI-BART library is ready to go.&lt;/p&gt;
 &lt;p&gt;If you have path modifications in your &lt;code&gt;~/.gpirc&lt;/code&gt; file or the nodes are not
 visible in your library menu, consult the
 &lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;Configuration&lt;/a&gt; docs or check out the
-post on &lt;a href="/2015/06/30/Installing-Node-Libraries"&gt;Installing Node
-Libraries&lt;/a&gt;.&lt;/p&gt;
+post on &lt;a href="http://gpilab.github.io/2015/Jun/30/installing-node-libraries/"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Events&lt;/h2&gt;
 &lt;p&gt;This work has been presented at the &lt;a href="http://www.ismrm.org/workshops/Data16/"&gt;ISMRM Workshop on Data Sampling &amp;amp; Image
 Reconstruction&lt;/a&gt; in Sedona Arizona this
