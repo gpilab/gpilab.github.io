@@ -137,6 +137,14 @@ hr.small {
     transform: translate3d(0, 100%, 0);
   }
 }
+/* NRZ - color overlay for banner image */
+.intro-header-overlay {
+  background: rgba(35,21,67,0.7) !important; 
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2 !important;
+}
 .intro-header {
   background-color: #808080;
   background: no-repeat center center;
