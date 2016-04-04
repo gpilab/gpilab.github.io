@@ -6,6 +6,7 @@ Tags: community, resources, issues, bugs, libraries, bibliography
 Slug: community
 Authors: Nicholas Zwart
 Summary: An index of node libraries, links, and scientific articles that reference GPI.
+Header_Cover: /images/community_banner.jpg
 
 ## Node Libraries
 
