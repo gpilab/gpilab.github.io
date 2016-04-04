@@ -8,8 +8,11 @@ SITENAME = 'gpilab'
 SITETITLE = 'GPI'
 SITESUBTITLE = 'Graphical Programming Interface'
 SITEURL = ''
-PAGE_URL = '{slug}.html'
-PAGE_SAVE_AS = PAGE_URL
+
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+ARTICLE_URL = '{date:%Y}/{date:%b}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 
 PATH = 'content'
 TIMEZONE = 'America/Phoenix'
