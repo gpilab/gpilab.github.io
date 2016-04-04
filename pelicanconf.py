@@ -2,20 +2,21 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+# general config
 AUTHOR = 'Nicholas Zwart'
 SITENAME = 'gpilab'
 SITEURL = ''
-
 PATH = 'content'
-
-THEME = "./theme/clean-blog"
-
-HEADER_COVER = '/images/banner.jpg'
-
-
 TIMEZONE = 'America/Phoenix'
-
 DEFAULT_LANG = 'en'
+DEFAULT_PAGINATION = 10
+
+# Uncomment following line if you want document-relative URLs when developing
+#RELATIVE_URLS = True
+
+# theme specific
+THEME = "./theme/clean-blog"
+HEADER_COVER = '/images/banner.jpg'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -33,8 +34,3 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
-
-DEFAULT_PAGINATION = 10
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
