@@ -37,7 +37,8 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #404040;
+  /*color: #404040;*/
+    color: rgb(0,133,161); /* NRZ - make these more visible */
 }
 a:hover,
 a:focus {
