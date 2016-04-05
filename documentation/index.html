@@ -2,16 +2,15 @@
 <html lang="en">
 
 <head>
-            <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>gpilab.com</title>
+        <title>Documentation</title>
 
             <link href="http://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
-            <link href="http://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="http://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -34,21 +33,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-
-
-
-
-
-			<meta property="og:locale" content="en">
+		<meta property="og:locale" content="en">
 		<meta property="og:site_name" content="gpilab.com">
-
-	<meta property="og:type" content="article">
-	<meta property="article:author" content="">
-	<meta property="og:url" content="http://gpilab.com/2015/Apr/06/philips-raw-data-reader/">
-	<meta property="og:title" content="Philips Raw Data Reader">
-	<meta property="og:description" content="">
-	<meta property="og:image" content="http://gpilab.com//images/Screen-Shot-2015-04-03-at-4.50.31-PM.png">
-	<meta property="article:published_time" content="2015-04-06 13:27:00-07:00">
 </head>
 
 <body>
@@ -76,7 +62,7 @@
 
 
                             <li><a href="http://gpilab.com/downloads/">Downloads</a></li>
-                            <li><a href="http://gpilab.com/documentation/">Documentation</a></li>
+                            <li class="active"><a href="http://gpilab.com/documentation/">Documentation</a></li>
                             <li><a href="http://gpilab.com/community/">Community</a></li>
                             <li><a href="http://gpilab.com/screencasts/">Screencasts</a></li>
                             <li><a href="http://gpilab.com/about/">About</a></li>
@@ -88,17 +74,12 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/images/Screen-Shot-2015-04-03-at-4.50.31-PM.png')">
+        <header class="intro-header" style="background-image: url('/images/documentation_banner.jpg')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Philips Raw Data Reader</h1>
-                        <span class="meta">Posted by
-                                <a href="http://gpilab.com/author/nicholas-zwart.html">Nicholas Zwart</a>
-                             on Mon 06 April 2015
-                        </span>
-                        
+                        <h1>Documentation</h1>
                     </div>
                 </div>
             </div>
@@ -109,49 +90,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <!-- Post Content -->
     <article>
-        <p>The Philips raw data reader node, for MR data, is now available as a binary
-release. Users of the Philips raw data formats can directly import the raw data
-into GPI and start investigating. Thanks to the tenacious efforts of Ryan
-Robison, the reader node supports a plethora of file formats such as .data,
-.list, .lab, .raw, .sin, .par, .xml, .rec, and .cpx at many different release
-levels.  The package releases are available for download on <a
-href="https://github.com/gpilab/philips-data-reader"
-target="_blank">GitHub</a>.</p>
-<h2>Output</h2>
-<p><img alt="fitw75" src="http://gpilab.com/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png" /></p>
-<p>The ReadPhilips node parses the file contents for MR data, converts the data to
-a numpy numeric array and makes it available as an output port.  Depending on
-the input files and application, there may be multiple output datasets
-corresponding to the sampled k-space, noise measurements, etc...  The reader
-also parses any available header information (which is format dependent) and
-populates a python-dictionary object which is also pushed to an output port.  
-This header information can be viewed via the 'dictionquery' node which
-displays python-dictionary information as a simple list.</p>
-<h2>Widgets</h2>
-<p><img alt="fitw75" src="http://gpilab.com/images/ReadPhilipsUI_ex_head-240x300.jpg" /></p>
-<p>The ReadPhilips menu provides an interface to browse for the desired files and
-displays basic file system information and a summary of the header information
-(when available).  The interface also provides options for various minor data
-corrections and the ability to load single coils or slices from the file.</p>
-<h2><a href="/community">Community</a></h2>
-<p>The ReadPhilips node is available to the scientific community as a closed
-source binary package allowing users immediate access to this functionality.
- The source code for this project can be made available to Philips researchers,
-who have signed an NDA, in an effort to foster community development and
-maintenance of the reader as the Philips product software advances.
- This project provides a model for GPI developers to generate reader tools for
-other closed raw data formats.  In this way, the closed source tools can be
-maintained by developers, who have vendor specific access, allowing the tool to
-be updated with product changes.  The end users benefit by moving forward with
-their research without getting tangled up in the proprietary code.</p>
-<p>If you have a GPI node project, you are welcome to submit a link for listing on
-the <a href="/community">community</a> page.</p>
+        <div class="list-group">
+  <a class="list-group-item" href="http://gpi-framework.readthedocs.org/en/develop/"><i class="fa fa-book fa-fw"></i>&nbsp; GPI Documentation</a>
+  <a class="list-group-item" href="https://github.com/gpilab/framework"><i class="fa fa-github fa-fw"></i>&nbsp; GPI Documentation Repository</a>
+</div>
+
+<div class="text-center"><a href='http://docs.gpilab.com/en/develop/?badge=develop'><img src='http://readthedocs.org/projects/gpi-framework/badge/?version=develop' alt='Documentation Status' /></a></div>
     </article>
-
-    <hr>
-
             </div>
         </div>
     </div>
