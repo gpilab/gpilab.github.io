@@ -23,6 +23,9 @@ DEFAULT_PAGINATION = 10
 GITHUB_URL = 'https://github.com/gpilab'
 YOUTUBE_URL= 'http://www.youtube.com/user/gpilab'
 
+# analytics
+GOOGLE_ANALYTICS = 'UA-55259609-4'
+
 # favicon
 EXTRA_PATH_METADATA = {
     'images/favicon.ico': {'path': 'favicon.ico'},
