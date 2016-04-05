@@ -10,7 +10,7 @@ Header_Cover: /images/documentation_banner.jpg
 
 <div class="list-group">
   <a class="list-group-item" href="http://gpi-framework.readthedocs.org/en/develop/"><i class="fa fa-book fa-fw"></i>&nbsp; GPI Documentation</a>
-  <a class="list-group-item" href="https://github.com/gpilab/framework"><i class="fa fa-github fa-fw"></i>&nbsp; GPI Documentation Repository</a>
+  <a class="list-group-item" href="https://github.com/gpilab/framework/tree/develop/doc"><i class="fa fa-github fa-fw"></i>&nbsp; GPI Documentation Repository</a>
 </div>
 
 <div class="text-center"><a href='http://docs.gpilab.com/en/develop/?badge=develop'><img src='http://readthedocs.org/projects/gpi-framework/badge/?version=develop' alt='Documentation Status' /></a></div>
