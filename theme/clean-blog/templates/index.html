@@ -31,8 +31,11 @@
                 </h2>
             </a>
             {% if article.summary %}
-                {{ article.summary|truncate(140) }}
+                {{ article.summary|striptags|truncate(200) }}
             {% endif %}
+
+            <br><br>
+
             <p class="post-meta">Posted by
                 {% for author in article.authors %}
                     <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
