@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.github.io/" rel="alternate"></link><link href="http://gpilab.github.io/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.github.io/</id><updated>2016-02-16T12:56:00-07:00</updated><entry><title>GPI and the BART</title><link href="http://gpilab.github.io/2016/Feb/16/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2016-02-16:2016/Feb/16/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2016-02-16T12:56:00-07:00</updated><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/Feb/16/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:2016/Feb/16/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
 has been used to wrap the &lt;a href="http://mrirecon.github.io/bart/"
 target="_blank"&gt;Berkeley Advanced Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI
 node library for the purpose of allowing GPI users to easily explore and
@@ -96,7 +96,7 @@ convey numeric arrays and k-space coordinates.  In order to pass the data
 between nodes from each library, the data need to be manipulated to fit the
 each node's requirements. This is easily accomplished with the core GPI nodes.
 Lets start with an example of the worst case scenario: the &lt;code&gt;traj&lt;/code&gt; node.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.github.io/images/BARTDataConvention.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The image above shows an example gridded 2D radial trajectory (via the BART
 node library) and a gridded 2D spiral trajectory (via the GPI core library).
 Starting from the top nodes, you can see that the &lt;code&gt;Traj&lt;/code&gt; node produces radial
@@ -136,7 +136,7 @@ nodes in the core library.  The conventions for data between these two
 libraries are different as would be expected between any two libraries that are
 developed independently.  The goal for this example is to show that a cross
 library data transfer may require some extra attention.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.github.io/images/BARTDataConvention_BNI2BART.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention_BNI2BART.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Another approach to this problem would be to integrate these differences into
 the nodes themselves.  An example of this can be seen in the image above.  The
 &lt;code&gt;SpiralCoords&lt;/code&gt; node is generating a trajectory that is reformatted using the
@@ -149,7 +149,7 @@ target="_blank"&gt;GPI-BART node library&lt;/a&gt; installation: the BART compil
 and the GPI node library installation.  Before starting download or clone the
 GPI-BART fork:&lt;/p&gt;
 &lt;p&gt;First (if you haven't already), make a 'gpi' directory in your home directory.
-If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.github.io/2015/Jun/30/installing-node-libraries/"&gt;Installing Node
+If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.com/2015/Jun/30/installing-node-libraries/"&gt;Installing Node
 Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ cd ~/
     $ mkdir ~/gpi
@@ -190,7 +190,7 @@ the default paths then GPI-BART library is ready to go.&lt;/p&gt;
 &lt;p&gt;If you have path modifications in your &lt;code&gt;~/.gpirc&lt;/code&gt; file or the nodes are not
 visible in your library menu, consult the
 &lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;Configuration&lt;/a&gt; docs or check out the
-post on &lt;a href="http://gpilab.github.io/2015/Jun/30/installing-node-libraries/"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
+post on &lt;a href="http://gpilab.com/2015/Jun/30/installing-node-libraries/"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Events&lt;/h2&gt;
 &lt;p&gt;This work has been presented at the &lt;a href="http://www.ismrm.org/workshops/Data16/"&gt;ISMRM Workshop on Data Sampling &amp;amp; Image
 Reconstruction&lt;/a&gt; in Sedona Arizona this
@@ -199,7 +199,7 @@ Exhibition&lt;/a&gt; in Singapore
 this March.&lt;/p&gt;
 &lt;h2&gt;Thanks&lt;/h2&gt;
 &lt;p&gt;We'd like to thanks the BART developers at UC Berkeley for their help in
-building these nodes.&lt;/p&gt;</summary></entry><entry><title>GPI v1 Release</title><link href="http://gpilab.github.io/2016/Jan/13/gpi-v1-release/" rel="alternate"></link><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2016-01-13:2016/Jan/13/gpi-v1-release/</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
+building these nodes.&lt;/p&gt;</summary></entry><entry><title>GPI v1 Release</title><link href="http://gpilab.com/2016/Jan/13/gpi-v1-release/" rel="alternate"></link><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-01-13:2016/Jan/13/gpi-v1-release/</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
 major framework changes with the transition to &lt;a
 href="https://docs.python.org/3/" target="_blank"&gt;Python 3&lt;/a&gt;, packaging via
 &lt;a href="http://anaconda.org" target="_blank"&gt;Anaconda.org&lt;/a&gt;, PyFI API
@@ -255,7 +255,7 @@ href="https://github.com/aganders3/gpi-neurotools" target="_blank"&gt;FSL (FMRIB
 Software Library)&lt;/a&gt; projects.&lt;/p&gt;
 &lt;h3&gt;Download&lt;/h3&gt;
 &lt;p&gt;To view the complete changelog or download the latest release, head over to 
-&lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Editor's Pick!</title><link href="http://gpilab.github.io/2015/Dec/18/editors-pick/" rel="alternate"></link><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2015-12-18:2015/Dec/18/editors-pick/</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
+&lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Editor's Pick!</title><link href="http://gpilab.com/2015/Dec/18/editors-pick/" rel="alternate"></link><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-12-18:2015/Dec/18/editors-pick/</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
 href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
 target="_blank"&gt;"Graphical programming interface: A development environment for
 MRI methods"&lt;/a&gt; has been chosen as one of the &lt;a
@@ -264,7 +264,7 @@ target="_blank"&gt;MRM Editor's Picks&lt;/a&gt; for November!  There is also a s
 interview with Jim Pipe and myself from the folks at &lt;a
 href="http://www.ismrm.org/qa-with-nicholas-zwart-and-james-pipe/"
 target="_blank"&gt;MRM Highlights&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</summary></entry><entry><title>Installing Node Libraries</title><link href="http://gpilab.github.io/2015/Jun/30/installing-node-libraries/" rel="alternate"></link><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.github.io,2015-06-30:2015/Jun/30/installing-node-libraries/</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
+&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</summary></entry><entry><title>Installing Node Libraries</title><link href="http://gpilab.com/2015/Jun/30/installing-node-libraries/" rel="alternate"></link><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.com,2015-06-30:2015/Jun/30/installing-node-libraries/</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
 using new nodes. Whether the library contains nodes and networks you created,
 or code from a collaborator or colleague, installation is the same simple
 process.&lt;/p&gt;
@@ -282,14 +282,14 @@ Since the file is hidden (begins with a &lt;code&gt;.&lt;/code&gt;), you will no
 a normal directory listing; use &lt;code&gt;ls -a&lt;/code&gt; to see it. If this file does
 not exist on your system, you can generate a basic version from the GPI
 "Config" menu.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.github.io/images/Screenshot-2015-02-05-11.21.10-300x80.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/Screenshot-2015-02-05-11.21.10-300x80.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Select "Generate Config File" to create a basic .gpirc file.&lt;/p&gt;
 &lt;p&gt;The default GPI library path (&lt;code&gt;~/gpi/&lt;/code&gt;) is stored in the
 &lt;code&gt;LIB_DIRS&lt;/code&gt; variable within the &lt;code&gt;.gpirc&lt;/code&gt; file. You can amend the
 &lt;code&gt;LIB_DIRS&lt;/code&gt; in your &lt;code&gt;.gpirc&lt;/code&gt; file to tell GPI to look for
 libraries in some other directories, if you prefer. Append (or prepend)
 directories to &lt;code&gt;LIB_DIRS&lt;/code&gt; separated by colons.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitwidth" src="http://gpilab.github.io/images/Screenshot-2015-06-30-14.09.30.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitwidth" src="http://gpilab.com/images/Screenshot-2015-06-30-14.09.30.png" /&gt;&lt;/p&gt;
 &lt;p&gt;My .gpirc file with modified LIB_DIRS to include additional node libraries.&lt;/p&gt;
 &lt;h2&gt;Installing the Updated Core Library&lt;/h2&gt;
 
@@ -366,7 +366,7 @@ changes in your GPI node libraries. Check out the
 &lt;a href="http://docs.gpilab.com"&gt;documentation&lt;/a&gt; for more information, and please &lt;a href="/community"&gt;get
 in touch&lt;/a&gt; if you have questions or if you're
 interested in contributing to the project.
-&lt;h2&gt;&lt;/h2&gt;&lt;/p&gt;</summary></entry><entry><title>Philips Raw Data Reader</title><link href="http://gpilab.github.io/2015/Apr/06/philips-raw-data-reader/" rel="alternate"></link><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2015-04-06:2015/Apr/06/philips-raw-data-reader/</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
+&lt;h2&gt;&lt;/h2&gt;&lt;/p&gt;</summary></entry><entry><title>Philips Raw Data Reader</title><link href="http://gpilab.com/2015/Apr/06/philips-raw-data-reader/" rel="alternate"></link><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-04-06:2015/Apr/06/philips-raw-data-reader/</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
 release. Users of the Philips raw data formats can directly import the raw data
 into GPI and start investigating. Thanks to the tenacious efforts of Ryan
 Robison, the reader node supports a plethora of file formats such as .data,
@@ -375,7 +375,7 @@ levels.  The package releases are available for download on &lt;a
 href="https://github.com/gpilab/philips-data-reader"
 target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.github.io/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png" /&gt;&lt;/p&gt;
 &lt;p&gt;The ReadPhilips node parses the file contents for MR data, converts the data to
 a numpy numeric array and makes it available as an output port.  Depending on
 the input files and application, there may be multiple output datasets
@@ -385,7 +385,7 @@ populates a python-dictionary object which is also pushed to an output port.  
 This header information can be viewed via the 'dictionquery' node which
 displays python-dictionary information as a simple list.&lt;/p&gt;
 &lt;h2&gt;Widgets&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.github.io/images/ReadPhilipsUI_ex_head-240x300.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/ReadPhilipsUI_ex_head-240x300.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;The ReadPhilips menu provides an interface to browse for the desired files and
 displays basic file system information and a summary of the header information
 (when available).  The interface also provides options for various minor data
@@ -402,10 +402,10 @@ maintained by developers, who have vendor specific access, allowing the tool to
 be updated with product changes.  The end users benefit by moving forward with
 their research without getting tangled up in the proprietary code.&lt;/p&gt;
 &lt;p&gt;If you have a GPI node project, you are welcome to submit a link for listing on
-the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>GPI v½ Release</title><link href="http://gpilab.github.io/2015/Feb/27/gpi-v12-release/" rel="alternate"></link><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2015-02-27:2015/Feb/27/gpi-v12-release/</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
+the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>GPI v½ Release</title><link href="http://gpilab.com/2015/Feb/27/gpi-v12-release/" rel="alternate"></link><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-02-27:2015/Feb/27/gpi-v12-release/</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
 &lt;div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;"&gt;
-&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.github.io/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
-&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="http://gpilab.github.io/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
+&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.com/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
+&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="http://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
@@ -433,11 +433,11 @@ community support.&lt;/p&gt;
     &lt;li&gt;Improved HDF5 reader node&lt;/li&gt;
     &lt;li&gt;Added a new Matlab file reader (for old and new HDF5 formats)&lt;/li&gt;
     &lt;li&gt;&lt;strong&gt;Left-mouse-button port-edge-connect!&lt;/strong&gt;&lt;/li&gt;
-    &lt;li&gt;Right-click downstream ports to delete an edge &lt;br&gt;&lt;img class=" size-full wp-image-184 aligncenter" src="http://gpilab.github.io/images/rightclickdelete.gif" alt="rightclickdelete" width="244" height="202" /&gt;&lt;br&gt;&lt;/li&gt;
+    &lt;li&gt;Right-click downstream ports to delete an edge &lt;br&gt;&lt;img class=" size-full wp-image-184 aligncenter" src="http://gpilab.com/images/rightclickdelete.gif" alt="rightclickdelete" width="244" height="202" /&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ul&gt;
-    &lt;li&gt;Node reload; just select a node (or multiple nodes), press Ctrl+R and the node will update and reconnect to up and downstream nodes&lt;br&gt;&lt;img class="alignnone size-full wp-image-182 aligncenter" src="http://gpilab.github.io/images/node_reload.gif" alt="node_reload" width="262" height="212" /&gt;&lt;br&gt;&lt;/li&gt;
+    &lt;li&gt;Node reload; just select a node (or multiple nodes), press Ctrl+R and the node will update and reconnect to up and downstream nodes&lt;br&gt;&lt;img class="alignnone size-full wp-image-182 aligncenter" src="http://gpilab.com/images/node_reload.gif" alt="node_reload" width="262" height="212" /&gt;&lt;br&gt;&lt;/li&gt;
     &lt;li&gt;Auto generate the user library (via the main menu)&lt;/li&gt;
     &lt;li&gt;&lt;code&gt;gpi_make&lt;/code&gt; now does a force recompile on all node .py files&lt;/li&gt;
     &lt;li&gt;&lt;code&gt;LIB_DIRS&lt;/code&gt;, in the &lt;code&gt;.gpirc&lt;/code&gt;, will now search the parent directory for libraries, so now you can easily setup your custom library directory and new libraries will be loaded as they are added
@@ -455,20 +455,20 @@ community support.&lt;/p&gt;
     &lt;li&gt;Removed zlib string compression on StringBox widgets to prevent nodes from segfaulting when using the StringBox in Linux&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p style="text-align: center;"&gt;&lt;/p&gt;</summary></entry><entry><title>New Tutorial Screencasts</title><link href="http://gpilab.github.io/2014/Oct/10/new-tutorial-screencasts/" rel="alternate"></link><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2014-10-10:2014/Oct/10/new-tutorial-screencasts/</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;/p&gt;</summary></entry><entry><title>New Tutorial Screencasts</title><link href="http://gpilab.com/2014/Oct/10/new-tutorial-screencasts/" rel="alternate"></link><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-10-10:2014/Oct/10/new-tutorial-screencasts/</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
 &lt;table style="width:100%"&gt;
   &lt;tr&gt;
 &lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/X9ddBrbFAWU?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-71" 
-src="http://gpilab.github.io/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
+src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
 
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="http://gpilab.github.io/images/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;  
   &lt;tr&gt;
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="http://gpilab.github.io/images/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
 
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="http://gpilab.github.io/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.3: SoS Coil Combine&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.3: SoS Coil Combine&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</summary></entry><entry><title>Whats New in Version 0.2</title><link href="http://gpilab.github.io/2014/Sep/29/whats-new-in-version-02/" rel="alternate"></link><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.github.io,2014-09-29:2014/Sep/29/whats-new-in-version-02/</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
+&lt;/table&gt;</summary></entry><entry><title>Whats New in Version 0.2</title><link href="http://gpilab.com/2014/Sep/29/whats-new-in-version-02/" rel="alternate"></link><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-09-29:2014/Sep/29/whats-new-in-version-02/</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
 Linux virtual machine. The package is built upon the multi-platform Python
 distribution “Anaconda”, from Continuum Analytics. The packages also contains
 an installer for maximum convenience.&lt;/p&gt;
@@ -489,7 +489,7 @@ matplotlib. Pyopencl has been included in the OSX package.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="{filename}/images/walltime1.jpg"&gt;&lt;img
 class="size-medium wp-image-55"
-src="http://gpilab.github.io/images/walltime1-300x39.jpg"
+src="http://gpilab.com/images/walltime1-300x39.jpg"
 alt="More canvas info." width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;More canvas info.&lt;/p&gt;
 &lt;ul&gt;
@@ -502,9 +502,9 @@ alt="More canvas info." width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
   currently available as an estimate based on previous runtimes.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.github.io/images/pdone-300x1161.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="http://gpilab.com/images/pdone-300x1161.jpg"&gt;&lt;img
 class="size-full wp-image-54"
-src="http://gpilab.github.io/images/pdone-300x1161.jpg"
+src="http://gpilab.com/images/pdone-300x1161.jpg"
 alt="Percent done." width="300" height="116" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Percent done.&lt;/p&gt;
 &lt;ul&gt;
@@ -513,14 +513,14 @@ alt="Percent done." width="300" height="116" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;li&gt;Node menus now have a corner grip (arguably one of the most important updates
   in Aughty) and a “Close-all” feature located in the main menu.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.github.io/images/grip-300x1951.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="http://gpilab.com/images/grip-300x1951.jpg"&gt;&lt;img
 class="size-full wp-image-53"
-src="http://gpilab.github.io/images/grip-300x1951.jpg" alt="The
+src="http://gpilab.com/images/grip-300x1951.jpg" alt="The
 corner grip." width="300" height="195" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The corner grip.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://gpilab.github.io/images/closeall-300x49.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="http://gpilab.com/images/closeall-300x49.jpg"&gt;&lt;img
 class="size-full wp-image-50"
-src="http://gpilab.github.io/images/closeall-300x49.jpg"
+src="http://gpilab.com/images/closeall-300x49.jpg"
 alt="Close all menu option." width="350" /&gt;&lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;Close all menu option.&lt;/p&gt;
 &lt;h2&gt;Commandline Interface&lt;/h2&gt;
@@ -543,9 +543,9 @@ alt="Close all menu option." width="350" /&gt;&lt;/a&gt; &lt;/p&gt;
 &lt;li&gt;Nodes are now searched for by scope allowing multiple nodes to have the same
   name.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.github.io/images/library-300x186.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="http://gpilab.com/images/library-300x186.jpg"&gt;&lt;img
 class="size-full wp-image-51"
-src="http://gpilab.github.io/images/library-300x186.jpg"
+src="http://gpilab.com/images/library-300x186.jpg"
 alt="2-level library scope." width="400" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2-level library scope.&lt;/p&gt;
 &lt;h2&gt;Network File Upgrade (v2)&lt;/h2&gt;
