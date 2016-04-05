@@ -132,6 +132,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
+                    {% if GITHUB_URL %}
                         <li>
                             <a href="{{ GITHUB_URL }}">
                                 <span class="fa-stack fa-lg">
@@ -140,6 +141,8 @@
                                 </span>
                             </a>
                         </li>
+                    {% endif %}
+                    {% if YOUTUBE_URL %}
                         <li>
                             <a href="{{ YOUTUBE_URL }}">
                                 <span class="fa-stack fa-lg">
@@ -148,10 +151,26 @@
                                 </span>
                             </a>
                         </li>
+                    {% endif %}
+                    {% if DOCUMENTATION_URL %}
+                        <li>
+                            <a href="{{ DOCUMENTATION_URL }}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    {% endif %}
                     </ul>
 
                     <p class="copyright text-muted">
-                        &copy; Copyright 2016 Nicholas Zwart, Jim Pipe, Ashley Anderson
+                    {% if FOOTER_TEXT %}
+                    {{ FOOTER_TEXT }}
+                    {% endif %}
+                    {% if COPYRIGHT %}
+                    &copy; Copyright {{ COPYRIGHT }}
+                    {% endif %}
                     </p>
 
                 </div>
