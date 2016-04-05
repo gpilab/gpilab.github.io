@@ -8,6 +8,7 @@ SITENAME = 'gpilab.com'
 SITETITLE = 'GPI'
 SITESUBTITLE = 'Graphical Programming Interface'
 SITEURL = ''
+STATIC_PATHS = ["images", "static"]
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
@@ -30,7 +31,7 @@ GOOGLE_ANALYTICS = 'UA-55259609-4'
 EXTRA_PATH_METADATA = {
     'images/favicon.ico': {'path': 'favicon.ico'},
     'images/favicon.png': {'path': 'favicon.png'},
-    'CNAME':{'path': 'CNAME'}
+    'static/CNAME':{'path': 'CNAME'}
 }
 
 # Uncomment following line if you want document-relative URLs when developing
