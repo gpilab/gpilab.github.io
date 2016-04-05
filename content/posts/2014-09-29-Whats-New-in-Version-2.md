@@ -25,7 +25,7 @@ matplotlib. Pyopencl has been included in the OSX package.
 * The status bar now contains the canvas walltime and total port memory held by
   the canvas.
 
-<a href="{filename}/images/walltime1.jpg"><img
+<a href="{filename}/images/walltime1-300x39.jpg"><img
 class="size-medium wp-image-55"
 src="{filename}/images/walltime1-300x39.jpg"
 alt="More canvas info." width="500" /></a>
