@@ -66,5 +66,6 @@ href="https://github.com/aganders3/gpi-neurotools" target="_blank">FSL (FMRIB
 Software Library)</a> projects.
 
 ### Download
-To view the complete changelog or download the latest release, head over to 
-[gpilab.com/downloads](/downloads).
+For more information about the updates check out the
+[changelog](http://gpi-framework.readthedocs.org/en/develop/CHANGELOG.html) or
+just download the latest release at [gpilab.com/downloads](/downloads).
