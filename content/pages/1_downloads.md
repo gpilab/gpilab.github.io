@@ -83,7 +83,9 @@ upgrading to a newer version of GPI from GPI v0.5 or older, move (or remove)
 the existing installation by executing the following command in a terminal
 window as root.
 
-> `$ sudo mv /opt/gpi /opt/gpi.old`
+```
+$ sudo mv /opt/gpi /opt/gpi.old
+```
 
 -----------
 
@@ -103,7 +105,9 @@ To install the OSX app, download and open the `.dmg` file, then drag the
 In order to add the `gpi_make` command and the anaconda python suite to your
 environment, add the following to your `~/.bashrc`.
 
-> PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"
+```
+PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"
+```
 
 -----------
 
@@ -124,7 +128,7 @@ After downloading and opening the GPI `.dmg` bundle, depending on the security
 settings, the Gatekeeper may require an extra acknowledgement before allowing
 installation. This can be granted in the
 
-> System Preferences → Security &amp; Privacy → Allow apps...
+`System Preferences → Security & Privacy → Allow apps...`
 
 preferences menu. Then continue on to the guided installation.
 
@@ -136,7 +140,9 @@ target="_blank">xcode commandline</a> tools.  The `gpi` and `gpi_make` commands
 can be added to your path by adding the following line to your shell config
 file (i.e. `~/.bashrc`).
 
-> PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"
+```
+PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"
+```
 
 -----------
 
@@ -144,11 +150,15 @@ file (i.e. `~/.bashrc`).
 To use the install script `GPI_Install_Latest-rc.sh`, first make sure the
 script is executable by entering the following command in a terminal:
 
-> $ chmod a+x GPI_Install_Latest-rc.sh
+```
+$ chmod a+x GPI_Install_Latest-rc.sh
+```
 
 Then run the script with a path to the desired install location:
 
-> $ GPI_Install_Latest-rc.sh ~/gpi_stack
+```
+$ GPI_Install_Latest-rc.sh ~/gpi_stack
+```
 
 -----------
 
@@ -161,6 +171,8 @@ VMware compatible player.
 To compile C++ extension modules in Ubuntu linux, install g++ with the
 following command:
 
-> `$ sudo apt-get install build-essential`
+```
+$ sudo apt-get install build-essential
+```
 
 The password for the default user is `gpilab`.
