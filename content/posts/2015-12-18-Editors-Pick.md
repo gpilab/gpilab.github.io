@@ -1,7 +1,7 @@
 Title:  Editor's Pick!
 Date:   2015-12-18 20:30:00
 Author: Nicholas Zwart
-Header_Cover: http://www.ismrm.org/wp-content/uploads/mrm-highlights-logo-2-4.png
+Header_Cover: /images/editorspick.jpg
 
 The GPI article entitled <a
 href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
