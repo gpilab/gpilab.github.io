@@ -164,9 +164,10 @@ GPI_VM_1.0.0-rc.zip<br>1.2GB
 upgrading to a newer version of GPI from GPI v0.5 or older, move (or remove)
 the existing installation by executing the following command in a terminal
 window as root.</p>
-<blockquote>
-<p><code>$ sudo mv /opt/gpi /opt/gpi.old</code></p>
-</blockquote>
+<div class="highlight"><pre><span></span>$ sudo mv /opt/gpi /opt/gpi.old
+</pre></div>
+
+
 <hr />
 <h2><a name="MinHardware"></a> Minimum Hardware</h2>
 <p>For native installs it is recommended to use at least a dual processor system
@@ -180,9 +181,10 @@ target="_blank">version 8</a>.</p>
 <code>GPI.app</code> to the <code>/Applications</code> folder (which is linked in the <code>.dmg</code> image).
 In order to add the <code>gpi_make</code> command and the anaconda python suite to your
 environment, add the following to your <code>~/.bashrc</code>.</p>
-<blockquote>
-<p>PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"</p>
-</blockquote>
+<div class="highlight"><pre><span></span><span class="x">PATH=&quot;/Applications/GPI.app/Contents/Resources/miniconda/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x">&quot;</span>
+</pre></div>
+
+
 <hr />
 <h3>Installation Notes</h3>
 <ul>
@@ -199,9 +201,7 @@ the package to be opened in the <em>Security &amp; Privacy</em> preferances pane
 <p>After downloading and opening the GPI <code>.dmg</code> bundle, depending on the security
 settings, the Gatekeeper may require an extra acknowledgement before allowing
 installation. This can be granted in the</p>
-<blockquote>
-<p>System Preferences → Security &amp; Privacy → Allow apps...</p>
-</blockquote>
+<p><code>System Preferences → Security &amp; Privacy → Allow apps...</code></p>
 <p>preferences menu. Then continue on to the guided installation.</p>
 <p>To compile C++ extension modules, install <a
 href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12&amp;uo=4"
@@ -210,20 +210,23 @@ href="https://developer.apple.com/library/mac/technotes/tn2339/_index.html"
 target="_blank">xcode commandline</a> tools.  The <code>gpi</code> and <code>gpi_make</code> commands
 can be added to your path by adding the following line to your shell config
 file (i.e. <code>~/.bashrc</code>).</p>
-<blockquote>
-<p>PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"</p>
-</blockquote>
+<div class="highlight"><pre><span></span><span class="x">PATH=&quot;/Applications/GPI.app/Contents/Resources/miniconda/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x">&quot;</span>
+</pre></div>
+
+
 <hr />
 <h2>Install Script</h2>
 <p>To use the install script <code>GPI_Install_Latest-rc.sh</code>, first make sure the
 script is executable by entering the following command in a terminal:</p>
-<blockquote>
-<p>$ chmod a+x GPI_Install_Latest-rc.sh</p>
-</blockquote>
+<div class="highlight"><pre><span></span>$ chmod a+x GPI_Install_Latest-rc.sh
+</pre></div>
+
+
 <p>Then run the script with a path to the desired install location:</p>
-<blockquote>
-<p>$ GPI_Install_Latest-rc.sh ~/gpi_stack</p>
-</blockquote>
+<div class="highlight"><pre><span></span>$ GPI_Install_Latest-rc.sh ~/gpi_stack
+</pre></div>
+
+
 <hr />
 <h2>Virtual Machine</h2>
 <p>Download and unzip the GPI Stack <code>.zip</code> file.  This will create a directory
@@ -231,9 +234,10 @@ with the virtual machine contents.  Open the contained <code>.vmx</code> file wi
 VMware compatible player.</p>
 <p>To compile C++ extension modules in Ubuntu linux, install g++ with the
 following command:</p>
-<blockquote>
-<p><code>$ sudo apt-get install build-essential</code></p>
-</blockquote>
+<div class="highlight"><pre><span></span>$ sudo apt-get install build-essential
+</pre></div>
+
+
 <p>The password for the default user is <code>gpilab</code>.</p>
     </article>
             </div>
