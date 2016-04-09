@@ -49,7 +49,8 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  /*color: #0085a1;*/
+  color: #00aacc;
 }
 a img:hover,
 a img:focus {
