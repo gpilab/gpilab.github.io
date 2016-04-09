@@ -52,6 +52,21 @@ if [ -z "$SIZE" ]; then
     help
 fi
 
+# check inital size
 $IDENT $IMAGE
-$CVT $IMAGE -define jpeg:extent=${SIZE}kb $IMAGE
-$IDENT $IMAGE
+
+# convert to jpg if necessary by changing the output extension
+filename=$(basename "$IMAGE")
+directory=$(dirname "$IMAGE")
+extension="${filename##*.}"
+filename="${filename%.*}"
+OUTPUT=$IMAGE
+if [ "$extension" != "jpg" ]; then
+    OUTPUT="$directory/${filename}.jpg"
+    echo "converting to jpg > $OUTPUT"
+    $CVT $IMAGE $OUTPUT
+    IMAGE=$OUTPUT
+fi
+
+$CVT $IMAGE -define jpeg:extent=${SIZE}kb $OUTPUT
+$IDENT $OUTPUT
