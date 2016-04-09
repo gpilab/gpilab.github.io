@@ -224,7 +224,8 @@ just download the latest release at <a href="/downloads">gpilab.com/downloads</a
     <!-- <script src="http://gpilab.com/theme/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
-        $( ".intro-header" ).onload = titlefade();
+        //$( ".intro-header" ).onload = titlefade();
+        document.onload = titlefade();
         function titlefade(){
             /* these classes start out with zero opacity */
             $( ".intro-header-overlay" ).fadeTo(700, 1)
