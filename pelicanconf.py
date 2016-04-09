@@ -40,7 +40,7 @@ EXTENDED_SITEMAP_PLUGIN = {
 # links
 GITHUB_URL = 'https://github.com/gpilab'
 YOUTUBE_URL= 'http://www.youtube.com/user/gpilab'
-DOCUMENTATION_URL='http://gpi-framework.readthedocs.org/en/develop/'
+DOCUMENTATION_URL='http://docs.gpilab.com'
 
 # footer
 COPYRIGHT = '2016 Nicholas Zwart, Jim Pipe, Ashley Anderson'
