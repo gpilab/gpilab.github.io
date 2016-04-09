@@ -46,9 +46,6 @@ DOCUMENTATION_URL='http://docs.gpilab.com'
 COPYRIGHT = '2016 Nicholas Zwart, Jim Pipe, Ashley Anderson'
 #FOOTER_TEXT = 'hello'
 
-# analytics
-GOOGLE_ANALYTICS = 'UA-55259609-4'
-
 # favicon
 EXTRA_PATH_METADATA = {
     'images/favicon.ico': {'path': 'favicon.ico'},
