@@ -208,8 +208,8 @@ references GPI, please tell us at <a href="mailto:gpi@gpilab.com">gpi@gpilab.com
     <script>
         $( ".intro-header" ).onload = titlefade();
         function titlefade(){
-            $( ".intro-header-overlay" ).hide(0)
-            $( ".intro-header-overlay" ).fadeIn(700)
+            /* these classes start out with zero opacity */
+            $( ".intro-header-overlay" ).fadeTo(700, 1)
         }
     </script>
 

@@ -226,8 +226,8 @@ just download the latest release at <a href="/downloads">gpilab.com/downloads</a
     <script>
         $( ".intro-header" ).onload = titlefade();
         function titlefade(){
-            $( ".intro-header-overlay" ).hide(0)
-            $( ".intro-header-overlay" ).fadeIn(700)
+            /* these classes start out with zero opacity */
+            $( ".intro-header-overlay" ).fadeTo(700, 1)
         }
     </script>
 

@@ -319,8 +319,8 @@ The Free Software Foundation may publish revised and/or new versions of the GNU 
     <script>
         $( ".intro-header" ).onload = titlefade();
         function titlefade(){
-            $( ".intro-header-overlay" ).hide(0)
-            $( ".intro-header-overlay" ).fadeIn(700)
+            /* these classes start out with zero opacity */
+            $( ".intro-header-overlay" ).fadeTo(700, 1)
         }
     </script>
 

@@ -182,8 +182,8 @@ src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" 
     <script>
         $( ".intro-header" ).onload = titlefade();
         function titlefade(){
-            $( ".intro-header-overlay" ).hide(0)
-            $( ".intro-header-overlay" ).fadeIn(700)
+            /* these classes start out with zero opacity */
+            $( ".intro-header-overlay" ).fadeTo(700, 1)
         }
     </script>
 
