@@ -67,5 +67,5 @@ Software Library)</a> projects.
 
 ### Download
 For more information about the updates check out the
-[changelog](http://gpi-framework.readthedocs.org/en/develop/CHANGELOG.html) or
+[changelog](http://docs.gpilab.com/en/develop/CHANGELOG.html) or
 just download the latest release at [gpilab.com/downloads](/downloads).
