@@ -47,6 +47,11 @@ reported the same issue, check the issue tracker for each of the GPI projects:
 The following work makes use of the GPI project. If you have a publication that
 references GPI, please tell us at [gpi@gpilab.com](mailto:gpi@gpilab.com).
 
+* Hu, H. H., Li, Z., Pokorney, A. L., Chia, J. M., Stefani, N., Pipe, J. G., &
+  Miller, J. H.<br>
+  **Assessment of Cerebral Blood Perfusion Reserve with Acetazolamide Using 3D
+  Spiral ASL MRI: Preliminary Experience in Pediatric Patients.**<br> Magn
+  Reson Imag. 2016. DOI: 10.1016/j.mri.2016.08.019
 * Schär M, Gabr RE, El-Sharkawy AM, Steinberg A, Bottomley PA, Weiss RG.<br>
   **Two repetition time saturation transfer (TwiST) with spill-over correction
   to measure creatine kinase reaction rates in human hearts.**<br> J Cardiovasc

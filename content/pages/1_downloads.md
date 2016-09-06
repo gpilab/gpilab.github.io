@@ -37,13 +37,13 @@ GPI_1.0.0-rc.dmg * <br>364MB
 </div>
 
 <div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_Install_Latest-rc.sh">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Install_Latest.sh">
 <div class="text-center">
 <img src="/images/script_dl.jpg" width="100%" />
 <header>
 <h3>Ubuntu 12.04+<br>&<br>OSX 10.7+</h3>
 </header>
-GPI_Install_Latest-rc.sh ** <br>3.9KB
+GPI_Install_Latest.sh ** <br>4.5KB
 </div>
 </a>
 </div>
