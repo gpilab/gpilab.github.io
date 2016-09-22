@@ -49,13 +49,13 @@ GPI_Install_Latest.sh ** <br>4.5KB
 </div>
 
 <div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_VM_1.0.0-rc.zip">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Stack_1.0.2.vmwarevm.zip">
 <div class="text-center">
 <img src="/images/vm_dl.jpg" width="100%" />
 <header>
 <h3>VMware<br>(Ubuntu 15.10)</h3>
 </header>
-GPI_VM_1.0.0-rc.zip<br>1.2GB
+GPI_VM_1.0.2.zip<br>1.2GB
 </div>
 </a>
 </div>
