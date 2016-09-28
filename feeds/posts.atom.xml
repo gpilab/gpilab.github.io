@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2016-02-16T12:56:00-07:00</updated><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2016-09-27T15:28:00-07:00</updated><entry><title>GPI on Windows</title><link href="http://gpilab.com/2016/09/gpi-on-windows/" rel="alternate"></link><updated>2016-09-27T15:28:00-07:00</updated><author><name>Akshay Bakhru</name></author><id>tag:gpilab.com,2016-09-27:2016/09/gpi-on-windows/</id><summary type="html">&lt;p&gt;This is a quick step by step guide for getting GPI installed for native use on
+Windows!  This capability is made possible through the new "Windows
+Subsystem for Linux".  The guide starts with the installation and verification
+of Ubuntu Linux and then provides steps for installing GPI.  This is an
+exciting step forward for GPI users and developers.&lt;/p&gt;
+&lt;h1&gt;Installing the Linux Bash Shell on Windows&lt;/h1&gt;
+&lt;h2&gt;Ensure you are running the right Windows 10 version&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;You have to have the 64-bit build of Windows 10&lt;/li&gt;
+&lt;li&gt;You should have the Windows 10 anniversary update or higher. To check the
+   version type “About your PC” in the start menu and press “Enter”. Version
+   should be 1607 or higher (shown in the about window below)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_1_settings.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Enable developer mode&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the Settings app and head to Update &amp;amp; Security &amp;gt; For Developers&lt;/li&gt;
+&lt;li&gt;Enable Developer Mode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_2_devmode.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Enable the “Windows Subsystem for Linux (Beta)”&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the Control Panel, click “Programs,” and click “Turn Windows Features
+   On or Off”&lt;/li&gt;
+&lt;li&gt;Enable the “Windows Subsystem for Linux (Beta)” option in the list here and
+   click “OK.”&lt;/li&gt;
+&lt;li&gt;After you do, you’ll be prompted to reboot your computer. Click “Restart
+   Now” to reboot your computer and Windows 10 will install the new feature.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_3_subsys.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Install&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;After your computer restarts, click the Start button (or press the Windows
+   key), type “bash”, and press “Enter.”&lt;/li&gt;
+&lt;li&gt;The first time you run the bash.exe file, you’ll be prompted to accept the
+   terms of service.&lt;/li&gt;
+&lt;li&gt;The command will then download the “Bash on Ubuntu on Windows” application
+   from the Windows Store.&lt;/li&gt;
+&lt;li&gt;You’ll be asked to create a user account and password for use in the Bash
+   environment.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_5_useradd.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Run the bash shell&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Now you have a full command-line bash shell based on Ubuntu.&lt;/li&gt;
+&lt;li&gt;To open the Bash shell, just open your Start menu and search for “bash” or
+   “Ubuntu.”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_6_bash.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Some tips (Installing packages and accessing windows dirs.)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;You can use Ubuntu’s apt-get command to install software from Ubuntu’s
+   repositories.&lt;/li&gt;
+&lt;li&gt;Install an Application Package: sudo apt-get install packagename (Replace
+   “packagename” with the package’s name.)&lt;/li&gt;
+&lt;li&gt;Windows drives will be available in the “mnt” folder&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_7_mnt.jpg" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;Enable GUI app support for Linux Shell&lt;/h1&gt;
+&lt;p&gt;Microsoft still does not support graphical applications in Bash on Windows.
+However, Microsoft built an entire “Windows Subsystem for Linux” that allows
+Windows 10 to natively run Linux applications, even graphical ones. The only
+missing piece is an X server that allows those graphical applications to appear
+on your Windows desktop. This is basically the same technique people would use
+to run graphical Linux desktop applications over a network. Please note: Not
+all Linux GUI applications might work with this, but it works for most, and it
+works great with GPI.&lt;/p&gt;
+&lt;h2&gt;Download and install “Xming X server” for windows&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The installer is available here: https://sourceforge.net/projects/xming/&lt;/li&gt;
+&lt;li&gt;Download and install it on your Windows 10 PC&lt;/li&gt;
+&lt;li&gt;Just use the default settings and it’ll work fine&lt;/li&gt;
+&lt;li&gt;Launch Xming and it will appear in your system tray, running in the
+   background and waiting for you to launch a graphical Linux program.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_8_xming.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Try a graphical application&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install Firefox using below command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install firefox&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After installation launch Firefox using the below commands&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;export DISPLAY=:0&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;firefox&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_9_firefox.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Install Anaconda&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In Firefox launched above, download the Linux installer from here&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.continuum.io/downloads#linux"&gt;https://www.continuum.io/downloads#linux&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run below command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash ~/Downloads/Anaconda3-4.1.1-Linux-x86_64.sh&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select a location to install&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Accept the option to add the Anaconda directory to your bash shell &lt;code&gt;PATH&lt;/code&gt;
+   environment variable&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Verify the Install&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the Anaconda folder&lt;/li&gt;
+&lt;li&gt;Check that python 3.x is installed in the packages&lt;/li&gt;
+&lt;li&gt;Check if conda is also available&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_10_conda.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Install GPI via Conda&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the below command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;conda install -c https://conda.anaconda.org/GPI gpi&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you get the below errors, follow the sub steps&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_11_error.jpg" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This error is also shown if higher versions of numpy and python are
+  installed&lt;/li&gt;
+&lt;li&gt;Remove the bottleneck package using below command conda remove bottleneck&lt;/li&gt;
+&lt;li&gt;Repeat step a to install GPI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also install any other packages like core nodes&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;conda install -c https://conda.anaconda.org/GPI gpi-core-nodes&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check GPI config as shown here:
+   &lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;http://docs.gpilab.com/en/develop/config.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_12_gpiconf.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Launch the GPI GUI&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;export DISPLAY=:0 gpi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_13_gpi.jpg" /&gt;
+&lt;img alt="fitw75" src="http://gpilab.com/images/win_14_gpi.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
 has been used to wrap the &lt;a href="http://mrirecon.github.io/bart/"
 target="_blank"&gt;Berkeley Advanced Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI
 node library for the purpose of allowing GPI users to easily explore and
