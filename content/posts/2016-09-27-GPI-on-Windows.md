@@ -7,7 +7,7 @@ Header_Cover: /images/win_banner.jpeg
 > develop our MR methods on Windows and therefore have limited experience
 > with this.  Fortunately, the nice folks at Philips who develop in GPI have
 > taken it upon themselves to forge a path.  These instructions represent a
-> first step onto the Windows platform, so we are interested in getting your
+> first step onto the Windows platform, so we are interested in getting
 > feedback about your experience with this.  Let us know at gpi@gpilab.com.
 >
 > -- Nick Zwart
