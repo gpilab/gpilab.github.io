@@ -3,7 +3,13 @@ Date: 2016-09-27 15:28:00
 Author: Akshay Bakhru
 Header_Cover: /images/win_banner.jpeg
 
-# Install the Linux Bash Shell on Windows
+This is a quick step by step guide for getting GPI installed for native use on
+Windows!  This capability is made possible through the new "Windows
+Subsystem for Linux".  The guide starts with the installation and verification
+of Ubuntu Linux and then provides steps for installing GPI.  This is an
+exciting step forward for GPI users and developers.
+
+# Installing the Linux Bash Shell on Windows
 
 ## Ensure you are running the right Windows 10 version
 1. You have to have the 64-bit build of Windows 10
