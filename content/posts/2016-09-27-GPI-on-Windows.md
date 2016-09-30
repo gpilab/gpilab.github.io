@@ -158,7 +158,8 @@ works great with GPI.
 
 ## Launch the GPI GUI
 
-`export DISPLAY=:0 gpi`
+`export DISPLAY=:0` <br>
+`gpi`
 
 ![fitw75]({filename}/images/win_13_gpi.jpg)
 ![fitw75]({filename}/images/win_14_gpi.jpg)
