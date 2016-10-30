@@ -47,6 +47,9 @@ reported the same issue, check the issue tracker for each of the GPI projects:
 The following work makes use of the GPI project. If you have a publication that
 references GPI, please tell us at [gpi@gpilab.com](mailto:gpi@gpilab.com).
 
+* Robison RK, Anderson AG III, Pipe JG.<br>
+  **Three-dimensional ultrashort echo-time imaging using a FLORET trajectory**<br>
+  Magn Reson Imag. 2016. DOI: 10.1002/mrm.26500
 * Hu, H. H., Li, Z., Pokorney, A. L., Chia, J. M., Stefani, N., Pipe, J. G., &
   Miller, J. H.<br>
   **Assessment of Cerebral Blood Perfusion Reserve with Acetazolamide Using 3D
