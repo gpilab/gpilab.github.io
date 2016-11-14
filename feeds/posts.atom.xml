@@ -151,7 +151,15 @@ works great with GPI.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;export DISPLAY=:0&lt;/code&gt; &lt;br&gt;
 &lt;code&gt;gpi&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_13_gpi.jpg" /&gt;
-&lt;img alt="fitw75" src="http://gpilab.com/images/win_14_gpi.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
+&lt;img alt="fitw75" src="http://gpilab.com/images/win_14_gpi.jpg" /&gt;&lt;/p&gt;
+&lt;h1&gt;Troubleshooting&lt;/h1&gt;
+&lt;p&gt;If you've encountered any bugs or issues during the installation or when
+running GPI, check out the &lt;a href="https://github.com/gpilab/framework/issues"&gt;issue
+tracker&lt;/a&gt; for potential solutions or
+help. If you have encountered any solutions to those problems or would like to
+share an issue that you've fixed, a post on the &lt;a href="https://github.com/gpilab/framework/issues"&gt;issue
+tracker&lt;/a&gt; would be much appreciated
+:).&lt;/p&gt;</summary></entry><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
 has been used to wrap the &lt;a href="http://mrirecon.github.io/bart/"
 target="_blank"&gt;Berkeley Advanced Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI
 node library for the purpose of allowing GPI users to easily explore and
