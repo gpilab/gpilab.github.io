@@ -164,4 +164,11 @@ works great with GPI.
 ![fitw75]({filename}/images/win_13_gpi.jpg)
 ![fitw75]({filename}/images/win_14_gpi.jpg)
 
-
+# Troubleshooting
+If you've encountered any bugs or issues during the installation or when
+running GPI, check out the [issue
+tracker](https://github.com/gpilab/framework/issues) for potential solutions or
+help. If you have encountered any solutions to those problems or would like to
+share an issue that you've fixed, a post on the [issue
+tracker](https://github.com/gpilab/framework/issues) would be much appreciated
+:).
