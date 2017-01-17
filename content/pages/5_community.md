@@ -27,6 +27,8 @@ provide new algorithms, visualization and I/O.
     Nodes that wrap the Berkeley Advanced Reconstruction Toolkit.
 * **[gpi-neurotools](https://github.com/aganders3/gpi-neurotools)**<br>
     For wrapping tools that use the NIfTI file format (e.g. FSL).
+* **[Pulseq-GPI](https://github.com/sravan953/pulseq-gpi)**<br>
+    A Python language based implementation of Pulseq in GPI Lab.
 * **Community Libraries**<br>
     If you, or someone you know, is interested in contributing to the list of
     known GPI node libraries, let us know by emailing us at
