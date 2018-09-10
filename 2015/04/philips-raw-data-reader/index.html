@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>gpilab.com - Archives</title>
+        <title>gpilab.com</title>
 
             <link href="http://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="http://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="http://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +34,21 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-		<meta property="og:locale" content="en">
+
+
+
+
+
+			<meta property="og:locale" content="en">
 		<meta property="og:site_name" content="gpilab.com">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="http://gpilab.com/2015/04/philips-raw-data-reader/">
+	<meta property="og:title" content="Philips Raw Data Reader">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="http://gpilab.com//images/Screen-Shot-2015-04-03-at-4.50.31-PM.png">
+	<meta property="article:published_time" content="2015-04-06 13:27:00-07:00">
 </head>
 
 <body>
@@ -69,12 +83,17 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/images/banner.jpg')">
+        <header class="intro-header" style="background-image: url('/images/Screen-Shot-2015-04-03-at-4.50.31-PM.png')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Archives for gpilab.com</h1>
+                        <h1>Philips Raw Data Reader</h1>
+                        <span class="meta">Posted by
+                                <a href="http://gpilab.com/author/nicholas-zwart.html">Nicholas Zwart</a>
+                             on Mon 06 April 2015
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -85,27 +104,49 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <dl>
-            <dt>Tue 27 September 2016</dt>
-            <dd><a href="http://gpilab.com/2016/09/gpi-on-windows/">GPI on Windows?!</a></dd>
-            <dt>Tue 16 February 2016</dt>
-            <dd><a href="http://gpilab.com/2016/02/gpi-and-the-bart/">GPI and the BART</a></dd>
-            <dt>Wed 13 January 2016</dt>
-            <dd><a href="http://gpilab.com/2016/01/gpi-v1-release/">GPI v1 Release</a></dd>
-            <dt>Fri 18 December 2015</dt>
-            <dd><a href="http://gpilab.com/2015/12/editors-pick/">Editor's Pick!</a></dd>
-            <dt>Tue 30 June 2015</dt>
-            <dd><a href="http://gpilab.com/2015/06/installing-node-libraries/">Installing Node Libraries</a></dd>
-            <dt>Mon 06 April 2015</dt>
-            <dd><a href="http://gpilab.com/2015/04/philips-raw-data-reader/">Philips Raw Data Reader</a></dd>
-            <dt>Fri 27 February 2015</dt>
-            <dd><a href="http://gpilab.com/2015/02/gpi-v-12-release/">GPI v½ Release</a></dd>
-            <dt>Fri 10 October 2014</dt>
-            <dd><a href="http://gpilab.com/2014/10/new-tutorial-screencasts/">New Tutorial Screencasts</a></dd>
-            <dt>Mon 29 September 2014</dt>
-            <dd><a href="http://gpilab.com/2014/09/whats-new-in-version-02/">Whats New in Version 0.2</a></dd>
-        <hr>
-    </dl>
+    <!-- Post Content -->
+    <article>
+        <p>The Philips raw data reader node, for MR data, is now available as a binary
+release. Users of the Philips raw data formats can directly import the raw data
+into GPI and start investigating. Thanks to the tenacious efforts of Ryan
+Robison, the reader node supports a plethora of file formats such as .data,
+.list, .lab, .raw, .sin, .par, .xml, .rec, and .cpx at many different release
+levels.  The package releases are available for download on <a
+href="https://github.com/gpilab/philips-data-reader"
+target="_blank">GitHub</a>.</p>
+<h2>Output</h2>
+<p><img alt="fitw75" src="http://gpilab.com/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png"></p>
+<p>The ReadPhilips node parses the file contents for MR data, converts the data to
+a numpy numeric array and makes it available as an output port.  Depending on
+the input files and application, there may be multiple output datasets
+corresponding to the sampled k-space, noise measurements, etc...  The reader
+also parses any available header information (which is format dependent) and
+populates a python-dictionary object which is also pushed to an output port.  
+This header information can be viewed via the 'dictionquery' node which
+displays python-dictionary information as a simple list.</p>
+<h2>Widgets</h2>
+<p><img alt="fitw75" src="http://gpilab.com/images/ReadPhilipsUI_ex_head-240x300.jpg"></p>
+<p>The ReadPhilips menu provides an interface to browse for the desired files and
+displays basic file system information and a summary of the header information
+(when available).  The interface also provides options for various minor data
+corrections and the ability to load single coils or slices from the file.</p>
+<h2><a href="/community">Community</a></h2>
+<p>The ReadPhilips node is available to the scientific community as a closed
+source binary package allowing users immediate access to this functionality.
+ The source code for this project can be made available to Philips researchers,
+who have signed an NDA, in an effort to foster community development and
+maintenance of the reader as the Philips product software advances.
+ This project provides a model for GPI developers to generate reader tools for
+other closed raw data formats.  In this way, the closed source tools can be
+maintained by developers, who have vendor specific access, allowing the tool to
+be updated with product changes.  The end users benefit by moving forward with
+their research without getting tangled up in the proprietary code.</p>
+<p>If you have a GPI node project, you are welcome to submit a link for listing on
+the <a href="/community">community</a> page.</p>
+    </article>
+
+    <hr>
+
             </div>
         </div>
     </div>

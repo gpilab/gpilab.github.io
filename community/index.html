@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>gpilab.com - Archives</title>
+        <title>Community</title>
 
             <link href="http://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
 
@@ -69,12 +69,12 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/images/banner.jpg')">
+        <header class="intro-header" style="background-image: url('/images/community_banner.jpg')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Archives for gpilab.com</h1>
+                        <h1>Community</h1>
                     </div>
                 </div>
             </div>
@@ -85,27 +85,81 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <dl>
-            <dt>Tue 27 September 2016</dt>
-            <dd><a href="http://gpilab.com/2016/09/gpi-on-windows/">GPI on Windows?!</a></dd>
-            <dt>Tue 16 February 2016</dt>
-            <dd><a href="http://gpilab.com/2016/02/gpi-and-the-bart/">GPI and the BART</a></dd>
-            <dt>Wed 13 January 2016</dt>
-            <dd><a href="http://gpilab.com/2016/01/gpi-v1-release/">GPI v1 Release</a></dd>
-            <dt>Fri 18 December 2015</dt>
-            <dd><a href="http://gpilab.com/2015/12/editors-pick/">Editor's Pick!</a></dd>
-            <dt>Tue 30 June 2015</dt>
-            <dd><a href="http://gpilab.com/2015/06/installing-node-libraries/">Installing Node Libraries</a></dd>
-            <dt>Mon 06 April 2015</dt>
-            <dd><a href="http://gpilab.com/2015/04/philips-raw-data-reader/">Philips Raw Data Reader</a></dd>
-            <dt>Fri 27 February 2015</dt>
-            <dd><a href="http://gpilab.com/2015/02/gpi-v-12-release/">GPI v½ Release</a></dd>
-            <dt>Fri 10 October 2014</dt>
-            <dd><a href="http://gpilab.com/2014/10/new-tutorial-screencasts/">New Tutorial Screencasts</a></dd>
-            <dt>Mon 29 September 2014</dt>
-            <dd><a href="http://gpilab.com/2014/09/whats-new-in-version-02/">Whats New in Version 0.2</a></dd>
-        <hr>
-    </dl>
+    <article>
+        <h2>Node Libraries</h2>
+<p>GPI's functionality is easily extended through its node libraries. Nodes can
+provide new algorithms, visualization and I/O.</p>
+<ul>
+<li><strong><a href="https://github.com/gpilab/core-nodes">core-nodes</a></strong><br>
+    The core nodes are a collection of basic data manipulation and
+    visualization algorithms. This node library is the "default library"
+    packaged with the GPI Stack.</li>
+<li><strong><a href="https://github.com/gpilab/philips-data-reader">philips-data-reader</a></strong><br>
+    The philips-data-reader project provides compiled binary packages (closed
+    source) of the ReadPhilips node for reading raw MR data.</li>
+<li><strong><a href="https://github.com/hansenms/gpi_ismrmrd/tree/master/ismrmrd/GPI">gpi-ismrmrd</a></strong><br>
+    Nodes for reading and writing to the ISMRMRD format and nodes that take
+    advantage of the ISMRMRD built-in MR reconstruction toolkit.</li>
+<li><strong><a href="https://github.com/nckz/bart/tree/master/gpi">gpi-bart</a></strong><br>
+    Nodes that wrap the Berkeley Advanced Reconstruction Toolkit.</li>
+<li><strong><a href="https://github.com/aganders3/gpi-neurotools">gpi-neurotools</a></strong><br>
+    For wrapping tools that use the NIfTI file format (e.g. FSL).</li>
+<li><strong><a href="https://github.com/sravan953/pulseq-gpi">Pulseq-GPI</a></strong><br>
+    A Python language based implementation of Pulseq in GPI Lab.</li>
+<li><strong>Community Libraries</strong><br>
+    If you, or someone you know, is interested in contributing to the list of
+    known GPI node libraries, let us know by emailing us at
+    <a href="mailto:gpi@gpilab.com">gpi@gpilab.com</a>.</li>
+</ul>
+<h2>Issues and Bugs</h2>
+<p>For questions about software bugs and to see if some one else has already
+reported the same issue, check the issue tracker for each of the GPI projects:</p>
+<ul>
+<li><strong><a href="https://github.com/gpilab/core-nodes/issues">core-nodes</a></strong> - Bugs in
+  specific core nodes.</li>
+<li><strong><a href="https://github.com/gpilab/framework/issues">framework</a></strong> - Issues with the
+  user interface, network canvas and documentation.</li>
+</ul>
+<h2>GPI Bibliography</h2>
+<p>The following work makes use of the GPI project. If you have a publication that
+references GPI, please tell us at <a href="mailto:gpi@gpilab.com">gpi@gpilab.com</a>.</p>
+<ul>
+<li>Robison RK, Anderson AG III, Pipe JG.<br>
+  <strong>Three-dimensional ultrashort echo-time imaging using a FLORET trajectory</strong><br>
+  Magn Reson Imag. 2016. DOI: 10.1002/mrm.26500</li>
+<li>Hu, H. H., Li, Z., Pokorney, A. L., Chia, J. M., Stefani, N., Pipe, J. G., &amp;
+  Miller, J. H.<br>
+  <strong>Assessment of Cerebral Blood Perfusion Reserve with Acetazolamide Using 3D
+  Spiral ASL MRI: Preliminary Experience in Pediatric Patients.</strong><br> Magn
+  Reson Imag. 2016. DOI: 10.1016/j.mri.2016.08.019</li>
+<li>Schär M, Gabr RE, El-Sharkawy AM, Steinberg A, Bottomley PA, Weiss RG.<br>
+  <strong>Two repetition time saturation transfer (TwiST) with spill-over correction
+  to measure creatine kinase reaction rates in human hearts.</strong><br> J Cardiovasc
+  Magn Reson. 2015;17(1):70. DOI: 10.1186/s12968-015-0175-4.</li>
+<li>Li Z, Wang D, Robison RK, Zwart NR, Schär M, Karis JP, Pipe JG.<br>
+  <strong>Sliding-slab three-dimensional TSE imaging with a spiral-In/Out
+  readout.</strong><br> Magn Reson Med 2015 DOI: 10.1002/mrm.25660</li>
+<li>Schär M, Eggers H, Zwart NR, Chang Y, Bakhru A, and Pipe JG.<br> <strong>Dixon
+  water-fat separation in PROPELLER MRI acquired with two interleaved echoes.</strong>
+  <br>Magn Reson Med 2015 DOI: 10.1002/mrm.25656</li>
+<li>Li Z, Schär M, Wang D, Zwart NR, Madhuranthakam AJ, Karis JP, Pipe JG.<br>
+  <strong>Arterial spin labeled perfusion imaging using three-dimensional turbo spin
+  echo with a distributed spiral-in/out trajectory.</strong><br> Magn Reson Med 2015
+  DOI: 10.1002/mrm.25645</li>
+<li>Wang D, Zwart NR, Li Z, Schär M, Pipe JG.<br> <strong>Analytical three-point Dixon
+  method: With applications for spiral water-fat imaging.</strong><br> Magn Reson Med
+  2015 DOI: 10.1002/mrm.25620</li>
+<li>Chang Y, Pipe JG, Karis JP, Gibbs WN, Zwart NR and Schär M.<br> <strong>The effects
+  of SENSE on PROPELLER imaging.</strong><br> Magn Reson Med 2014 DOI:
+  10.1002/mrm.25557</li>
+<li><a href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract">Zwart NR and Pipe JG.<br> <strong>Graphical Programming Interface: A development
+  environment for MRI methods.</strong><br> Magn Reson Med 2014 DOI:
+  10.1002/mrm.25528</a></li>
+<li>Pipe JG, Gibbs WN, Li Z, Karis JP, Schär M and Zwart NR.<br> <strong>Revised motion
+  estimation algorithm for PROPELLER MRI.</strong><br> Magn Reson Med 2014;72:430-437.
+  DOI: 10.1002/mrm.24929</li>
+</ul>
+    </article>
             </div>
         </div>
     </div>
