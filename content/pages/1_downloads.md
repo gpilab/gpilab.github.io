@@ -37,7 +37,7 @@ GPI_1.0.0-rc.dmg * <br>364MB
 </div>
 
 <div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Install_Latest.sh">
+<a href="https://raw.githubusercontent.com/gpilab/conda-distro/master/GPI_Install_Latest.sh">
 <div class="text-center">
 <img src="/images/script_dl.jpg" width="100%" />
 <header>
