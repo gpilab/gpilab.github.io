@@ -88,7 +88,7 @@ href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;c
 target="_blank">version 8</a>.
 
 -----------
-## MacPorts Installation
+## <a name="MacPorts"></a> MacPorts Installation
 Our thanks to [Eric Borisch](https://github.com/eborisch) for enabling GPI installation via MacPorts. To install via MacPorts. Use the following commands to install the latest GPI framework and core nodes.
 
 ```
