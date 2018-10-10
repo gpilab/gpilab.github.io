@@ -17,7 +17,7 @@ to download, install or otherwise use the software in any way. By continuing
 with this download, you are agreeing to the applicable [license terms and
 conditions](/license).
 
-## GPI v1-beta
+## GPI v1.0
 The latest release can be downloaded below.  This is the current development
 release used by the MR Technology Design Group.
 
@@ -28,50 +28,40 @@ release used by the MR Technology Design Group.
 <a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_1.0.0-rc.dmg">
 <div class="text-center">
 <img src="/images/osx_dl.jpg" width="100%" />
-<header>
-<h3>OSX 10.7+</h3>
-</header>
-GPI_1.0.0-rc.dmg * <br>364MB
-</div>
+<h3>Mac OS 10.7+</h3>
 </a>
+GPI_1.0.0-rc.dmg <br> 364MB <br>
+<i>Provides an OSX app that can be launched from your dock.</i>
+</div>
 </div>
 
 <div class="col-md-3 col-sm-3">
 <a href="https://raw.githubusercontent.com/gpilab/conda-distro/master/GPI_Install_Latest.sh">
 <div class="text-center">
 <img src="/images/script_dl.jpg" width="100%" />
-<header>
-<h3>Ubuntu 12.04+<br>&<br>OSX 10.7+</h3>
-</header>
-GPI_Install_Latest.sh ** <br>4.5KB
-</div>
+<h3>Ubuntu 12.04+ <br> & <br> Mac OS  10.9+</h3>
 </a>
+GPI_Install_Latest.sh <br> 4.5KB <br>
+<i>Install GPI (to be launched from a command line) using conda. This script should also work in Ubuntu (WSL) on Windows 10 (unsupported).</i>
+</div>
+
 </div>
 
 <div class="col-md-3 col-sm-3">
 <a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Stack_1.0.2.vmwarevm.zip">
 <div class="text-center">
 <img src="/images/vm_dl.jpg" width="100%" />
-<header>
-<h3>VMware<br>(Ubuntu 15.10)</h3>
-</header>
-GPI_VM_1.0.2.zip<br>1.2GB
-</div>
+<h3>VMware VM <br> (Ubuntu 15.10) </h3>
 </a>
+GPI_VM_1.0.2.zip <br> 1.2GB <br>
+<i>A complete Linux virtual machine containing GPI.</i>
+</div>
 </div>
 
-<div class="col-md-3 col-sm-3">
-</div>
+<br>
 
 </div> <!-- row -->
 
-<br>
-<div style="text-align: left;">
-<sup>&nbsp;&nbsp;\* </sup> Provides an OSX app that can be launched from your dock.<br>
-<sup>\*\* </sup> Provides the 'gpi' command that can be launched from a terminal.
-</div>
-<br>
-<a href="https://github.com/gpilab/framework/releases/tag/v1.0.0-rc1">MD5SUM</a> |
 <a href="https://github.com/gpilab/framework/releases">Release Archive</a>
 
 </div> <!-- container -->
@@ -98,7 +88,15 @@ href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;c
 target="_blank">version 8</a>.
 
 -----------
+## MacPorts Installation
+Our thanks to [Eric Borisch](https://github.com/eborisch) for enabling GPI installation via MacPorts. To install via MacPorts. Use the following commands to install the latest GPI framework and core nodes.
 
+```
+$ sudo port install py-gpilab-framework
+$ sudo port install py-gpilab-core
+```
+
+-----------
 ## OSX App
 To install the OSX app, download and open the `.dmg` file, then drag the
 `GPI.app` to the `/Applications` folder (which is linked in the `.dmg` image).
@@ -158,6 +156,12 @@ Then run the script with a path to the desired install location:
 
 ```
 $ GPI_Install_Latest-rc.sh ~/gpi_stack
+```
+
+This script will install GPI from [Anaconda Cloud](https://anaconda.org) using the `conda` package manager. If you already use `conda`, you can install `gpi` with from the `gpi` channel, with dependencies from the `conda-forge` channel (this is how the installation script works).
+
+```
+$ conda install gpi -c conda-forge -c gpi -c defaults
 ```
 
 -----------
