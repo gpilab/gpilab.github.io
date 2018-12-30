@@ -49,6 +49,7 @@ reported the same issue, check the issue tracker for each of the GPI projects:
 The following work makes use of the GPI project. If you have a publication that
 references GPI, please tell us at [gpi@gpilab.com](mailto:gpi@gpilab.com).
 
+* **[More from Google Scholar](https://scholar.google.com/scholar?cites=7526654090324936147&as_sdt=8005&sciodt=0,7&hl=en)**
 * Robison RK, Anderson AG III, Pipe JG.<br>
   **Three-dimensional ultrashort echo-time imaging using a FLORET trajectory**<br>
   Magn Reson Imag. 2016. DOI: 10.1002/mrm.26500
