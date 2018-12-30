@@ -208,7 +208,7 @@ convey numeric arrays and k-space coordinates.  In order to pass the data
 between nodes from each library, the data need to be manipulated to fit the
 each node's requirements. This is easily accomplished with the core GPI nodes.
 Lets start with an example of the worst case scenario: the <code>traj</code> node.</p>
-<p><img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention.png"></p>
+<p><img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention.png" /></p>
 <p>The image above shows an example gridded 2D radial trajectory (via the BART
 node library) and a gridded 2D spiral trajectory (via the GPI core library).
 Starting from the top nodes, you can see that the <code>Traj</code> node produces radial
@@ -248,7 +248,7 @@ nodes in the core library.  The conventions for data between these two
 libraries are different as would be expected between any two libraries that are
 developed independently.  The goal for this example is to show that a cross
 library data transfer may require some extra attention.</p>
-<p><img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention_BNI2BART.png"></p>
+<p><img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention_BNI2BART.png" /></p>
 <p>Another approach to this problem would be to integrate these differences into
 the nodes themselves.  An example of this can be seen in the image above.  The
 <code>SpiralCoords</code> node is generating a trajectory that is reformatted using the
