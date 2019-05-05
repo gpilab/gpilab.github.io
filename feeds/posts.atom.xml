@@ -11,9 +11,11 @@ Amazon-EC2 instance.&lt;/p&gt;
 &lt;li&gt;Using Amazon-EC2 via AMI&lt;/li&gt;
 &lt;li&gt;Using a Virtual Machine Locally&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;If you are not familiar with either of these technologies, it would behoove you
+to take some time before the meeting to get one of these setups working.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;Using Amazon-EC2 via AMI&lt;/h1&gt;
-&lt;p&gt;Lets start by defining these terms:&lt;/p&gt;
+&lt;p&gt;Lets start by introducing some terms:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;EC2: Elastic Compute Cloud (the '2' is meant to save space by doubling the abbreviated 'C')&lt;ul&gt;
 &lt;li&gt;The "elastic compute" generally referes to a computer in the cloud that you can use by secure shelling (ssh) into and starting services like an jupyter notebook or web-server, etc...&lt;/li&gt;
@@ -161,6 +163,9 @@ connection, you should be good to go ;).&lt;/p&gt;
 &lt;h2&gt;Start GPI&lt;/h2&gt;
 &lt;p&gt;There is a script on the desktop called &lt;code&gt;startGPI&lt;/code&gt;, just double click to get
 started.&lt;/p&gt;
+&lt;p&gt;If you'd like more information on the process of setting up an AMI, the ISMRM
+organizers have a nice guide (with pictures) used in a past &lt;a href="https://github.com/peterchang77/dl_tutorial"&gt;DL
+tutorial&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;Using A Virtual Machine Locally&lt;/h1&gt;
 &lt;p&gt;If your not convinced you'll be able to connect to an Amazon EC3 instance or
