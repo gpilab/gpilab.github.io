@@ -16,10 +16,13 @@ This guide is split into two sections:
 * Using Amazon-EC2 via AMI
 * Using a Virtual Machine Locally
 
+If you are not familiar with either of these technologies, it would behoove you
+to take some time before the meeting to get one of these setups working.
+
 ---------
 
 # Using Amazon-EC2 via AMI
-Lets start by defining these terms:
+Lets start by introducing some terms:
 
 * EC2: Elastic Compute Cloud (the '2' is meant to save space by doubling the abbreviated 'C')
     * The "elastic compute" generally referes to a computer in the cloud that you can use by secure shelling (ssh) into and starting services like an jupyter notebook or web-server, etc...
@@ -83,8 +86,8 @@ setup for the demo:
     * this brings you to a page that has various pre-configure images
 * Click the "Community AMIs" tab on the left hand side of the page.
     * use the search bar to find either of the following AMIs:
-        * Name: GPILAB, AMI-Name: GPILAB DEMO, AMI ID: ami-071e3cfbdabe95296 Region: (US East, Ohio)
-        * Name: GPILAB, AMI-Name: GPILAB DEMO, AMI ID: ami-0637710332aca14d4 Region: (US West, Oregon)
+        * Name: GPILAB, AMI-Name: GPILAB-DEMO, AMI ID: ami-02203acf16dd4a983 Region: (US East, Ohio)
+        * Name: GPILAB, AMI-Name: GPILAB-DEMO, AMI ID: ami-0080216529b04243b Region: (US West, Oregon)
 * Click the checkbox next to the list AMI and then click the "Launch" button above the list
     * Choose the "General purpose" (t2.micro) machine config
     * Press "Review and Launch"
@@ -174,6 +177,10 @@ connection, you should be good to go ;).
 ## Start GPI
 There is a script on the desktop called `startGPI`, just double click to get
 started.
+
+If you'd like more information on the process of setting up an AMI, the ISMRM
+organizers have a nice guide (with pictures) used in a past [DL
+tutorial](https://github.com/peterchang77/dl_tutorial).
 
 ---------
 
