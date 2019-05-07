@@ -2,9 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://gpilab.com/</loc>
-<lastmod>2019-05-05</lastmod>
+<lastmod>2019-05-07</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.00</priority>
+</url><url>
+<loc>http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/</loc>
+<lastmod>2019-05-07</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.80</priority>
 </url><url>
 <loc>http://gpilab.com/2019/05/ismrm-demo-primer/</loc>
 <lastmod>2019-05-05</lastmod>
@@ -82,7 +87,7 @@
 <priority>0.50</priority>
 </url><url>
 <loc>http://gpilab.com/category/posts.html</loc>
-<lastmod>2019-05-05</lastmod>
+<lastmod>2019-05-07</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.40</priority>
 </url><url>
@@ -93,6 +98,11 @@
 </url><url>
 <loc>http://gpilab.com/author/ashley-anderson.html</loc>
 <lastmod>2015-06-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.40</priority>
+</url><url>
+<loc>http://gpilab.com/author/ashley-anderson-iii.html</loc>
+<lastmod>2019-05-07</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.40</priority>
 </url><url>

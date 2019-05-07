@@ -44,11 +44,11 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="http://gpilab.com/2015/04/philips-raw-data-reader/">
-	<meta property="og:title" content="Philips Raw Data Reader">
+	<meta property="og:url" content="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/">
+	<meta property="og:title" content="ISMRM Demo: CS with BART in GPI">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="http://gpilab.com//images/Screen-Shot-2015-04-03-at-4.50.31-PM.png">
-	<meta property="article:published_time" content="2015-04-06 13:27:00-07:00">
+	<meta property="og:image" content="http://gpilab.com//images/ismrm2019_bart.png">
+	<meta property="article:published_time" content="2019-05-07 08:59:00-07:00">
 </head>
 
 <body>
@@ -88,15 +88,15 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/images/Screen-Shot-2015-04-03-at-4.50.31-PM.png')">
+        <header class="intro-header" style="background-image: url('/images/ismrm2019_bart.png')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Philips Raw Data Reader</h1>
+                        <h1>ISMRM Demo: CS with BART in GPI</h1>
                         <span class="meta">Posted by
-                                <a href="http://gpilab.com/author/nicholas-zwart.html">Nicholas Zwart</a>
-                             on Mon 06 April 2015
+                                <a href="http://gpilab.com/author/ashley-anderson-iii.html">Ashley Anderson III <aganders3@gmail.com></a>
+                             on Tue 07 May 2019
                         </span>
                         
                     </div>
@@ -111,43 +111,75 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <!-- Post Content -->
     <article>
-        <p>The Philips raw data reader node, for MR data, is now available as a binary
-release. Users of the Philips raw data formats can directly import the raw data
-into GPI and start investigating. Thanks to the tenacious efforts of Ryan
-Robison, the reader node supports a plethora of file formats such as .data,
-.list, .lab, .raw, .sin, .par, .xml, .rec, and .cpx at many different release
-levels.  The package releases are available for download on <a
-href="https://github.com/gpilab/philips-data-reader"
-target="_blank">GitHub</a>.</p>
-<h2>Output</h2>
-<p><img alt="fitw75" src="http://gpilab.com/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png"></p>
-<p>The ReadPhilips node parses the file contents for MR data, converts the data to
-a numpy numeric array and makes it available as an output port.  Depending on
-the input files and application, there may be multiple output datasets
-corresponding to the sampled k-space, noise measurements, etc...  The reader
-also parses any available header information (which is format dependent) and
-populates a python-dictionary object which is also pushed to an output port.  
-This header information can be viewed via the 'dictionquery' node which
-displays python-dictionary information as a simple list.</p>
-<h2>Widgets</h2>
-<p><img alt="fitw75" src="http://gpilab.com/images/ReadPhilipsUI_ex_head-240x300.jpg"></p>
-<p>The ReadPhilips menu provides an interface to browse for the desired files and
-displays basic file system information and a summary of the header information
-(when available).  The interface also provides options for various minor data
-corrections and the ability to load single coils or slices from the file.</p>
-<h2><a href="/community">Community</a></h2>
-<p>The ReadPhilips node is available to the scientific community as a closed
-source binary package allowing users immediate access to this functionality.
- The source code for this project can be made available to Philips researchers,
-who have signed an NDA, in an effort to foster community development and
-maintenance of the reader as the Philips product software advances.
- This project provides a model for GPI developers to generate reader tools for
-other closed raw data formats.  In this way, the closed source tools can be
-maintained by developers, who have vendor specific access, allowing the tool to
-be updated with product changes.  The end users benefit by moving forward with
-their research without getting tangled up in the proprietary code.</p>
-<p>If you have a GPI node project, you are welcome to submit a link for listing on
-the <a href="/community">community</a> page.</p>
+        <p>As part of our GPI demo at at the <a href="https://www.ismrm.org/19/program_files/WE21.htm">ISMRM 2019 Open-Source Software Tools for MR
+Pulse Design, Simulation &amp; Reconstruction Weekend
+Course</a>, we've revived an
+example of BART working inside GPI. This example is intended to demonstrate the
+flexibility and capabilities of GPI to integrate other packages. This demo also
+highlights the use of GPI as a teaching tool; the example is based on <a href="http://people.eecs.berkeley.edu/~mlustig/CS.html">this
+example from Professor
+Lustig</a>.</p>
+<p>Before getting started here, please see Nick's post on <a href="http://gpilab.com/2019/05/ismrm-demo-primer/">setting up GPI for the
+ISMRM 2019 demo</a>.</p>
+<hr>
+<h1>Download and Compile BART for GPI</h1>
+<p><a href="https://github.com/nckz/bart">BART for GPI</a> is a fork of the <a href="https://github.com/mrirecon/bart">BART
+project</a>. We concede this fork is out of
+date, but it should suffice for a demonstation. Updating to a newer version
+would be fairly trivial for someone familiar with both BART and GPI. Check
+out Nick's <em>other</em> post on <a href="http://gpilab.com/2016/02/gpi-and-the-bart/">how BART was wrapped for use in
+GPI</a> if you're interested in
+making this work.</p>
+<p>First, prepare your virtual machine for BART compilation:</p>
+<div class="highlight"><pre><span></span>&gt; sudo apt-get install git gcc make libfftw3-dev liblapack-dev libpng-dev
+</pre></div>
+
+
+<p>If you're using the GPI ISMRM 2019 demo VM or AMI on EC2, the password for the
+<code>ubuntu</code> user is <code>gpilab</code>.</p>
+<p>Next clone the BART for GPI fork into your <code>gpi</code> library folder:</p>
+<div class="highlight"><pre><span></span>&gt; git clone https://github.com/nckz/bart.git /home/<span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/gpi/bart
+</pre></div>
+
+
+<p>Finally, build and test BART:</p>
+<div class="highlight"><pre><span></span>&gt; cd ~/gpi/bart
+&gt; make
+&gt; ./bart bench
+</pre></div>
+
+
+<p>If you're not working in the GPI VM, instead follow the instructions in the
+BART for GPI README.</p>
+<h1>Launch GPI and Open the Example</h1>
+<p>Open GPI using the startup script or from a terminal. Right click anywhere on
+the canvas and you should see a new Library in the menu called <code>bart</code>. GPI
+Libraries can contain both nodes and networks. Most BART functions should have
+corresponding nodes here, but for now go ahead and select the <code>brain_cs_example
+(net)</code> near the bottom of the menu.</p>
+<p><img src="http://gpilab.com/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/></p>
+<p>The demo network will be loaded on the canvas, and the <code>DownloadFile</code> node
+should begin downloading the example data. This data (about 5 MB) will be
+stored in a temporary file.</p>
+<p><img src="http://gpilab.com/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/></p>
+<h1>Configure and Run the Network</h1>
+<p>Note the three <code>ReadMatlab</code> nodes. Each is reading data from the same file (the
+one downloaded by the <code>DownloadFile</code> node) which contains several arrays.
+Right-click on each of these nodes to open their node menus. In the menu you
+will be able to select which array is output. From left to right we need to
+select the sampling mask, the image, and the sampling pdf.</p>
+<p><img src="http://gpilab.com/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/></p>
+<p>Right-click on a few of the <code>ImageDisplay</code> nodes to probe the algorithm at
+various points. The <code>ImageDisplay</code> node labeled <code>CS Image</code> is the
+compressed-sensing reconstruction (though at this point it is only the inital
+condition based on zero-filling).</p>
+<p>Open the <code>Iter</code> node and click the "Start/Stop" button to begin the iterative
+reconstruction. The <code>CS Image</code> will be updated with each iteration, and you can
+watch as the undersampling artifacts are removed by the wavelet-based
+soft-thresholding constraint.</p>
+<p><img src="http://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/></p>
+<p>There you have it! Explore the rest of the BART tools in GPI and let us know if
+you come up with any cool examples.</p>
     </article>
 
     <hr>
