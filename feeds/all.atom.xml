@@ -1,5 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2019-05-07T08:59:00-07:00</updated><entry><title>ISMRM Demo: CS with BART in GPI</title><link href="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/" rel="alternate"></link><published>2019-05-07T08:59:00-07:00</published><updated>2019-05-07T08:59:00-07:00</updated><author><name>Ashley Anderson III &lt;aganders3@gmail.com&gt;</name></author><id>tag:gpilab.com,2019-05-07:/2019/05/ismrm-demo-cs-with-bart-in-gpi/</id><summary type="html">&lt;p&gt;As part of our GPI demo at at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for MR
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2019-07-23T00:00:00-07:00</updated><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+&lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+&lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the Linux Disrto under Windows 10 and how to convert the proprietary and standard Philips MR rawdata, imaging and spectroscopy data to NumPy data are shown below.&lt;/p&gt;
+&lt;p&gt;Prerequisites and Installed Software list&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Prerequisites&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10 Professional (Enterprise / Home) with version 1607 (OS build 14393) or above&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Software installed on Windows 10:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows Subsystem for Linux (WSL)&lt;/li&gt;
+&lt;li&gt;‘X’ windows server (such as Xming or MobaXterm or VcXsrv)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Software installed inside the Linux environment (under WSL):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Conda (miniconda) – a cross-platform and cross-language package manager&lt;/li&gt;
+&lt;li&gt;GPI (Graphical Programming Interface)&lt;/li&gt;
+&lt;li&gt;ReadPhilips nodes and networks for GPI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Windows Subsystem for Linux (WSL)&lt;/h1&gt;
+&lt;p&gt;Introduction to Windows Subsystem for Linux (WSL)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The Windows Subsystem for Linux (WSL) is a new Windows 10 feature (made available in a 2016 Windows update) that enables native Linux command-line tools directly on Windows, alongside the traditional Windows desktop and modern store apps. WSL is a collection of components that enables native Linux ELF64 binaries to run on Windows. It contains both user mode and kernel mode components.&lt;/p&gt;
+&lt;p&gt;It is primarily comprised of:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;User mode session manager service that handles the Linux instance life cycle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pico provider drivers (lxss.sys, lxcore.sys) that emulate a Linux kernel by translating Linux syscalls&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pico processes that host the unmodified user mode Linux (e.g. /bin/bash)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By placing unmodified Linux binaries in Pico processes, thus enabling Linux system calls to be directed into the Windows kernel. The lxss.sys and lxcore.sys drivers translate the Linux system calls into NT APIs and emulate the Linux kernel on Windows.&lt;/p&gt;
+&lt;p&gt;In May 2019, Microsoft announced the newest architecture for the Windows Subsystem for Linux (WSL2). It will be released as a Windows Insider Preview in late-2019 and later will be incorporated into native Windows build in the future releases. (Source:&lt;a href="https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/"&gt;https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/&lt;/a&gt;,
+&lt;a href="https://devblogs.microsoft.com/commandline/announcing-wsl-2/"&gt;https://devblogs.microsoft.com/commandline/announcing-wsl-2/&lt;/a&gt; and &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-install"&gt;https://docs.microsoft.com/en-us/windows/wsl/wsl2-install&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;WSL depends on the Windows 10 Build version&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;It is important to understand that Windows adds, updates, and removes features with each new major update (version or build number change). WSL was first introduced in Windows 10 version 1607 (OS build 14393, first made available on 2016-08-02). While the more recent version of Windows 10 is 1903 (OS build 18362, released on 2019-05-21).&lt;/p&gt;
+&lt;p&gt;Checking Windows 10 Build version&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To confirm your current Windows version, follow the step below&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Method 1: Using “winver” command&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Press “Windows Key” + “R” simultaneously&lt;/p&gt;
+&lt;p&gt;Then type “winver” and hit “Enter Key” and note the output&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Method 2: Using “About PC” functionality&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;Press “Windows Key”, type “About your PC” in the search space and hit
+“Enter Key”.&lt;/p&gt;
+&lt;p&gt;A window with your system information will open showing you the Windows Edition and version number.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;Updating to the latest Windows Version&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Press “Windows Key”, type “Check for Updates” in the search space and hit “Enter Key”.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;Checking if the WSL is enabled&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;First check if the WSL is already enabled in your Windows operating system&lt;/p&gt;
+&lt;p&gt;Step 1: Open Powershell as “Administrator” (right-click on the icon and select option “Run as Administrator”)&lt;/p&gt;
+&lt;p&gt;Step 2: Run the following command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DISM&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;table&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="k"&gt;Select&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;Linux&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If is output shows “&lt;strong&gt;Microsoft-Windows-Subsystem-Linux | Enabled&lt;/strong&gt;”, then WSL is &lt;strong&gt;enabled&lt;/strong&gt; in Windows.&lt;/p&gt;
+&lt;p&gt;If is output shows “&lt;strong&gt;Microsoft-Windows-Subsystem-Linux | Disabled&lt;/strong&gt;”, then WSL is &lt;strong&gt;not enabled&lt;/strong&gt; in the Windows and it must be enabled
+manually. Follow the steps below to enable the WSL in Windows.&lt;/p&gt;
+&lt;p&gt;Method 1: Enabling WSL using PowerShell with Administrator rights&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Step 1: Open PowerShell as “Administrator”&lt;/p&gt;
+&lt;p&gt;Step 2: Run the following command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Enable&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;WindowsOptionalFeature&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Online&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;FeatureName&lt;/span&gt; &lt;span class="n"&gt;Microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Windows&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Subsystem&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 3: Wait for the process to end and Restart the computer when prompted&lt;/p&gt;
+&lt;p&gt;Method 2: Enabling WSL using Windows Features (GUI)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Step 1: Open the advanced Windows Feature list&lt;/p&gt;
+&lt;p&gt;Step 2: Go to “&lt;strong&gt;Control Panel&lt;/strong&gt;”, then “&lt;strong&gt;Programs and Features&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;Step 3: Select “&lt;strong&gt;Turn Windows features on or off&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;(Note: If you don’t have Administrative rights on the PC, then try the above mentioned PowerShell method or contact your system administrator or IT)&lt;/p&gt;
+&lt;p&gt;Step 4: Enable “&lt;strong&gt;Windows Subsystem for Linux&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_5.png"&gt;
+&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_6.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 5: Wait for the process to end and Restart the computer when prompted&lt;/p&gt;
+&lt;h1&gt;Installing X Server software (on Windows 10)&lt;/h1&gt;
+&lt;p&gt;The previous steps give access to only command line version of Ubuntu (or whatever distro you installed) natively on Windows. It can be used like most other apps in Windows. However, in order to run GUI applications in WSL, you need to first install an X Server on your
+Windows machine. Microsoft Windows is not shipped with support for X server, but many third-party implementations exist, such as &lt;strong&gt;Cygwin/X&lt;/strong&gt; or &lt;strong&gt;Xming&lt;/strong&gt; or &lt;strong&gt;MobaXterm&lt;/strong&gt; or &lt;strong&gt;VcXsrv&lt;/strong&gt; (free version), and proprietary products such as &lt;strong&gt;Exceed&lt;/strong&gt;, &lt;strong&gt;MKS X/Server&lt;/strong&gt;, &lt;strong&gt;Reflection X&lt;/strong&gt;, &lt;strong&gt;X-Win32&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Step 1: Download Xming from &lt;a href="https://sourceforge.net/projects/xming/"&gt;https://sourceforge.net/projects/xming/&lt;/a&gt; on to your Windows 10 machine&lt;/p&gt;
+&lt;p&gt;Step 2: Install the Xming by running “&lt;strong&gt;&lt;em&gt;Xming-6-9-0-31-setup.exe&lt;/em&gt;&lt;/strong&gt;” file&lt;/p&gt;
+&lt;p&gt;Step 3: Reboot the system and after rebooting start the Xming software. Confirm that Xming is running in Windows Taskbar (will show up as &lt;strong&gt;Xming Server:0.0&lt;/strong&gt;, when you hover mouse on the icon).&lt;/p&gt;
+&lt;h1&gt;Installing Linux Distro of your choice&lt;/h1&gt;
+&lt;p&gt;Download and install your favorite flavor of Linux distribution from the Windows Store.&lt;/p&gt;
+&lt;p&gt;Step 1: Open the Windows Store, search (top right corner) for “&lt;strong&gt;Linux&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;Step 2: Click on “&lt;strong&gt;Get the apps&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;Step 3: Download the Linux distribution you prefer for your work (Ubuntu 18.04 version is recommended if you do not have a reason to pick another distribution. If you choose a different Linux distribution, some of the following instructions may not completely apply)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_7.png"&gt;&lt;/p&gt;
+&lt;p&gt;If for some reason, the network you’re connected does not allow access to “Microsoft Store”, then you can manually download the Linux distro’s at &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual"&gt;https://docs.microsoft.com/en-us/windows/wsl/install-manual&lt;/a&gt; (e.g. Ubuntu 18.01 version is &lt;em&gt;CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2018.817.0_x64__79rhkp1fndgsc&lt;/em&gt;).&lt;/p&gt;
+&lt;h1&gt;Post Installation Setup (inside Linux)&lt;/h1&gt;
+&lt;p&gt;Step 1: Launch your distribution of Linux (via Start Menu or Microsoft Store)&lt;/p&gt;
+&lt;p&gt;Step 2: Wait for installation to finish, until it shows the following window&lt;/p&gt;
+&lt;p&gt;Step 3: When prompted create a &lt;strong&gt;username&lt;/strong&gt; and &lt;strong&gt;password&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_8.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 4: Check the Linux version installed (type into the terminal)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;release&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For example, output for Ubuntu 18.04 Linux distro is shown below&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_9.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 5: Update the system with latest distro repositories by entering the following commands&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Step 6: Get the wget and unzip packages by using following command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;unzip&lt;/span&gt; &lt;span class="n"&gt;wget&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Step 7: Get the build-essential tools (The build-essential package contains important development tools including the gcc compiler)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;essential&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Step 8: Get latest ca-certificates&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ca&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;certificates&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;GPI installation and testing&lt;/h1&gt;
+&lt;p&gt;In order to install GPI, first you need to get the installation script from the GPI website (&lt;a href="http://gpilab.com/downloads/"&gt;http://gpilab.com/downloads/&lt;/a&gt;) and then run the script in the Linux distro (this case it is Ubuntu) installed using the steps above.&lt;/p&gt;
+&lt;p&gt;Obtaining the GPI install script&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Step 1: Launch your distribution of Linux (via Start Menu)&lt;/p&gt;
+&lt;p&gt;Step 2: Get the latest GPI installation script from
+&lt;a href="http://gpilab.com/downloads/"&gt;http://gpilab.com/downloads/&lt;/a&gt; using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;githubusercontent&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpilab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;distro&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;GPI_Install_Latest&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(Note: this script will work only for Linux distros and macOS version 10.09 or above)&lt;/p&gt;
+&lt;p&gt;Installing GPI&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Step 1: Elevate the privileges of “GPI_Install_Latest.sh” shell script&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;GPI_Install_Latest&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Step 2: Execute the shell script “GPI_Install_Latest.sh”&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;GPI_Install_Latest&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;   &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi_stack&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(Note: if you need help, you see the help text by ./GPI_Install_Latest.sh  -h)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_10.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 3: If the GPI install is successful you will get the following
+message in the terminal&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_11.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 4: Close the WSL terminal (by using exit command)&lt;/p&gt;
+&lt;p&gt;Testing the GPI GUI&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The main GPI workspace is the canvas, which can be loaded by running the following commands. It gives access to the core gpi nodes and can be used to build algorithms. Make sure the Xming server or your preferred Windows X Server is running.&lt;/p&gt;
+&lt;p&gt;Launch your distribution of Linux (via Start Menu). Run the following commands in the Ubuntu Terminal (see the screenshot below that shows the outputs)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_12.png"&gt;
+&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_13.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Obtaining and configuring the readPhilips nodes&lt;/h1&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The “&lt;em&gt;readPhilips&lt;/em&gt;” nodes are GPI nodes that are binary distributions for reading Philips MR data. Current supported formats include rawdata (LAB/RAW/SIN, DATA/LIST, CPX), and imaging &amp;amp; spectroscopy data (e.g. DICOM, par/rec, sdat/spar). For more information visit
+&lt;a href="https://github.com/gpilab/philips-data-reader"&gt;https://github.com/gpilab/philips-data-reader&lt;/a&gt;. The below steps assume a working GPI already exists and has all the gpi-core-nodes are
+installed.&lt;/p&gt;
+&lt;p&gt;Installation of the nodes in GPI&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Download the latest release binary (pre-compiled) files corresponding to the installation of GPI platform (Linux or macOS X) to the default GPI library directory (or a directory that is in your LIB_PATH, as shown in the configuration documentation), unzip and restart GPI.&lt;/p&gt;
+&lt;p&gt;For example, from the Ubuntu terminal&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="cm"&gt;/**user**/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(here &lt;strong&gt;user&lt;/strong&gt; is the name of your user directory)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpilab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ReadPhilips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GPI&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Python36&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;
+&lt;span class="n"&gt;unzip&lt;/span&gt; &lt;span class="n"&gt;ReadPhilips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GPI&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Python36&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(this will unzip a folder called ‘&lt;em&gt;philips&lt;/em&gt;’ in /home/&lt;strong&gt;user&lt;/strong&gt;/gpi, precise naming here is important for GPI to load the modules properly. Note that there may be new readphilips nodes or networks in the future)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_14.png"&gt;&lt;/p&gt;
+&lt;p&gt;Confirming the read philips nodes in GPI canvas&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To confirm that the nodes are installed and working, you can do the following simple test.&lt;/p&gt;
+&lt;p&gt;Step 1: Start the X server application (Xming in this case)&lt;/p&gt;
+&lt;p&gt;Step 2: Start the Linux (Ubuntu 18.04 in this case) terminal and run the following commands in the terminal window&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Step 3: Once the GPI canvas is open, “Right Click” on the canvas to open a menu and it should show “philips” option under the “core”. Any other GPI libraries you create or install will also show up here.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_15.png"&gt;&lt;/p&gt;
+&lt;p&gt;Step 4: If you do not see the “philips” option, then in the Menu options at the top, click on “Config” and then click on “Scan for New Nodes” and then check the menu again for “philips” option&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_16.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Data conversion networks&lt;/h1&gt;
+&lt;p&gt;The latest GPI network files (*.net) for converting reading and converting the Philips MR data from GitHub are included in the
+readphilips nodes zip file (inside the \~/gpi/philips folder).&lt;/p&gt;
+&lt;p&gt;readPhilips_Imaging_raw.net&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This network is designed to read and convert the Philips MR imaging data (LAB/RAW/SIN, DATA/LIST, CPX) to NumPy data format (*.npy files) and header information into a Python dictionary (saved on-disk as a *.pickle file).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_17.png"&gt;&lt;/p&gt;
+&lt;p&gt;readPhilips_Spectro_raw.net&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This network is designed to read and convert the Philips MR spectroscopy data (LAB/RAW/SIN, DATA/LIST, CPX) to NumPy data format (*.npy files) and header information into a Python dictionary (saved on-disk as a *.pickle file).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_18.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Running the data conversion networks and validating the output&lt;/h1&gt;
+&lt;p&gt;Philips raw data conversion using Linux command line&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The rawdata that needs to be converted can be anywhere in the system (host or in the linux). For WSL, all the drives can be accessed by /mnt directory inside the Linux environment. Once you have the location of the data on the windows you can use that as a path in the Linux terminal.&lt;/p&gt;
+&lt;p&gt;Step 1: Start the X server application (Xming in this case)&lt;/p&gt;
+&lt;p&gt;Step 2: Start the Linux (in this case Ubuntu 18.04) terminal and run the following commands in the terminal window&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Step 3: For imaging raw data you can use the readPhilips_Imaging_raw.net&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sganji&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;readPhilips_Imaging_raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt; &lt;span class="c1"&gt;--nogui -s filename:/mnt/drive_letter/path_of_rawdata_files/Filename.raw&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Or&lt;/p&gt;
+&lt;p&gt;Step 3: For spectroscopy raw data you can use the readPhilips_Spectro_raw.net&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sganji&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;readPhilips_Spectro_raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt; &lt;span class="c1"&gt;--nogui -s filename:/mnt/drive_letter/path_of_rawdata_files/Filename.raw&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Validating the output NumPy files (checking the dimensions, and labels)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;One can validate the output NumPy files using a python IDE. Load the data using NumPy package.&lt;/p&gt;
+&lt;p&gt;For example, using Spyder (&lt;a href="https://www.spyder-ide.org/"&gt;https://www.spyder-ide.org/&lt;/a&gt;) one can check the output files of a mDixon dataset.&lt;/p&gt;
+&lt;p&gt;Input files
+20190425_155716_mDixon_3D_2echo.raw
+20190425_155716_mDixon_3D_2echo.lab
+20190425_155716_mDixon_3D_2echo.sin&lt;/p&gt;
+&lt;p&gt;Script&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sganji&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="cm"&gt;/**readPhilips_Imaging_raw.net** --nogui -s filename:/mnt/v/zData_WorkingON01/20190425_SG_ProstatePhan/RAWDATA/20190425_155716_mDixon_3D_2echo.raw&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_19.png"&gt;&lt;/p&gt;
+&lt;p&gt;Output files
+20190425_155716_mDixon_3D_2echo__data.npy
+-   Data is a NumPy array with dimensions [27 x 2 x 2 x 32 x 60 x 224]
+20190425_155716_mDixon_3D_2echo__header.pickle
+-   Contains header information in the form of a dictionary (from both &lt;em&gt;.lab and &lt;/em&gt;.sin files)
+20190425_155716_mDixon_3D_2echo__noise.npy
+-   Noise is a NumPy array with dimensions [27 x 19936] (this is 27 channels noise data)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_20.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Known issues and bugs&lt;/h1&gt;
+&lt;p&gt;GPI and its Philips networks are constantly being developed and improved by GPI and Philips team. If you find any bugs or have questions, please reach out to GPI team on the GitHub (use the issue tracker) or email Sandeep Ganji (&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#83;&amp;#97;&amp;#110;&amp;#100;&amp;#101;&amp;#101;&amp;#112;&amp;#46;&amp;#71;&amp;#97;&amp;#110;&amp;#106;&amp;#105;&amp;#64;&amp;#112;&amp;#104;&amp;#105;&amp;#108;&amp;#105;&amp;#112;&amp;#115;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#83;&amp;#97;&amp;#110;&amp;#100;&amp;#101;&amp;#101;&amp;#112;&amp;#46;&amp;#71;&amp;#97;&amp;#110;&amp;#106;&amp;#105;&amp;#64;&amp;#112;&amp;#104;&amp;#105;&amp;#108;&amp;#105;&amp;#112;&amp;#115;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Multi-Nuclear MR Spectroscopy&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We have noticed some failures when converting the multi-nuclear spectroscopy rawdata. So please check the output data, if it converts,
+for dimensionality and continency. If the data fails to convert at all, please let us know and we can improve the functionality based on your inputs.&lt;/p&gt;
+&lt;p&gt;Certificate issue when using wget&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;When downloading the installation script, if one gets the following ca-certificates error&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;certificate&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;githubusercontent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;certificate&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;githubusercontent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt; &lt;span class="n"&gt;hasn&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;got&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;known&lt;/span&gt; &lt;span class="n"&gt;issuer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;They should install the latest &lt;strong&gt;ca-certificates&lt;/strong&gt; using the following command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ca&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;certificates&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Atypical sequence data&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;For raw data from a newly development sequence, where the dimensions are either improbably labelled or new reconstruction labels were created, then the above conversion may fail.&lt;/p&gt;
+&lt;h2&gt;Author&lt;/h2&gt;
+&lt;p&gt;Sandeep Ganji
+Contributions from Daniel Borup and Ashley Anderson&lt;/p&gt;
+&lt;h1&gt;Legal Disclaimer&lt;/h1&gt;
+&lt;p&gt;THE SOFTWARE AND INSTRUCTIONS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&lt;/p&gt;
+&lt;h1&gt;References and Sources&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Linux on Windows&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/"&gt;https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/about"&gt;https://docs.microsoft.com/en-us/windows/wsl/about&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"&gt;https://docs.microsoft.com/en-us/windows/wsl/install-win10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual"&gt;https://docs.microsoft.com/en-us/windows/wsl/install-manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wsl-guide.org/en/latest/index.html"&gt;http://wsl-guide.org/en/latest/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;GPI (Graphical Programming Interface)&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;http://gpilab.com/&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gpilab"&gt;https://github.com/gpilab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ismrm.github.io/mrhub/"&gt;https://ismrm.github.io/mrhub/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gpilab/philips-data-reader/releases"&gt;https://github.com/gpilab/philips-data-reader/releases&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content></entry><entry><title>ISMRM Demo: CS with BART in GPI</title><link href="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/" rel="alternate"></link><published>2019-05-07T08:59:00-07:00</published><updated>2019-05-07T08:59:00-07:00</updated><author><name>Ashley Anderson III &lt;aganders3@gmail.com&gt;</name></author><id>tag:gpilab.com,2019-05-07:/2019/05/ismrm-demo-cs-with-bart-in-gpi/</id><summary type="html">&lt;p&gt;As part of our GPI demo at at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for MR
 Pulse Design, Simulation &amp;amp; Reconstruction Weekend
 Course&lt;/a&gt;, we've revived an
 example of BART working inside GPI. This example is intended to demonstrate the
