@@ -164,8 +164,8 @@ focus.</p>
 <h3>Ubuntu Linux</h3>
 <p>I prefer <a href="https://www.tightvnc.com/">tightVNC</a> since it has nice compression
 features and has been available nearly for ever.</p>
-<div class="highlight"><pre><span></span>   $ sudo apt-get update
-   $ sudo apt-get install xtightvncviewer
+<div class="highlight"><pre><span></span>   <span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="k">update</span>
+   <span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="n">xtightvncviewer</span>
 </pre></div>
 
 
@@ -213,23 +213,23 @@ final "Launch" button and then hit the "View Instance" button.</p>
 <p>Almost connected!  Within the "EC2 Instance" view right click on your newly
 running instance to get a popup-dialog, from there hit connect for another
 popup that shows the following information:</p>
-<div class="highlight"><pre><span></span>To access your instance:
+<div class="highlight"><pre><span></span><span class="nv">To</span> <span class="nv">access</span> <span class="nv">your</span> <span class="nv">instance</span>:
 
-1. Open an SSH client. (find out how to connect using PuTTY)
-2. Locate your private key file (GPILAB_Demo.pem). The wizard automatically detects the key you used to launch the instance.
-3. Your key must not be publicly viewable for SSH to work. Use this command if needed:
+<span class="mi">1</span>. <span class="nv">Open</span> <span class="nv">an</span> <span class="nv">SSH</span> <span class="nv">client</span>. <span class="ss">(</span><span class="nv">find</span> <span class="nv">out</span> <span class="nv">how</span> <span class="nv">to</span> <span class="k">connect</span> <span class="nv">using</span> <span class="nv">PuTTY</span><span class="ss">)</span>
+<span class="mi">2</span>. <span class="nv">Locate</span> <span class="nv">your</span> <span class="nv">private</span> <span class="nv">key</span> <span class="nv">file</span> <span class="ss">(</span><span class="nv">GPILAB_Demo</span>.<span class="nv">pem</span><span class="ss">)</span>. <span class="nv">The</span> <span class="nv">wizard</span> <span class="nv">automatically</span> <span class="nv">detects</span> <span class="nv">the</span> <span class="nv">key</span> <span class="nv">you</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">launch</span> <span class="nv">the</span> <span class="nv">instance</span>.
+<span class="mi">3</span>. <span class="nv">Your</span> <span class="nv">key</span> <span class="nv">must</span> <span class="nv">not</span> <span class="nv">be</span> <span class="nv">publicly</span> <span class="nv">viewable</span> <span class="k">for</span> <span class="nv">SSH</span> <span class="nv">to</span> <span class="nv">work</span>. <span class="nv">Use</span> <span class="nv">this</span> <span class="nv">command</span> <span class="k">if</span> <span class="nv">needed</span>:
 
-    chmod 400 GPILAB_DEMO.pem
+    <span class="nv">chmod</span> <span class="mi">400</span> <span class="nv">GPILAB_DEMO</span>.<span class="nv">pem</span>
 
-4. Connect to your instance using its Public DNS:
+<span class="mi">4</span>. <span class="k">Connect</span> <span class="nv">to</span> <span class="nv">your</span> <span class="nv">instance</span> <span class="nv">using</span> <span class="nv">its</span> <span class="nv">Public</span> <span class="nv">DNS</span>:
 
-    ec2-3-17-23-92.us-east-2.compute.amazonaws.com
+    <span class="nv">ec2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="mi">92</span>.<span class="nv">us</span><span class="o">-</span><span class="nv">east</span><span class="o">-</span><span class="mi">2</span>.<span class="nv">compute</span>.<span class="nv">amazonaws</span>.<span class="nv">com</span>
 
-Example:
+<span class="nv">Example</span>:
 
-    ssh -i &quot;GPILAB_DEMO.pem&quot; root@ec2-3-17-23-92.us-east-2.compute.amazonaws.com
+    <span class="nv">ssh</span> <span class="o">-</span><span class="nv">i</span> <span class="s2">&quot;</span><span class="s">GPILAB_DEMO.pem</span><span class="s2">&quot;</span> <span class="nv">root</span>@<span class="nv">ec2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="mi">92</span>.<span class="nv">us</span><span class="o">-</span><span class="nv">east</span><span class="o">-</span><span class="mi">2</span>.<span class="nv">compute</span>.<span class="nv">amazonaws</span>.<span class="nv">com</span>
 
-Please note that in most cases the username above will be correct, however please ensure that you read your AMI usage instructions to ensure that the AMI owner has not changed the default AMI username.
+<span class="nv">Please</span> <span class="nv">note</span> <span class="nv">that</span> <span class="nv">in</span> <span class="nv">most</span> <span class="nv">cases</span> <span class="nv">the</span> <span class="nv">username</span> <span class="nv">above</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">correct</span>, <span class="nv">however</span> <span class="nv">please</span> <span class="nv">ensure</span> <span class="nv">that</span> <span class="nv">you</span> <span class="nv">read</span> <span class="nv">your</span> <span class="nv">AMI</span> <span class="nv">usage</span> <span class="nv">instructions</span> <span class="nv">to</span> <span class="nv">ensure</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">AMI</span> <span class="nv">owner</span> <span class="nv">has</span> <span class="nv">not</span> <span class="nv">changed</span> <span class="nv">the</span> <span class="nv">default</span> <span class="nv">AMI</span> <span class="nv">username</span>.
 </pre></div>
 
 
@@ -238,7 +238,7 @@ instances domain and the user 'ubuntu').</p>
 <h3>MacOS and Linux</h3>
 <p>In a terminal enter the following command (after you replace the relevant parts
 with your instance information):</p>
-<div class="highlight"><pre><span></span>    $ ssh -i &quot;GPILAB_DEMO.pem&quot; -L 5900:localhost:5900 ubuntu@ec2-3-17-23-92.us-east-2.compute.amazonaws.com
+<div class="highlight"><pre><span></span><span class="w">    </span><span class="err">$</span><span class="w"> </span><span class="n">ssh</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="ss">&quot;GPILAB_DEMO.pem&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="mi">5900</span><span class="err">:</span><span class="nl">localhost</span><span class="p">:</span><span class="mi">5900</span><span class="w"> </span><span class="n">ubuntu</span><span class="nv">@ec2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="mf">92.</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">2.</span><span class="k">compute</span><span class="p">.</span><span class="n">amazonaws</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
 </pre></div>
 
 
@@ -255,14 +255,14 @@ that Putty and VNC are setup correctly.</p>
 You can fire up your VNC client and enter the following information:</p>
 <h3>MacOS</h3>
 <p>Focus the <code>Finder.app</code> and hit <code>Command-k</code>.  In the dialog box labelled 'server address' type:</p>
-<div class="highlight"><pre><span></span>    vnc://localhost:5900
+<div class="highlight"><pre><span></span>    <span class="n">vnc</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5900</span>
 </pre></div>
 
 
 <p>Then press connect.</p>
 <h3>Linux</h3>
 <p>In a terminal enter:</p>
-<div class="highlight"><pre><span></span>    $ xtightvncviewer localhost:5900
+<div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">xtightvncviewer</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">5900</span>
 </pre></div>
 
 

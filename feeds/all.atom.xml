@@ -23,7 +23,7 @@ out Nick's &lt;em&gt;other&lt;/em&gt; post on &lt;a href="http://gpilab.com/2016
 GPI&lt;/a&gt; if you're interested in
 making this work.&lt;/p&gt;
 &lt;p&gt;First, prepare your virtual machine for BART compilation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; sudo apt-get install git gcc make libfftw3-dev liblapack-dev libpng-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;gcc&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;libfftw3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;liblapack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libpng&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -35,9 +35,9 @@ making this work.&lt;/p&gt;
 
 
 &lt;p&gt;Finally, build and test BART:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd ~/gpi/bart
-&amp;gt; make
-&amp;gt; ./bart bench
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt; &lt;span class="n"&gt;bench&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -128,8 +128,8 @@ focus.&lt;/p&gt;
 &lt;h3&gt;Ubuntu Linux&lt;/h3&gt;
 &lt;p&gt;I prefer &lt;a href="https://www.tightvnc.com/"&gt;tightVNC&lt;/a&gt; since it has nice compression
 features and has been available nearly for ever.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   $ sudo apt-get update
-   $ sudo apt-get install xtightvncviewer
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;
+   &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;xtightvncviewer&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -177,23 +177,23 @@ final "Launch" button and then hit the "View Instance" button.&lt;/p&gt;
 &lt;p&gt;Almost connected!  Within the "EC2 Instance" view right click on your newly
 running instance to get a popup-dialog, from there hit connect for another
 popup that shows the following information:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;To access your instance:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;To&lt;/span&gt; &lt;span class="nv"&gt;access&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;instance&lt;/span&gt;:
 
-1. Open an SSH client. (find out how to connect using PuTTY)
-2. Locate your private key file (GPILAB_Demo.pem). The wizard automatically detects the key you used to launch the instance.
-3. Your key must not be publicly viewable for SSH to work. Use this command if needed:
+&lt;span class="mi"&gt;1&lt;/span&gt;. &lt;span class="nv"&gt;Open&lt;/span&gt; &lt;span class="nv"&gt;an&lt;/span&gt; &lt;span class="nv"&gt;SSH&lt;/span&gt; &lt;span class="nv"&gt;client&lt;/span&gt;. &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;find&lt;/span&gt; &lt;span class="nv"&gt;out&lt;/span&gt; &lt;span class="nv"&gt;how&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="k"&gt;connect&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;PuTTY&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;. &lt;span class="nv"&gt;Locate&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;private&lt;/span&gt; &lt;span class="nv"&gt;key&lt;/span&gt; &lt;span class="nv"&gt;file&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;GPILAB_Demo&lt;/span&gt;.&lt;span class="nv"&gt;pem&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;. &lt;span class="nv"&gt;The&lt;/span&gt; &lt;span class="nv"&gt;wizard&lt;/span&gt; &lt;span class="nv"&gt;automatically&lt;/span&gt; &lt;span class="nv"&gt;detects&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;key&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;used&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;launch&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;instance&lt;/span&gt;.
+&lt;span class="mi"&gt;3&lt;/span&gt;. &lt;span class="nv"&gt;Your&lt;/span&gt; &lt;span class="nv"&gt;key&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;publicly&lt;/span&gt; &lt;span class="nv"&gt;viewable&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;SSH&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;work&lt;/span&gt;. &lt;span class="nv"&gt;Use&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;command&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;needed&lt;/span&gt;:
 
-    chmod 400 GPILAB_DEMO.pem
+    &lt;span class="nv"&gt;chmod&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt; &lt;span class="nv"&gt;GPILAB_DEMO&lt;/span&gt;.&lt;span class="nv"&gt;pem&lt;/span&gt;
 
-4. Connect to your instance using its Public DNS:
+&lt;span class="mi"&gt;4&lt;/span&gt;. &lt;span class="k"&gt;Connect&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;instance&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;its&lt;/span&gt; &lt;span class="nv"&gt;Public&lt;/span&gt; &lt;span class="nv"&gt;DNS&lt;/span&gt;:
 
-    ec2-3-17-23-92.us-east-2.compute.amazonaws.com
+    &lt;span class="nv"&gt;ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt;.&lt;span class="nv"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;.&lt;span class="nv"&gt;compute&lt;/span&gt;.&lt;span class="nv"&gt;amazonaws&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;
 
-Example:
+&lt;span class="nv"&gt;Example&lt;/span&gt;:
 
-    ssh -i &amp;quot;GPILAB_DEMO.pem&amp;quot; root@ec2-3-17-23-92.us-east-2.compute.amazonaws.com
+    &lt;span class="nv"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;GPILAB_DEMO.pem&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;root&lt;/span&gt;@&lt;span class="nv"&gt;ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt;.&lt;span class="nv"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;.&lt;span class="nv"&gt;compute&lt;/span&gt;.&lt;span class="nv"&gt;amazonaws&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;
 
-Please note that in most cases the username above will be correct, however please ensure that you read your AMI usage instructions to ensure that the AMI owner has not changed the default AMI username.
+&lt;span class="nv"&gt;Please&lt;/span&gt; &lt;span class="nv"&gt;note&lt;/span&gt; &lt;span class="nv"&gt;that&lt;/span&gt; &lt;span class="nv"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;most&lt;/span&gt; &lt;span class="nv"&gt;cases&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;username&lt;/span&gt; &lt;span class="nv"&gt;above&lt;/span&gt; &lt;span class="nv"&gt;will&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;correct&lt;/span&gt;, &lt;span class="nv"&gt;however&lt;/span&gt; &lt;span class="nv"&gt;please&lt;/span&gt; &lt;span class="nv"&gt;ensure&lt;/span&gt; &lt;span class="nv"&gt;that&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;AMI&lt;/span&gt; &lt;span class="nv"&gt;usage&lt;/span&gt; &lt;span class="nv"&gt;instructions&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;ensure&lt;/span&gt; &lt;span class="nv"&gt;that&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;AMI&lt;/span&gt; &lt;span class="nv"&gt;owner&lt;/span&gt; &lt;span class="nv"&gt;has&lt;/span&gt; &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;changed&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;default&lt;/span&gt; &lt;span class="nv"&gt;AMI&lt;/span&gt; &lt;span class="nv"&gt;username&lt;/span&gt;.
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -202,7 +202,7 @@ instances domain and the user 'ubuntu').&lt;/p&gt;
 &lt;h3&gt;MacOS and Linux&lt;/h3&gt;
 &lt;p&gt;In a terminal enter the following command (after you replace the relevant parts
 with your instance information):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ ssh -i &amp;quot;GPILAB_DEMO.pem&amp;quot; -L 5900:localhost:5900 ubuntu@ec2-3-17-23-92.us-east-2.compute.amazonaws.com
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;GPILAB_DEMO.pem&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="nl"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ubuntu&lt;/span&gt;&lt;span class="nv"&gt;@ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;92.&lt;/span&gt;&lt;span class="n"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="k"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;amazonaws&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -219,14 +219,14 @@ that Putty and VNC are setup correctly.&lt;/p&gt;
 You can fire up your VNC client and enter the following information:&lt;/p&gt;
 &lt;h3&gt;MacOS&lt;/h3&gt;
 &lt;p&gt;Focus the &lt;code&gt;Finder.app&lt;/code&gt; and hit &lt;code&gt;Command-k&lt;/code&gt;.  In the dialog box labelled 'server address' type:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    vnc://localhost:5900
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;vnc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Then press connect.&lt;/p&gt;
 &lt;h3&gt;Linux&lt;/h3&gt;
 &lt;p&gt;In a terminal enter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ xtightvncviewer localhost:5900
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;xtightvncviewer&lt;/span&gt; &lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -586,15 +586,15 @@ GPI-BART fork:&lt;/p&gt;
 &lt;p&gt;First (if you haven't already), make a 'gpi' directory in your home directory.
 If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.com/2015/06/installing-node-libraries/"&gt;Installing Node
 Libraries&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ cd ~/
-    $ mkdir ~/gpi
-    $ cd ~/gpi
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;
+    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;
+    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Next, use &lt;a href="https://git-scm.com/"&gt;git&lt;/a&gt; to clone the node library project into a
 directory called 'bart'.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ git clone https://github.com/nckz/bart.git bart
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nckz&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;bart&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -606,8 +606,8 @@ third party library dependencies that are specific to each OS (e.g. &lt;a href="
 OSX&lt;/a&gt;).  For OSX, the Xcode and the
 gcc compiler must be installed before the &lt;code&gt;make&lt;/code&gt; command can be issued.  Once
 you've installed the dependencies, make the BART.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    $ cd ~/gpi/bart
-    $ make
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;
+    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
