@@ -1,14 +1,14 @@
 Title: Downloads
 Date: 2016-04-03 19:25
-Modified: 2016-04-03 19:25
+Modified: 2019-08-14 09:30
 Category: downloads
 Tags: downloads
 Slug: downloads
-Authors: Nicholas Zwart
+Authors: Nicholas Zwart, Daniel Borup
 Header_Cover: /images/downloads_banner.jpg
 Summary:
 
-> Dignity Health makes this software available for download via this website
+> This software is made available for download via this website
 subject to the [license terms and conditions](/license), available also on
 this website. You will be required to view and accept these [license terms and
 conditions](/license) upon installation of the software. If you do not
@@ -17,22 +17,14 @@ to download, install or otherwise use the software in any way. By continuing
 with this download, you are agreeing to the applicable [license terms and
 conditions](/license).
 
-## GPI v1.0
-The latest release can be downloaded below.  This is the current development
-release used by the MR Technology Design Group.
+## GPI v1.1
+The latest release can be downloaded below. This is the current development
+release used by the MR Technology Use Design Group.
 
 <div class="container">
 <div class="row">
 
 <div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_1.0.0-rc.dmg">
-<div class="text-center">
-<img src="/images/osx_dl.jpg" width="100%" />
-<h3>Mac OS 10.7+</h3>
-</a>
-GPI_1.0.0-rc.dmg <br> 364MB <br>
-<i>Provides an OSX app that can be launched from your dock.</i>
-</div>
 </div>
 
 <div class="col-md-3 col-sm-3">
@@ -48,14 +40,6 @@ GPI_Install_Latest.sh <br> 4.5KB <br>
 </div>
 
 <div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Stack_1.0.2.vmwarevm.zip">
-<div class="text-center">
-<img src="/images/vm_dl.jpg" width="100%" />
-<h3>VMware VM <br> (Ubuntu 15.10) </h3>
-</a>
-GPI_VM_1.0.2.zip <br> 1.2GB <br>
-<i>A complete Linux virtual machine containing GPI.</i>
-</div>
 </div>
 
 <br>
@@ -97,6 +81,68 @@ $ sudo port install py-gpilab-core
 ```
 
 -----------
+
+## Install Script
+To use the install script `GPI_Install_Latest.sh`, first make sure the
+script is executable by entering the following command in a terminal:
+
+```
+$ chmod a+x GPI_Install_Latest.sh
+```
+
+Then run the script with a path to the desired install location:
+
+```
+$ GPI_Install_Latest.sh ~/gpi_stack
+```
+
+This script will install GPI from [Anaconda Cloud](https://anaconda.org) using the `conda` package manager. If you already use `conda`, you can install `gpi` with from the `gpi` channel, with dependencies from the `conda-forge` channel (this is how the installation script works).
+
+```
+$ conda install gpi -c conda-forge -c gpi -c defaults
+```
+
+-----------
+
+## GPI v1.0
+
+Previously, GPI v1.0 could be installed as an OSX app or a complete virtual machine. This is not supported for v1.1 (though we are working to bring back the OSX app). The links below allow you to install GPI v1.0 — note that v1.0.6 is also available on conda-forge!
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-3 col-sm-3">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_1.0.0-rc.dmg">
+<div class="text-center">
+<img src="/images/osx_dl.jpg" width="100%" />
+<h3>Mac OS 10.7+</h3>
+</a>
+GPI_1.0.0-rc.dmg <br> 364MB <br>
+<i>Provides an OSX app that can be launched from your dock.</i>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-3">
+<a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Stack_1.0.2.vmwarevm.zip">
+<div class="text-center">
+<img src="/images/vm_dl.jpg" width="100%" />
+<h3>VMware VM <br> (Ubuntu 15.10) </h3>
+</a>
+GPI_VM_1.0.2.zip <br> 1.2GB <br>
+<i>A complete Linux virtual machine containing GPI.</i>
+</div>
+</div>
+
+<br>
+
+</div> <!-- row -->
+
+<a href="https://github.com/gpilab/framework/releases">Release Archive</a>
+
+</div> <!-- container -->
+
+-----------
+
 ## OSX App
 To install the OSX app, download and open the `.dmg` file, then drag the
 `GPI.app` to the `/Applications` folder (which is linked in the `.dmg` image).
@@ -140,28 +186,6 @@ file (i.e. `~/.bashrc`).
 
 ```
 PATH="/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH"
-```
-
------------
-
-## Install Script
-To use the install script `GPI_Install_Latest-rc.sh`, first make sure the
-script is executable by entering the following command in a terminal:
-
-```
-$ chmod a+x GPI_Install_Latest-rc.sh
-```
-
-Then run the script with a path to the desired install location:
-
-```
-$ GPI_Install_Latest-rc.sh ~/gpi_stack
-```
-
-This script will install GPI from [Anaconda Cloud](https://anaconda.org) using the `conda` package manager. If you already use `conda`, you can install `gpi` with from the `gpi` channel, with dependencies from the `conda-forge` channel (this is how the installation script works).
-
-```
-$ conda install gpi -c conda-forge -c gpi -c defaults
 ```
 
 -----------
