@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2019-07-23T00:00:00-07:00</updated><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/all.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2019-08-14T00:00:00-07:00</updated><entry><title>GPI version 1.1 has arrived!</title><link href="http://gpilab.com/2019/08/gpi-version-11-has-arrived/" rel="alternate"></link><published>2019-08-14T00:00:00-07:00</published><updated>2019-08-14T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2019-08-14:/2019/08/gpi-version-11-has-arrived/</id><summary type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
+&lt;p&gt;GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
+&lt;p&gt;GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that we hope will make GPI easier for users, developers, and maintainers going forward. Below you'll find a description of the major changes, upgrade process, and a list of changes to the core nodes.&lt;/p&gt;
+&lt;p&gt;As of this version, the recommended installation method is to use the installation script. All changes listed below will be accounted for by default when installing with the script, so if you're a new user you can just sit back, relax, and enjoy GPI.&lt;/p&gt;
+&lt;h2&gt;Major changes&lt;/h2&gt;
+&lt;p&gt;Two main changes come as part of this release.&lt;/p&gt;
+&lt;h3&gt;Qt5&lt;/h3&gt;
+&lt;p&gt;We've added support for Qt5 thanks to a contribution from community member Gregory Lee. Support is now provided using the QtPy wrapper, which is technically compatible with Qt4 — however, because Qt4 has been end-of-life for some time now, we're no longer supporting it in GPI.&lt;/p&gt;
+&lt;p&gt;For most users, this change will show up as nothing more than a slightly different look to menus. However, if you were developing your own nodes and making use of Qt libraries imported from GPI, you may need to update your import statements to reference the new "QtWidgets" module -- for an example, see the changes made to the core nodes library as part of this update (https://github.com/gpilab/core-nodes/pull/10).&lt;/p&gt;
+&lt;h3&gt;Conda-forge packaging&lt;/h3&gt;
+&lt;p&gt;GPI, and the core nodes, are now packaged on conda-forge! This is another "under the hood" change for most users, but one that we're very excited about as it will make our development, testing, and release process much more streamlined and reliable. Since GPI already relied on numerous packages from conda-forge, it made sense to add our work to this community ecosystem, too.&lt;/p&gt;
+&lt;p&gt;If you're a new user or otherwise installing GPI from scratch, this change should be completely invisible. &lt;/p&gt;
+&lt;p&gt;If you want to upgrade an existing GPI installation, there are a few minor differences. First, the core nodes are now packaged and distributed under the name &lt;code&gt;gpi_core&lt;/code&gt;. At the surface level, this means these nodes will appear under the heading &lt;code&gt;gpi_core&lt;/code&gt; in the node selection menu. More critically, if you've written nodes that import or include modules from the core library, you'll need to change those import/include statements to reference &lt;code&gt;gpi_core&lt;/code&gt; instead of &lt;code&gt;core&lt;/code&gt; after upgrading.&lt;/p&gt;
+&lt;h2&gt;Upgrading&lt;/h2&gt;
+&lt;p&gt;To upgrade an existing GPI installation, you can take the following simple steps.&lt;/p&gt;
+&lt;p&gt;1) Remove the &lt;code&gt;gpi&lt;/code&gt; channel from your conda configuration, as it's no longer necessary. You can do this directly by modifying &lt;code&gt;~/.condarc&lt;/code&gt;. While various configurations may work, the &lt;code&gt;.condarc&lt;/code&gt; provided with a fresh GPI install is the following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;channels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+  &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="k"&gt;defaults&lt;/span&gt;
+&lt;span class="n"&gt;restore_free_channel&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;true&lt;/span&gt;
+&lt;span class="n"&gt;channel_priority&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;strict&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This sets &lt;code&gt;conda-forge&lt;/code&gt; and &lt;code&gt;defaults&lt;/code&gt; as the two channels to search (in that order), tells conda to include the &lt;code&gt;free&lt;/code&gt; packages as well (disabled by default in newer conda versions), and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.&lt;/p&gt;
+&lt;p&gt;2) Make a backup copy of any node libraries you may use outside of the GPI core nodes, as you may need to modify your nodes slightly to work with v1.1.&lt;/p&gt;
+&lt;p&gt;3) Run &lt;code&gt;conda update -n base conda&lt;/code&gt; to get the latest version of the package manager itself.&lt;/p&gt;
+&lt;p&gt;4) Install GPI and the core nodes. If you use conda exclusively for GPI, you can upgrade inside your existing gpi environment with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
+&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="n"&gt;gpi_core&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Or, if you prefer a more conservative approach, make a new environment for GPI 1.1 and install there:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="k"&gt;create&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="n"&gt;gpi_core&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;5) Make any necessary changes to other node libraries as described above.&lt;/p&gt;
+&lt;p&gt;6) Get started with GPI 1.1 -- and consider helping us make it even better!&lt;/p&gt;
+&lt;h2&gt;Core Node Library Changes&lt;/h2&gt;
+&lt;p&gt;Minor changes to the core nodes themselves include two new nodes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Int_Math&lt;/code&gt;, which works just like &lt;code&gt;Float_Math&lt;/code&gt; for integer values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Switch&lt;/code&gt;, which allows you to toggle between a left and right input without re-drawing connections.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And some modifications to existing nodes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the &lt;code&gt;Collapse&lt;/code&gt; node, you can now use the "non-zero" option for collapsing in a single dimension, not just with "collapse all" selected&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;shapes&lt;/code&gt; node now allows for the generation of complex-valued noise, as well as repeatable noise using a user-specified seed.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Calc_101&lt;/code&gt; now allows for more granular control over the scheme used for derivatives and integrals.&lt;/li&gt;
+&lt;li&gt;Many trigonometric functions now have a "cycles" option in addition to degrees and radians.&lt;/li&gt;
+&lt;li&gt;Nodes with multiple functions will provide more information on the canvas about which function is active.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!&lt;/p&gt;</content></entry><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
 &lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
 &lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the Linux Disrto under Windows 10 and how to convert the proprietary and standard Philips MR rawdata, imaging and spectroscopy data to NumPy data are shown below.&lt;/p&gt;
 &lt;p&gt;Prerequisites and Installed Software list&lt;/p&gt;
