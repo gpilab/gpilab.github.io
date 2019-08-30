@@ -18,12 +18,11 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;channels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
   &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
   &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="k"&gt;defaults&lt;/span&gt;
-&lt;span class="n"&gt;restore_free_channel&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;true&lt;/span&gt;
 &lt;span class="n"&gt;channel_priority&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;strict&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This sets &lt;code&gt;conda-forge&lt;/code&gt; and &lt;code&gt;defaults&lt;/code&gt; as the two channels to search (in that order), tells conda to include the &lt;code&gt;free&lt;/code&gt; packages as well (disabled by default in newer conda versions), and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.&lt;/p&gt;
+&lt;p&gt;This sets &lt;code&gt;conda-forge&lt;/code&gt; and &lt;code&gt;defaults&lt;/code&gt; as the two channels to search (in that order) and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.&lt;/p&gt;
 &lt;p&gt;2) Make a backup copy of any node libraries you may use outside of the GPI core nodes, as you may need to modify your nodes slightly to work with v1.1.&lt;/p&gt;
 &lt;p&gt;3) Run &lt;code&gt;conda update -n base conda&lt;/code&gt; to get the latest version of the package manager itself.&lt;/p&gt;
 &lt;p&gt;4) Install GPI and the core nodes. If you use conda exclusively for GPI, you can upgrade inside your existing gpi environment with:&lt;/p&gt;
@@ -56,7 +55,9 @@
 &lt;li&gt;Nodes with multiple functions will provide more information on the canvas about which function is active.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!&lt;/p&gt;</content></entry><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
-&lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+&lt;p&gt;(Note: a video version of this tutorial is available at &lt;a href="https://www.youtube.com/watch?v=LWMhKDcEce0&amp;amp;feature=youtu.be"&gt;this link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+&lt;p&gt;(Note: a video version of this tutorial is available at &lt;a href="https://www.youtube.com/watch?v=LWMhKDcEce0&amp;amp;feature=youtu.be"&gt;this link&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the Linux Disrto under Windows 10 and how to convert the proprietary and standard Philips MR rawdata, imaging and spectroscopy data to NumPy data are shown below.&lt;/p&gt;
 &lt;p&gt;Prerequisites and Installed Software list&lt;/p&gt;
 &lt;hr&gt;

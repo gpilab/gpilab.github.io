@@ -129,12 +129,11 @@
 <div class="highlight"><pre><span></span><span class="n">channels</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
   <span class="o">-</span> <span class="k">defaults</span>
-<span class="n">restore_free_channel</span><span class="p">:</span> <span class="k">true</span>
 <span class="n">channel_priority</span><span class="p">:</span> <span class="k">strict</span>
 </pre></div>
 
 
-<p>This sets <code>conda-forge</code> and <code>defaults</code> as the two channels to search (in that order), tells conda to include the <code>free</code> packages as well (disabled by default in newer conda versions), and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.</p>
+<p>This sets <code>conda-forge</code> and <code>defaults</code> as the two channels to search (in that order) and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.</p>
 <p>2) Make a backup copy of any node libraries you may use outside of the GPI core nodes, as you may need to modify your nodes slightly to work with v1.1.</p>
 <p>3) Run <code>conda update -n base conda</code> to get the latest version of the package manager itself.</p>
 <p>4) Install GPI and the core nodes. If you use conda exclusively for GPI, you can upgrade inside your existing gpi environment with:</p>
