@@ -36,11 +36,10 @@ To upgrade an existing GPI installation, you can take the following simple steps
 channels:
   - conda-forge
   - defaults
-restore_free_channel: true
 channel_priority: strict
 ```
 
-This sets `conda-forge` and `defaults` as the two channels to search (in that order), tells conda to include the `free` packages as well (disabled by default in newer conda versions), and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.
+This sets `conda-forge` and `defaults` as the two channels to search (in that order) and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.
 
 2) Make a backup copy of any node libraries you may use outside of the GPI core nodes, as you may need to modify your nodes slightly to work with v1.1.
 
