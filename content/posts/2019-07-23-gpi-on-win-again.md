@@ -6,6 +6,7 @@ Author: Sandeep Ganji <sandeep.ganji@philips.com>
 Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata
 ===================================================================================================
 
+(Note: a video version of this tutorial is available at [this link](https://www.youtube.com/watch?v=LWMhKDcEce0&feature=youtu.be))
   
 The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL) feature. Instructions on how to install GPI (Graphical Programming Interface) in the Linux Disrto under Windows 10 and how to convert the proprietary and standard Philips MR rawdata, imaging and spectroscopy data to NumPy data are shown below.
 
