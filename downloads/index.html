@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Downloads</title>
+        <title>Install GPI</title>
 
             <link href="http://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
 
@@ -61,10 +61,10 @@
                     <li><a href="/">Home</a></li>
 
 
-                            <li class="active"><a href="http://gpilab.com/downloads/">Downloads</a></li>
+                            <li class="active"><a href="http://gpilab.com/downloads/">Install GPI</a></li>
+                            <li><a href="http://gpilab.com/screencasts/">Tutorials</a></li>
                             <li><a href="http://gpilab.com/documentation/">Documentation</a></li>
                             <li><a href="http://gpilab.com/community/">Community</a></li>
-                            <li><a href="http://gpilab.com/screencasts/">Screencasts</a></li>
                             <li><a href="http://gpilab.com/about/">About</a></li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Downloads</h1>
+                        <h1>Install GPI</h1>
                     </div>
                 </div>
             </div>
@@ -101,171 +101,110 @@ to download, install or otherwise use the software in any way. By continuing
 with this download, you are agreeing to the applicable <a href="/license">license terms and
 conditions</a>.</p>
 </blockquote>
-<h2>GPI v1.1</h2>
-<p>The latest release can be downloaded below. This is the current development
-release used by the MR Technology Use Design Group.</p>
-<div class="container">
-<div class="row">
-
-<div class="col-md-3 col-sm-3">
-</div>
-
-<div class="col-md-3 col-sm-3">
-<a href="https://raw.githubusercontent.com/gpilab/conda-distro/master/GPI_Install_Latest.sh">
-<div class="text-center">
-<img src="/images/script_dl.jpg" width="100%" />
-<h3>Ubuntu 12.04+ <br> & <br> Mac OS  10.9+</h3>
-</a>
-GPI_Install_Latest.sh <br> 4.5KB <br>
-<i>Install GPI (to be launched from a command line) using conda. This script should also work in Ubuntu (WSL) on Windows 10 (unsupported).</i>
-</div>
-
-</div>
-
-<div class="col-md-3 col-sm-3">
-</div>
-
-<br>
-
-</div> <!-- row -->
-
-<a href="https://github.com/gpilab/framework/releases">Release Archive</a>
-
-</div>
-
-<!-- container -->
-
-<h2><a name="Installation"></a> Installation</h2>
-<p>The following sections cover the installation for OSX and Linux.  If you are
-upgrading to a newer version of GPI from GPI v0.5 or older, move (or remove)
-the existing installation by executing the following command in a terminal
-window as root.</p>
-<div class="highlight"><pre><span></span>$ sudo mv /opt/gpi /opt/gpi.old
-</pre></div>
-
-
+<h2><a name="min-hardware"></a> Minimum Hardware</h2>
+<p>It is recommended to use at least a dual processor system with 4GB of system memory for GPI.</p>
+<h2><a name="installation"></a> Installation</h2>
+<h3>Read This First</h3>
+<p>GPI is built and distributed on <a href="https://conda-forge.org/#about">Conda-Forge</a>, a community for open-source software distributed using the package manager <strong>conda</strong>. Conda allows you to create and maintain many separate "environments", each containing different software (such as different versions of Python). You can also save snapshots of an environment to help others verify or reproduce your work using exactly the same software versions.</p>
+<p>The most common conda distribution is Anaconda, which contains the package manager, a number of commonly used packages, and a graphical interface that may be easier for new GPI users. If you'd like to install GPI using Anaconda and the GUI (Anaconda Navigator), follow the guide for <a href="#install-navigator">installing with Anaconda Navigator</a>.</p>
+<p>GPI can also be installed, configured, and launched directly from the command line. This install method will be more appropriate for advanced users or those who are already using conda from the command line. If you prefer this method, skip ahead to the instructions for <a href="#install-command">installing from the command line</a>.</p>
+<h3><a id="install-navigator"></a> Installing with Anaconda Navigator</h3>
+<ol>
+<li>
+<p>If you already have Anaconda installed, go ahead to step 2. If not, download and run the latest Anaconda installer <a href="https://www.anaconda.com/distribution/#download-section">here</a> (choose the "Python 3.7" version). <em>When prompted, make sure to respond "yes" to the question about initializing Anaconda3 with conda init.</em>
+    <details>
+    <summary><b>Advanced notes (click to expand)</b></summary><br>
+    The installer will typically modify <code>~/.bashrc</code> or <code>~/.bash_profile</code> (or <code>~/.zshrc</code>, on OSX 10.15) so that new terminal windows open with the <code>base</code> conda environment active. If you'd prefer terminal windows to open outside of any conda environment, run the command:</p>
+<p><code>conda config --set auto_activate_base false</code></p>
+<p>The installer may also ask if it should add conda to your <code>PATH</code>. We recommend responding "no" (the default) to avoid breaking programs that rely on the system Python. For more information on Anaconda installation options, see the <a href="https://docs.anaconda.com/anaconda/user-guide/faq/">Anaconda FAQ</a>.
+</details></p>
+</li>
+<li>
+<p>If Anaconda Navigator is not already open, launch it as follows:</p>
+<ul>
+<li><strong>Mac</strong> - Choose the icon in your Applications folder.</li>
+<li><strong>Windows</strong> - Search for "Anaconda Navigator" in the Start Menu.</li>
+<li><strong>Linux</strong> - Open a terminal window and enter the command <code>anaconda-navigator</code> (note that if you set <code>auto_activate_base</code> to <code>false</code> in step 1, you'll have to enter <code>conda activate base</code> first - and you may find it more straightforward to use the command line installation method below).</li>
+</ul>
+</li>
+<li>
+<p>In Navigator, select <code>Environments</code> at left, then click <code>Create</code> at the bottom of the screen. Enter a name for this new environment (we'll call it <code>gpi_env</code> for the rest of these instructions). Make sure the box next to Python is checked, and select version 3.7. Click <code>Create</code>. The window should disappear, and after a few seconds you should see <code>gpi_env</code> show up in the environment list.</p>
+</li>
+<li>
+<p>There should be a triangle to the right of <code>gpi_env</code> indicating that it is the active environment. If this isn't the case, first double-click on <code>gpi_env</code> to activate it. Then click the triangle and choose <code>Open Terminal</code> to bring up a command prompt.</p>
+</li>
+<li>
+<p>A terminal window should open (on Linux, it may appear silently as a new tab in the terminal from step 2). Enter the following commands:</p>
+<p><code>conda config --env --add channels conda-forge</code></p>
+<p><code>conda config --env --set channel_priority strict</code></p>
+<p>This prepares your new environment to install the correct packages for GPI, without modifying any other environments.</p>
+</li>
+<li>
+<p>Close the terminal window/tab launched in step 4. In the right side of the Anaconda Navigator, you should see the list of packages installed in <code>gpi_env</code>. Above that list, click <code>Update Index</code> to refresh the list of available packages.</p>
+</li>
+<li>
+<p>Once this has finished running, change <code>Installed</code> to <code>Not Installed</code> in the drop-down menu, then type <code>gpi</code> into the search box at right. You should see a list of packages including <code>gpi</code> and <code>gpi_core</code>. You may also see other public GPI node libraries, which will have names starting with <code>gpi_</code>. Select <code>gpi</code> and <code>gpi_core</code> (and others, if you want to install them), then click <code>Apply</code>.</p>
+</li>
+<li>
+<p>A pop-up window will open and display a list of packages that will be added to <code>gpi_env</code>. You can take a look through this list, if you're interested in what software GPI depends on behind the scenes. When you're ready, click <code>Apply</code> again. The installation may take several minutes.</p>
+</li>
+<li>
+<p><strong>Run GPI:</strong> Once installation is complete, you should see GPI listed under the <code>Home</code> tab, with a <code>Launch</code> button available. You can run GPI using this button (in our experience, the first launch may be a bit slow). Each time you close and re-open Anaconda Navigator, you'll need to select <code>gpi_env</code> from the drop-down menu or Environments tab for GPI to appear.
+    <details>
+    <summary><b>Advanced notes (click to expand)</b></summary>
+    You may also wish to launch GPI by opening the <code>gpi_env</code> terminal (as in step 4) and entering the command <code>gpi</code>. This will allow you to see GPI warnings and error messages, which are currently not visible when launching from the <code>Home</code> tab (we're working on a fix!). Launching a <code>gpi_env</code> terminal also allows you to use the <code>gpi_make</code> command for building <a href="http://docs.gpilab.com/en/develop/NodeDev/devguide.html#pyfi-extending-gpi-nodes-with-c">C++ extensions with PyFI</a>.
+    </details></p>
+</li>
+</ol>
+<h3><a id="install-command"></a> Installing from the command line</h3>
+<ol>
+<li>
+<p>If you already have a conda distribution installed, skip ahead to step 2. If not, download and install Anaconda <a href="https://www.anaconda.com/distribution/#download-section">here</a>, or Miniconda (a lighter version about 90% smaller than Anaconda) <a href="https://docs.conda.io/en/latest/miniconda.html">here</a>. When prompted during installation, answer "yes" to the question about initializing conda using <code>conda init</code>. We recommend the default response of "no" when asked if you want to add conda to your system <code>PATH</code>, as this may break other things that depend on your system's installation of Python. For more information, please see the <a href="https://docs.anaconda.com/anaconda/user-guide/faq/">Anaconda FAQ</a>.</p>
+<p><strong>Note</strong> If you do not want terminal windows to open with the "base" conda environment active by default, you can disable this behavior with the following:</p>
+<p><code>conda config --set auto_activate_base false</code> </p>
+</li>
+<li>
+<p>Launch a new terminal instance. Windows users with Anaconda can launch "Anaconda Prompt" from the Start Menu, or any other terminal (cmd.exe, PowerShell, or MinGW) for which conda has been configured. Next, choose a name for the environment that will hold GPI. We will use <code>gpi_env</code> for this tutorial. Finally, run the following commands to set up and configure the new environment:</p>
+<p><code>conda create -n gpi_env</code></p>
+<p><code>conda activate gpi_env</code></p>
+<p><code>conda config --env --add channels conda-forge</code></p>
+<p><code>conda config --env --set channel_priority strict</code></p>
+<p><details>
+<summary><b>Advanced notes (click to expand)</b></summary>
+These commands assume you are starting from a clean installation of conda. If you have made config changes to conda prior to this installation, you may need to pay attention to those settings. The end goal is to have a new environment with at least two channels, <strong>conda-forge</strong> (first) and <strong>defaults</strong> (second), and with the <strong>channel_priority</strong> attribute set to "strict". You can omit the <code>--env</code> flag in the above commands if you want these configuration changes to apply to <em>all</em> of your conda environments. See <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html">here</a> for a full description of conda configuration options.
+</details></p>
+</li>
+<li>
+<p>Install GPI and the core nodes. In the same terminal as above (making sure <code>gpi_env</code> is still the active environment), run the following command:</p>
+<p><code>conda install gpi_core python=3.7 pyqt=5.9</code></p>
+<p>Python 3.7 and Qt 5.9 currently provide the "smoothest" running GPI, but you can also install with Python 3.6 or 3.8, and Qt 5.6 or 5.12 (the latter is required for Python 3.8). If you omit the python and pyqt pinnings from the above command, conda will use the newest possible version from conda-forge for both packages.</p>
+</li>
+<li>
+<p><strong>Running GPI</strong> - GPI is now installed and ready to use. Run it with the command <code>gpi</code>. When starting from a new terminal, remember that you will first need to activate the environment <code>gpi_env</code> using <code>conda activate gpi_env</code>.</p>
+</li>
+</ol>
 <hr>
-<h2><a name="MinHardware"></a> Minimum Hardware</h2>
-<p>For native installs it is recommended to use at least a dual processor system
-with 4GB of system memory. The virtual machine uses VMware hardware <a
-title="Virtual Hardware Compatibility "
-href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1003746"
-target="_blank">version 8</a>.</p>
+<h2>Updating GPI</h2>
+<p>You can update GPI like any other conda package, either from within Anaconda Navigator or using the command line. In addition, GPI contains a built-in updater, which is found under:
+- <code>GPI &gt; Search For Updates</code> (Mac)
+- <code>Help &gt; Search For Updates</code> (Windows/Linux)</p>
+<h5>Additional Notes</h5>
+<p>If you are upgrading from a very early version of GPI, v0.5 or older, first move (or remove) the existing installation, which will most likely be located at <code>/opt/gpi</code>.</p>
+<p>If you are a Mac user upgrading from the previous App-packaged version, simply delete the older GPI in your Applications folder prior to installing the new one. You may also need to modify the file <code>~/.bashrc</code> or <code>~/.bash_profile</code> to remove links to the App-style GPI package (which included a hidden installation of Miniconda).</p>
 <hr>
-<h2><a name="MacPorts"></a> MacPorts Installation</h2>
-<p>Our thanks to <a href="https://github.com/eborisch">Eric Borisch</a> for enabling GPI installation via MacPorts. To install via MacPorts. Use the following commands to install the latest GPI framework and core nodes.</p>
+<h2><a name="macports"></a> MacPorts Installation</h2>
+<p>Our thanks to <a href="https://github.com/eborisch">Eric Borisch</a> for enabling GPI installation via MacPorts. To install via MacPorts, use the following commands:</p>
 <div class="highlight"><pre><span></span>$ sudo port install py-gpilab-framework
 $ sudo port install py-gpilab-core
 </pre></div>
 
 
 <hr>
-<h2>Install Script</h2>
-<p>To use the install script <code>GPI_Install_Latest.sh</code>, first make sure the
-script is executable by entering the following command in a terminal:</p>
-<div class="highlight"><pre><span></span>$ chmod a+x GPI_Install_Latest.sh
-</pre></div>
-
-
-<p>Then run the script with a path to the desired install location:</p>
-<div class="highlight"><pre><span></span>$ GPI_Install_Latest.sh ~/gpi_stack
-</pre></div>
-
-
-<p>This script will install GPI from <a href="https://anaconda.org">Anaconda Cloud</a> using the <code>conda</code> package manager. If you already use <code>conda</code>, you can install <code>gpi</code> with from the <code>gpi</code> channel, with dependencies from the <code>conda-forge</code> channel (this is how the installation script works).</p>
-<div class="highlight"><pre><span></span>$ conda install gpi -c conda-forge -c gpi -c defaults
-</pre></div>
-
-
-<hr>
-<h2>GPI v1.0</h2>
-<p>Previously, GPI v1.0 could be installed as an OSX app or a complete virtual machine. This is not supported for v1.1 (though we are working to bring back the OSX app). The links below allow you to install GPI v1.0 — note that v1.0.6 is also available on conda-forge!</p>
-<div class="container">
-<div class="row">
-
-<div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.0-rc1/GPI_1.0.0-rc.dmg">
-<div class="text-center">
-<img src="/images/osx_dl.jpg" width="100%" />
-<h3>Mac OS 10.7+</h3>
-</a>
-GPI_1.0.0-rc.dmg <br> 364MB <br>
-<i>Provides an OSX app that can be launched from your dock.</i>
-</div>
-</div>
-
-<div class="col-md-3 col-sm-3">
-<a href="https://github.com/gpilab/framework/releases/download/v1.0.2/GPI_Stack_1.0.2.vmwarevm.zip">
-<div class="text-center">
-<img src="/images/vm_dl.jpg" width="100%" />
-<h3>VMware VM <br> (Ubuntu 15.10) </h3>
-</a>
-GPI_VM_1.0.2.zip <br> 1.2GB <br>
-<i>A complete Linux virtual machine containing GPI.</i>
-</div>
-</div>
-
-<br>
-
-</div> <!-- row -->
-
-<a href="https://github.com/gpilab/framework/releases">Release Archive</a>
-
-</div>
-
-<!-- container -->
-
-<hr>
-<h2>OSX App</h2>
-<p>To install the OSX app, download and open the <code>.dmg</code> file, then drag the
-<code>GPI.app</code> to the <code>/Applications</code> folder (which is linked in the <code>.dmg</code> image).
-In order to add the <code>gpi_make</code> command and the anaconda python suite to your
-environment, add the following to your <code>~/.bashrc</code>.</p>
-<div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">=</span><span class="ss">&quot;/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH&quot;</span>
-</pre></div>
-
-
-<hr>
-<h3>Installation Notes</h3>
+<h3>Other Notes</h3>
 <ul>
 <li>If you are having issues with node libraries not being visible, make sure to
-check your <code>~/.gpirc</code> file for the correct library paths.</li>
-<li>By default, the packaged <code>core</code> library and any library under <code>~/gpi</code> is
-searched.</li>
-<li>The OSX gatekeeper in 10.11 <em>El Capitan</em> appears to take more time to
-validate packages.  This may require you to wait a few minutes before allowing
-the package to be opened in the <em>Security &amp; Privacy</em> preferances pane.</li>
+check your <code>~/.gpirc</code> file for the correct library path. By default, the packaged <code>gpi_core</code> library and any library under <code>~/gpi</code> is searched.</li>
 </ul>
-<hr>
-<h4>OSX Gatekeeper</h4>
-<p>After downloading and opening the GPI <code>.dmg</code> bundle, depending on the security
-settings, the Gatekeeper may require an extra acknowledgement before allowing
-installation. This can be granted in the</p>
-<p><code>System Preferences → Security &amp; Privacy → Allow apps...</code></p>
-<p>preferences menu. Then continue on to the guided installation.</p>
-<p>To compile C++ extension modules, install <a
-href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12&amp;uo=4"
-target="_blank">xcode</a> and the <a
-href="https://developer.apple.com/library/mac/technotes/tn2339/_index.html"
-target="_blank">xcode commandline</a> tools.  The <code>gpi</code> and <code>gpi_make</code> commands
-can be added to your path by adding the following line to your shell config
-file (i.e. <code>~/.bashrc</code>).</p>
-<div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">=</span><span class="ss">&quot;/Applications/GPI.app/Contents/Resources/miniconda/bin:$PATH&quot;</span>
-</pre></div>
-
-
-<hr>
-<h2>Virtual Machine</h2>
-<p>Download and unzip the GPI Stack <code>.zip</code> file.  This will create a directory
-with the virtual machine contents.  Open the contained <code>.vmx</code> file with a
-VMware compatible player.</p>
-<p>To compile C++ extension modules in Ubuntu linux, install g++ with the
-following command:</p>
-<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span>
-</pre></div>
-
-
-<p>The password for the default user is <code>gpilab</code>.</p>
     </article>
             </div>
         </div>
