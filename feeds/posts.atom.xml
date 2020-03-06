@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com - posts</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2019-08-14T00:00:00-07:00</updated><entry><title>GPI version 1.1 has arrived!</title><link href="http://gpilab.com/2019/08/gpi-version-11-has-arrived/" rel="alternate"></link><published>2019-08-14T00:00:00-07:00</published><updated>2019-08-14T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2019-08-14:/2019/08/gpi-version-11-has-arrived/</id><summary type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com - posts</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2020-03-06T00:00:00-07:00</updated><subtitle>Graphical Programming Interface</subtitle><entry><title>Recent Updates to GPI</title><link href="http://gpilab.com/2020/03/recent-updates-to-gpi/" rel="alternate"></link><published>2020-03-06T00:00:00-07:00</published><updated>2020-03-06T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2020-03-06:/2020/03/recent-updates-to-gpi/</id><summary type="html">&lt;h3&gt;Interested in trying GPI? It's easier than ever to get started!&lt;/h3&gt;
+&lt;p&gt;We've been making some major behind-the-scenes upgrades to GPI in recent months! We've added the ability to run GPI natively on Windows, squashed a few bugs, and streamlined the installation process to help new users get up and running …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Interested in trying GPI? It's easier than ever to get started!&lt;/h3&gt;
+&lt;p&gt;We've been making some major behind-the-scenes upgrades to GPI in recent months! We've added the ability to run GPI natively on Windows, squashed a few bugs, and streamlined the installation process to help new users get up and running quickly. All of this means a smoother experience for new and existing users alike.&lt;/p&gt;
+&lt;p&gt;GPI can be used by anyone from a new Python coder to an experienced MRI reconstruction developer — and we want everyone to be able to install and run GPI without hassle. To facilitate this, we'll be supporting two methods of GPI installation going forward: one using the graphical "Anaconda Navigator", and the other using the command line. GPI will look and feel exactly the same regardless of which method you choose. For more details, visit the newly-updated &lt;a href="http://gpilab.com/downloads/"&gt;Install GPI&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;Once you've installed GPI and the core nodes, you'll want to keep them up to date as updates are released frequently. You can do this through conda (see the install page for details), or using GPI itself! Just look under:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mac&lt;/strong&gt;: GPI &amp;gt; Search For Updates&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux/Windows&lt;/strong&gt;: Help &amp;gt; Search For Updates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;Contributing to GPI&lt;/h3&gt;
+&lt;p&gt;We value community contributions highly and hope you'll consider pitching in to make GPI even better! All of our development work is carried out at &lt;a href="www.github.com/gpilab"&gt;www.github.com/gpilab&lt;/a&gt;. Feel free to have a look at the code, start a fork of any of the repositories, and communicate with us via &lt;code&gt;Issues&lt;/code&gt; for any bugs, feature requests, or general thoughts. We already have more feature ideas than we have time to implement them, so we'd love your help!&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI version 1.1 has arrived!</title><link href="http://gpilab.com/2019/08/gpi-version-11-has-arrived/" rel="alternate"></link><published>2019-08-14T00:00:00-07:00</published><updated>2019-08-14T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2019-08-14:/2019/08/gpi-version-11-has-arrived/</id><summary type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
 &lt;p&gt;GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
 &lt;p&gt;GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that we hope will make GPI easier for users, developers, and maintainers going forward. Below you'll find a description of the major changes, upgrade process, and a list of changes to the core nodes.&lt;/p&gt;
 &lt;p&gt;As of this version, the recommended installation method is to use the installation script. All changes listed below will be accounted for by default when installing with the script, so if you're a new user you can just sit back, relax, and enjoy GPI.&lt;/p&gt;
@@ -54,7 +65,7 @@
 &lt;li&gt;Many trigonometric functions now have a "cycles" option in addition to degrees and radians.&lt;/li&gt;
 &lt;li&gt;Nodes with multiple functions will provide more information on the canvas about which function is active.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!&lt;/p&gt;</content></entry><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+&lt;p&gt;Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
 &lt;p&gt;(Note: a video version of this tutorial is available at &lt;a href="https://www.youtube.com/watch?v=LWMhKDcEce0&amp;amp;feature=youtu.be"&gt;this link&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
 &lt;p&gt;(Note: a video version of this tutorial is available at &lt;a href="https://www.youtube.com/watch?v=LWMhKDcEce0&amp;amp;feature=youtu.be"&gt;this link&lt;/a&gt;)&lt;/p&gt;
@@ -377,7 +388,7 @@ Contributions from Daniel Borup and Ashley Anderson&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/gpilab"&gt;https://github.com/gpilab&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ismrm.github.io/mrhub/"&gt;https://ismrm.github.io/mrhub/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/gpilab/philips-data-reader/releases"&gt;https://github.com/gpilab/philips-data-reader/releases&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content></entry><entry><title>ISMRM Demo: CS with BART in GPI</title><link href="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/" rel="alternate"></link><published>2019-05-07T08:59:00-07:00</published><updated>2019-05-07T08:59:00-07:00</updated><author><name>Ashley Anderson III &lt;aganders3@gmail.com&gt;</name></author><id>tag:gpilab.com,2019-05-07:/2019/05/ismrm-demo-cs-with-bart-in-gpi/</id><summary type="html">&lt;p&gt;As part of our GPI demo at at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for MR
+&lt;/ol&gt;</content><category term="posts"></category></entry><entry><title>ISMRM Demo: CS with BART in GPI</title><link href="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/" rel="alternate"></link><published>2019-05-07T08:59:00-07:00</published><updated>2019-05-07T08:59:00-07:00</updated><author><name>Ashley Anderson III &lt;aganders3@gmail.com&gt;</name></author><id>tag:gpilab.com,2019-05-07:/2019/05/ismrm-demo-cs-with-bart-in-gpi/</id><summary type="html">&lt;p&gt;As part of our GPI demo at at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for MR
 Pulse Design, Simulation &amp;amp; Reconstruction Weekend
 Course&lt;/a&gt;, we've revived an
 example of BART working inside GPI. This example is intended to demonstrate the
@@ -389,7 +400,7 @@ flexibility and capabilities of GPI to integrate other packages. This demo also
 highlights the use of GPI as a teaching tool; the example is based on &lt;a href="http://people.eecs.berkeley.edu/~mlustig/CS.html"&gt;this
 example from Professor
 Lustig&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Before getting started here, please see Nick's post on &lt;a href="http://gpilab.com/2019/05/ismrm-demo-primer/"&gt;setting up GPI for the
+&lt;p&gt;Before getting started here, please see Nick's post on &lt;a href="http://gpilab.com/posts/2019-05-05-ISMRM-Demo-Primer.md"&gt;setting up GPI for the
 ISMRM 2019 demo&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;Download and Compile BART for GPI&lt;/h1&gt;
@@ -397,7 +408,7 @@ ISMRM 2019 demo&lt;/a&gt;.&lt;/p&gt;
 project&lt;/a&gt;. We concede this fork is out of
 date, but it should suffice for a demonstation. Updating to a newer version
 would be fairly trivial for someone familiar with both BART and GPI. Check
-out Nick's &lt;em&gt;other&lt;/em&gt; post on &lt;a href="http://gpilab.com/2016/02/gpi-and-the-bart/"&gt;how BART was wrapped for use in
+out Nick's &lt;em&gt;other&lt;/em&gt; post on &lt;a href="http://gpilab.com/posts/2016-02-16-GPI-and-the-BART.md"&gt;how BART was wrapped for use in
 GPI&lt;/a&gt; if you're interested in
 making this work.&lt;/p&gt;
 &lt;p&gt;First, prepare your virtual machine for BART compilation:&lt;/p&gt;
@@ -449,7 +460,7 @@ watch as the undersampling artifacts are removed by the wavelet-based
 soft-thresholding constraint.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/&gt;&lt;/p&gt;
 &lt;p&gt;There you have it! Explore the rest of the BART tools in GPI and let us know if
-you come up with any cool examples.&lt;/p&gt;</content></entry><entry><title>ISMRM Demo Primer</title><link href="http://gpilab.com/2019/05/ismrm-demo-primer/" rel="alternate"></link><published>2019-05-05T12:29:00-07:00</published><updated>2019-05-05T12:29:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2019-05-05:/2019/05/ismrm-demo-primer/</id><summary type="html">&lt;p&gt;GPI is going to be presented at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for
+you come up with any cool examples.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>ISMRM Demo Primer</title><link href="http://gpilab.com/2019/05/ismrm-demo-primer/" rel="alternate"></link><published>2019-05-05T12:29:00-07:00</published><updated>2019-05-05T12:29:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2019-05-05:/2019/05/ismrm-demo-primer/</id><summary type="html">&lt;p&gt;GPI is going to be presented at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for
 MR Pulse Design, Simulation &amp;amp; Reconstruction Weekend Course&lt;/a&gt;.
 The format of this session will be to allow developers to pitch their designs
 and then provide a break-out tutorial session to give participants a chance to
@@ -641,7 +652,7 @@ release page or directly:&lt;/p&gt;
 After a few dialog boxes you should be able to start your VM directly.&lt;/p&gt;
 &lt;h2&gt;Start GPI&lt;/h2&gt;
 &lt;p&gt;There is a script on the desktop called &lt;code&gt;startGPI&lt;/code&gt;, just double click to get
-started.&lt;/p&gt;</content></entry><entry><title>GPI on Windows?!</title><link href="http://gpilab.com/2016/09/gpi-on-windows/" rel="alternate"></link><published>2016-09-27T15:28:00-07:00</published><updated>2016-09-27T15:28:00-07:00</updated><author><name>Akshay Bakhru</name></author><id>tag:gpilab.com,2016-09-27:/2016/09/gpi-on-windows/</id><summary type="html">&lt;blockquote&gt;
+started.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI on Windows?!</title><link href="http://gpilab.com/2016/09/gpi-on-windows/" rel="alternate"></link><published>2016-09-27T15:28:00-07:00</published><updated>2016-09-27T15:28:00-07:00</updated><author><name>Akshay Bakhru</name></author><id>tag:gpilab.com,2016-09-27:/2016/09/gpi-on-windows/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;GPI is developed at the BNI on Mac and Linux platforms.  We typically don't
 develop our MR methods on Windows and therefore have limited experience
 with this.  Fortunately, the nice folks at Philips who develop in GPI have
@@ -805,7 +816,7 @@ tracker&lt;/a&gt; for potential solutions or
 help. If you have encountered any solutions to those problems or would like to
 share an issue that you've fixed, a post on the &lt;a href="https://github.com/gpilab/framework/issues"&gt;issue
 tracker&lt;/a&gt; would be much appreciated
-:).&lt;/p&gt;</content></entry><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><published>2016-02-16T12:56:00-07:00</published><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:/2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
+:).&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><published>2016-02-16T12:56:00-07:00</published><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:/2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
 has been used to wrap the &lt;a href="http://mrirecon.github.io/bart/"
 target="_blank"&gt;Berkeley Advanced Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI
 node library for the purpose of allowing GPI users to easily explore and
@@ -962,7 +973,7 @@ target="_blank"&gt;GPI-BART node library&lt;/a&gt; installation: the BART compil
 and the GPI node library installation.  Before starting download or clone the
 GPI-BART fork:&lt;/p&gt;
 &lt;p&gt;First (if you haven't already), make a 'gpi' directory in your home directory.
-If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.com/2015/06/installing-node-libraries/"&gt;Installing Node
+If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.com/posts/2015-06-30-Installing-Node-Libraries.md"&gt;Installing Node
 Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;
     &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;
@@ -1003,7 +1014,7 @@ the default paths then GPI-BART library is ready to go.&lt;/p&gt;
 &lt;p&gt;If you have path modifications in your &lt;code&gt;~/.gpirc&lt;/code&gt; file or the nodes are not
 visible in your library menu, consult the
 &lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;Configuration&lt;/a&gt; docs or check out the
-post on &lt;a href="http://gpilab.com/2015/06/installing-node-libraries/"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
+post on &lt;a href="http://gpilab.com/posts/2015-06-30-Installing-Node-Libraries.md"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Events&lt;/h2&gt;
 &lt;p&gt;This work has been presented at the &lt;a href="http://www.ismrm.org/workshops/Data16/"&gt;ISMRM Workshop on Data Sampling &amp;amp; Image
 Reconstruction&lt;/a&gt; in Sedona Arizona this
@@ -1012,7 +1023,7 @@ Exhibition&lt;/a&gt; in Singapore
 this March.&lt;/p&gt;
 &lt;h2&gt;Thanks&lt;/h2&gt;
 &lt;p&gt;We'd like to thanks the BART developers at UC Berkeley for their help in
-building these nodes.&lt;/p&gt;</content></entry><entry><title>GPI v1 Release</title><link href="http://gpilab.com/2016/01/gpi-v1-release/" rel="alternate"></link><published>2016-01-13T13:56:00-07:00</published><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-01-13:/2016/01/gpi-v1-release/</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
+building these nodes.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI v1 Release</title><link href="http://gpilab.com/2016/01/gpi-v1-release/" rel="alternate"></link><published>2016-01-13T13:56:00-07:00</published><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-01-13:/2016/01/gpi-v1-release/</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
 major framework changes with the transition to &lt;a
 href="https://docs.python.org/3/" target="_blank"&gt;Python 3&lt;/a&gt;, packaging via
 &lt;a href="http://anaconda.org" target="_blank"&gt;Anaconda.org&lt;/a&gt;, PyFI API
@@ -1076,7 +1087,7 @@ Software Library)&lt;/a&gt; projects.&lt;/p&gt;
 &lt;h3&gt;Download&lt;/h3&gt;
 &lt;p&gt;For more information about the updates check out the
 &lt;a href="http://docs.gpilab.com/en/develop/CHANGELOG.html"&gt;changelog&lt;/a&gt; or
-just download the latest release at &lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Editor's Pick!</title><link href="http://gpilab.com/2015/12/editors-pick/" rel="alternate"></link><published>2015-12-18T20:30:00-07:00</published><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-12-18:/2015/12/editors-pick/</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
+just download the latest release at &lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Editor's Pick!</title><link href="http://gpilab.com/2015/12/editors-pick/" rel="alternate"></link><published>2015-12-18T20:30:00-07:00</published><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-12-18:/2015/12/editors-pick/</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
 href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
 target="_blank"&gt;"Graphical programming interface: A development environment for
 MRI methods"&lt;/a&gt; has been chosen as one of the &lt;a
@@ -1094,7 +1105,7 @@ target="_blank"&gt;MRM Editor's Picks&lt;/a&gt; for November!  There is also a s
 interview with Jim Pipe and myself from the folks at &lt;a
 href="http://www.ismrm.org/qa-with-nicholas-zwart-and-james-pipe/"
 target="_blank"&gt;MRM Highlights&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</content></entry><entry><title>Installing Node Libraries</title><link href="http://gpilab.com/2015/06/installing-node-libraries/" rel="alternate"></link><published>2015-06-30T14:21:00-07:00</published><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.com,2015-06-30:/2015/06/installing-node-libraries/</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
+&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Installing Node Libraries</title><link href="http://gpilab.com/2015/06/installing-node-libraries/" rel="alternate"></link><published>2015-06-30T14:21:00-07:00</published><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.com,2015-06-30:/2015/06/installing-node-libraries/</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
 using new nodes. Whether the library contains nodes and networks you created,
 or code from a collaborator or colleague, installation is the same simple
 process.&lt;/p&gt;
@@ -1200,7 +1211,7 @@ changes in your GPI node libraries. Check out the
 &lt;a href="http://docs.gpilab.com"&gt;documentation&lt;/a&gt; for more information, and please &lt;a href="/community"&gt;get
 in touch&lt;/a&gt; if you have questions or if you're
 interested in contributing to the project.
-&lt;h2&gt;&lt;/h2&gt;&lt;/p&gt;</content></entry><entry><title>Philips Raw Data Reader</title><link href="http://gpilab.com/2015/04/philips-raw-data-reader/" rel="alternate"></link><published>2015-04-06T13:27:00-07:00</published><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-04-06:/2015/04/philips-raw-data-reader/</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
+&lt;h2&gt;&lt;/h2&gt;&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Philips Raw Data Reader</title><link href="http://gpilab.com/2015/04/philips-raw-data-reader/" rel="alternate"></link><published>2015-04-06T13:27:00-07:00</published><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-04-06:/2015/04/philips-raw-data-reader/</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
 release. Users of the Philips raw data formats can directly import the raw data
 into GPI and start investigating. Thanks to the tenacious efforts of Ryan
 Robison, the reader node supports a plethora of file …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
@@ -1239,7 +1250,7 @@ maintained by developers, who have vendor specific access, allowing the tool to
 be updated with product changes.  The end users benefit by moving forward with
 their research without getting tangled up in the proprietary code.&lt;/p&gt;
 &lt;p&gt;If you have a GPI node project, you are welcome to submit a link for listing on
-the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</content></entry><entry><title>GPI v½ Release</title><link href="http://gpilab.com/2015/02/gpi-v-12-release/" rel="alternate"></link><published>2015-02-27T15:39:00-07:00</published><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-02-27:/2015/02/gpi-v-12-release/</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
+the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI v½ Release</title><link href="http://gpilab.com/2015/02/gpi-v-12-release/" rel="alternate"></link><published>2015-02-27T15:39:00-07:00</published><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-02-27:/2015/02/gpi-v-12-release/</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
 &lt;div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;"&gt;
 &lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.com/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
 &lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="http://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
@@ -1304,7 +1315,7 @@ community support.&lt;/p&gt;
     &lt;li&gt;Removed zlib string compression on StringBox widgets to prevent nodes from segfaulting when using the StringBox in Linux&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p style="text-align: center;"&gt;&lt;/p&gt;</content></entry><entry><title>New Tutorial Screencasts</title><link href="http://gpilab.com/2014/10/new-tutorial-screencasts/" rel="alternate"></link><published>2014-10-10T15:06:00-07:00</published><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-10-10:/2014/10/new-tutorial-screencasts/</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>New Tutorial Screencasts</title><link href="http://gpilab.com/2014/10/new-tutorial-screencasts/" rel="alternate"></link><published>2014-10-10T15:06:00-07:00</published><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-10-10:/2014/10/new-tutorial-screencasts/</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
 &lt;table style="width:100%"&gt;
   &lt;tr&gt;
 &lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/X9ddBrbFAWU?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-71" 
@@ -1328,7 +1339,7 @@ src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" 
 
 &lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.3: SoS Coil Combine&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</content></entry><entry><title>Whats New in Version 0.2</title><link href="http://gpilab.com/2014/09/whats-new-in-version-02/" rel="alternate"></link><published>2014-09-29T21:42:00-07:00</published><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-09-29:/2014/09/whats-new-in-version-02/</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
+&lt;/table&gt;</content><category term="posts"></category></entry><entry><title>Whats New in Version 0.2</title><link href="http://gpilab.com/2014/09/whats-new-in-version-02/" rel="alternate"></link><published>2014-09-29T21:42:00-07:00</published><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-09-29:/2014/09/whats-new-in-version-02/</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
 Linux virtual machine. The package is built upon the multi-platform Python
 distribution “Anaconda”, from Continuum Analytics. The packages also contains
 an installer for maximum convenience.&lt;/p&gt;
@@ -1469,4 +1480,4 @@ alt="2-level library scope." width="400" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;li&gt;Corrected getWidget() error message (the bug threw exception during the error
   message creation) when using methods like getAttr() or setAttr().&lt;/li&gt;
 &lt;li&gt;Better node-process stability: fixed an issue causing zombie processes.&lt;/li&gt;
-&lt;/ul&gt;</content></entry></feed>
+&lt;/ul&gt;</content><category term="posts"></category></entry></feed>
