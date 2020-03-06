@@ -16,4 +16,4 @@ Once you've installed GPI and the core nodes, you'll want to keep them up to dat
 ----------------------------------
 
 ### Contributing to GPI
-We value community contributions highly and hope you'll consider pitching in to make GPI even better! All of our development work is carried out at [www.github.com/gpilab](www.github.com/gpilab). Feel free to have a look at the code, start a fork of any of the repositories, and communicate with us via `Issues` for any bugs, feature requests, or general thoughts. We already have more feature ideas than we have time to implement them, so we'd love your help!
+We value community contributions highly and hope you'll consider pitching in to make GPI even better! All of our development work is carried out at [www.github.com/gpilab](http://www.github.com/gpilab). Feel free to have a look at the code, start a fork of any of the repositories, and communicate with us via `Issues` for any bugs, feature requests, or general thoughts. We already have more feature ideas than we have time to implement them, so we'd love your help!
