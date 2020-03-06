@@ -26,13 +26,13 @@ exciting step forward for GPI users and developers.
    version type “About your PC” in the start menu and press “Enter”. Version
    should be 1607 or higher (shown in the about window below)
 
-![fitw75]({filename}/images/win_1_settings.jpg)
+![fitw75]({static}/images/win_1_settings.jpg)
 
 ## Enable developer mode
 1. Open the Settings app and head to Update & Security > For Developers
 2. Enable Developer Mode
 
-![fitw75]({filename}/images/win_2_devmode.jpg)
+![fitw75]({static}/images/win_2_devmode.jpg)
 
 ## Enable the “Windows Subsystem for Linux (Beta)”
 1. Open the Control Panel, click “Programs,” and click “Turn Windows Features
@@ -42,7 +42,7 @@ exciting step forward for GPI users and developers.
 3. After you do, you’ll be prompted to reboot your computer. Click “Restart
    Now” to reboot your computer and Windows 10 will install the new feature.
 
-![fitw75]({filename}/images/win_3_subsys.jpg)
+![fitw75]({static}/images/win_3_subsys.jpg)
 
 ## Install
 1. After your computer restarts, click the Start button (or press the Windows
@@ -54,14 +54,14 @@ exciting step forward for GPI users and developers.
 4. You’ll be asked to create a user account and password for use in the Bash
    environment.
 
-![fitw75]({filename}/images/win_5_useradd.jpg)
+![fitw75]({static}/images/win_5_useradd.jpg)
 
 ## Run the bash shell
 1. Now you have a full command-line bash shell based on Ubuntu.
 2. To open the Bash shell, just open your Start menu and search for “bash” or
    “Ubuntu.”
 
-![fitw75]({filename}/images/win_6_bash.jpg)
+![fitw75]({static}/images/win_6_bash.jpg)
 
 ## Some tips (Installing packages and accessing windows dirs.)
 1. You can use Ubuntu’s apt-get command to install software from Ubuntu’s
@@ -70,7 +70,7 @@ exciting step forward for GPI users and developers.
    “packagename” with the package’s name.)
 3. Windows drives will be available in the “mnt” folder
 
-![fitw75]({filename}/images/win_7_mnt.jpg)
+![fitw75]({static}/images/win_7_mnt.jpg)
 
 ---------
 
@@ -91,7 +91,7 @@ works great with GPI.
 4. Launch Xming and it will appear in your system tray, running in the
    background and waiting for you to launch a graphical Linux program.
 
-![fitw75]({filename}/images/win_8_xming.jpg)
+![fitw75]({static}/images/win_8_xming.jpg)
 
 ## Try a graphical application
 1. Install Firefox using below command
@@ -105,7 +105,7 @@ works great with GPI.
     `export DISPLAY=:0` <br>
     `firefox`
 
-![fitw75]({filename}/images/win_9_firefox.jpg)
+![fitw75]({static}/images/win_9_firefox.jpg)
 
 ## Install Anaconda
 1. In Firefox launched above, download the Linux installer from here
@@ -127,7 +127,7 @@ works great with GPI.
 2. Check that python 3.x is installed in the packages
 3. Check if conda is also available
 
-![fitw75]({filename}/images/win_10_conda.jpg)
+![fitw75]({static}/images/win_10_conda.jpg)
 
 ## Install GPI via Conda
 1. Run the below command
@@ -138,7 +138,7 @@ works great with GPI.
 
 2. If you get the below errors, follow the sub steps
 
-    ![fitw75]({filename}/images/win_11_error.jpg)
+    ![fitw75]({static}/images/win_11_error.jpg)
 
     * This error is also shown if higher versions of numpy and python are
       installed
@@ -154,15 +154,15 @@ works great with GPI.
 4. Check GPI config as shown here:
    [http://docs.gpilab.com/en/develop/config.html](http://docs.gpilab.com/en/develop/config.html)
 
-![fitw75]({filename}/images/win_12_gpiconf.jpg)
+![fitw75]({static}/images/win_12_gpiconf.jpg)
 
 ## Launch the GPI GUI
 
 `export DISPLAY=:0` <br>
 `gpi`
 
-![fitw75]({filename}/images/win_13_gpi.jpg)
-![fitw75]({filename}/images/win_14_gpi.jpg)
+![fitw75]({static}/images/win_13_gpi.jpg)
+![fitw75]({static}/images/win_14_gpi.jpg)
 
 # Troubleshooting
 If you've encountered any bugs or issues during the installation or when

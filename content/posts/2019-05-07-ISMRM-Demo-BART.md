@@ -13,7 +13,7 @@ example from Professor
 Lustig](http://people.eecs.berkeley.edu/~mlustig/CS.html).
 
 Before getting started here, please see Nick's post on [setting up GPI for the
-ISMRM 2019 demo]({filename}/posts/2019-05-05-ISMRM-Demo-Primer.md).
+ISMRM 2019 demo]({static}/posts/2019-05-05-ISMRM-Demo-Primer.md).
 
 ---------
 
@@ -24,7 +24,7 @@ project](https://github.com/mrirecon/bart). We concede this fork is out of
 date, but it should suffice for a demonstation. Updating to a newer version
 would be fairly trivial for someone familiar with both BART and GPI. Check
 out Nick's _other_ post on [how BART was wrapped for use in
-GPI]({filename}/posts/2016-02-16-GPI-and-the-BART.md) if you're interested in
+GPI]({static}/posts/2016-02-16-GPI-and-the-BART.md) if you're interested in
 making this work.
 
 First, prepare your virtual machine for BART compilation:
@@ -55,13 +55,13 @@ Libraries can contain both nodes and networks. Most BART functions should have
 corresponding nodes here, but for now go ahead and select the `brain_cs_example
 (net)` near the bottom of the menu.
 
-<img src="{filename}/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/>
+<img src="{static}/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/>
 
 The demo network will be loaded on the canvas, and the `DownloadFile` node
 should begin downloading the example data. This data (about 5 MB) will be
 stored in a temporary file.
 
-<img src="{filename}/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/>
+<img src="{static}/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/>
 
 # Configure and Run the Network
 
@@ -71,7 +71,7 @@ Right-click on each of these nodes to open their node menus. In the menu you
 will be able to select which array is output. From left to right we need to
 select the sampling mask, the image, and the sampling pdf.
 
-<img src="{filename}/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/>
+<img src="{static}/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/>
 
 Right-click on a few of the `ImageDisplay` nodes to probe the algorithm at
 various points. The `ImageDisplay` node labeled `CS Image` is the
@@ -83,7 +83,7 @@ reconstruction. The `CS Image` will be updated with each iteration, and you can
 watch as the undersampling artifacts are removed by the wavelet-based
 soft-thresholding constraint.
 
-<img src="{filename}/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/>
+<img src="{static}/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/>
 
 There you have it! Explore the rest of the BART tools in GPI and let us know if
 you come up with any cool examples.

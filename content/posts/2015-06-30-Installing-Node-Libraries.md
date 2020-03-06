@@ -23,7 +23,7 @@ a normal directory listing; use <code>ls -a</code> to see it. If this file does
 not exist on your system, you can generate a basic version from the GPI
 "Config" menu.
 
-![fitw75]({filename}/images/Screenshot-2015-02-05-11.21.10-300x80.png)
+![fitw75]({static}/images/Screenshot-2015-02-05-11.21.10-300x80.png)
 
 Select "Generate Config File" to create a basic .gpirc file.
 
@@ -33,7 +33,7 @@ The default GPI library path (<code>~/gpi/</code>) is stored in the
 libraries in some other directories, if you prefer. Append (or prepend)
 directories to `LIB_DIRS` separated by colons.
 
-![fitwidth]({filename}/images/Screenshot-2015-06-30-14.09.30.png)
+![fitwidth]({static}/images/Screenshot-2015-06-30-14.09.30.png)
 
 My .gpirc file with modified LIB_DIRS to include additional node libraries.
 

@@ -14,7 +14,7 @@ target="_blank">GitHub</a>.
 
 ## Output
 
-![fitw75]({filename}/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png)
+![fitw75]({static}/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png)
 
 The ReadPhilips node parses the file contents for MR data, converts the data to
 a numpy numeric array and makes it available as an output port.  Depending on
@@ -27,7 +27,7 @@ displays python-dictionary information as a simple list.
 
 ## Widgets
 
-![fitw75]({filename}/images/ReadPhilipsUI_ex_head-240x300.jpg)
+![fitw75]({static}/images/ReadPhilipsUI_ex_head-240x300.jpg)
 
 The ReadPhilips menu provides an interface to browse for the desired files and
 displays basic file system information and a summary of the header information

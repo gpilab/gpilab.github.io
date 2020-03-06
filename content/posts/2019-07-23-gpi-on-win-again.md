@@ -62,7 +62,7 @@ Press “Windows Key” + “R” simultaneously
 
 Then type “winver” and hit “Enter Key” and note the output
 
-![]({filename}/images/win10/GPIonWin10_1.png)
+![]({static}/images/win10/GPIonWin10_1.png)
 
   **Method 2: Using “About PC” functionality** 
 
@@ -71,14 +71,14 @@ Press “Windows Key”, type “About your PC” in the search space and hit
 
 A window with your system information will open showing you the Windows Edition and version number.
 
-![]({filename}/images/win10/GPIonWin10_2.png)
+![]({static}/images/win10/GPIonWin10_2.png)
 
  Updating to the latest Windows Version
  --------------------------------------
 
 Press “Windows Key”, type “Check for Updates” in the search space and hit “Enter Key”.
 
-![]({filename}/images/win10/GPIonWin10_3.png)
+![]({static}/images/win10/GPIonWin10_3.png)
 
  Checking if the WSL is enabled
  ------------------------------
@@ -106,7 +106,7 @@ Step 2: Run the following command
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-![]({filename}/images/win10/GPIonWin10_4.png)
+![]({static}/images/win10/GPIonWin10_4.png)
 
 Step 3: Wait for the process to end and Restart the computer when prompted
 
@@ -123,8 +123,8 @@ Step 3: Select “**Turn Windows features on or off**”
 
 Step 4: Enable “**Windows Subsystem for Linux**”
 
-![]({filename}/images/win10/GPIonWin10_5.png)
-![]({filename}/images/win10/GPIonWin10_6.png)
+![]({static}/images/win10/GPIonWin10_5.png)
+![]({static}/images/win10/GPIonWin10_6.png)
 
 Step 5: Wait for the process to end and Restart the computer when prompted
 
@@ -151,7 +151,7 @@ Step 2: Click on “**Get the apps**”
 
 Step 3: Download the Linux distribution you prefer for your work (Ubuntu 18.04 version is recommended if you do not have a reason to pick another distribution. If you choose a different Linux distribution, some of the following instructions may not completely apply)
 
-![]({filename}/images/win10/GPIonWin10_7.png)
+![]({static}/images/win10/GPIonWin10_7.png)
 
 If for some reason, the network you’re connected does not allow access to “Microsoft Store”, then you can manually download the Linux distro’s at <https://docs.microsoft.com/en-us/windows/wsl/install-manual> (e.g. Ubuntu 18.01 version is *CanonicalGroupLimited.Ubuntu18.04onWindows\_1804.2018.817.0\_x64\_\_79rhkp1fndgsc*).
 
@@ -164,7 +164,7 @@ Step 2: Wait for installation to finish, until it shows the following window
 
 Step 3: When prompted create a **username** and **password**
 
-![]({filename}/images/win10/GPIonWin10_8.png)
+![]({static}/images/win10/GPIonWin10_8.png)
 
 Step 4: Check the Linux version installed (type into the terminal)
 ```
@@ -172,7 +172,7 @@ cat /etc/os-release
 ```
 For example, output for Ubuntu 18.04 Linux distro is shown below
 
-![]({filename}/images/win10/GPIonWin10_9.png)
+![]({static}/images/win10/GPIonWin10_9.png)
 
 Step 5: Update the system with latest distro repositories by entering the following commands
 ```
@@ -221,12 +221,12 @@ Step 2: Execute the shell script “GPI_Install_Latest.sh”
 ```
 (Note: if you need help, you see the help text by ./GPI_Install_Latest.sh  -h)
 
-![]({filename}/images/win10/GPIonWin10_10.png)
+![]({static}/images/win10/GPIonWin10_10.png)
 
 Step 3: If the GPI install is successful you will get the following
 message in the terminal
 
-![]({filename}/images/win10/GPIonWin10_11.png)
+![]({static}/images/win10/GPIonWin10_11.png)
 
 Step 4: Close the WSL terminal (by using exit command)
 
@@ -241,8 +241,8 @@ conda activate gpi
 export DISPLAY=:0
 gpi &
 ```
-![]({filename}/images/win10/GPIonWin10_12.png)
-![]({filename}/images/win10/GPIonWin10_13.png)
+![]({static}/images/win10/GPIonWin10_12.png)
+![]({static}/images/win10/GPIonWin10_13.png)
 
 Obtaining and configuring the readPhilips nodes
 ===============================================
@@ -270,7 +270,7 @@ unzip ReadPhilips-GPI-Linux-Python36-2019-07-15.zip
 ```
 (this will unzip a folder called ‘*philips*’ in /home/**user**/gpi, precise naming here is important for GPI to load the modules properly. Note that there may be new readphilips nodes or networks in the future)
 
-![]({filename}/images/win10/GPIonWin10_14.png)
+![]({static}/images/win10/GPIonWin10_14.png)
 
  Confirming the read philips nodes in GPI canvas
  -----------------------------------------------
@@ -287,11 +287,11 @@ gpi &
 ```
 Step 3: Once the GPI canvas is open, “Right Click” on the canvas to open a menu and it should show “philips” option under the “core”. Any other GPI libraries you create or install will also show up here.
 
-![]({filename}/images/win10/GPIonWin10_15.png)
+![]({static}/images/win10/GPIonWin10_15.png)
 
 Step 4: If you do not see the “philips” option, then in the Menu options at the top, click on “Config” and then click on “Scan for New Nodes” and then check the menu again for “philips” option
 
-![]({filename}/images/win10/GPIonWin10_16.png)
+![]({static}/images/win10/GPIonWin10_16.png)
 
 Data conversion networks
 ========================
@@ -304,14 +304,14 @@ readphilips nodes zip file (inside the \~/gpi/philips folder).
 
 This network is designed to read and convert the Philips MR imaging data (LAB/RAW/SIN, DATA/LIST, CPX) to NumPy data format (\*.npy files) and header information into a Python dictionary (saved on-disk as a \*.pickle file).
 
-![]({filename}/images/win10/GPIonWin10_17.png)
+![]({static}/images/win10/GPIonWin10_17.png)
 
  readPhilips_Spectro_raw.net
  -----------------------------
 
 This network is designed to read and convert the Philips MR spectroscopy data (LAB/RAW/SIN, DATA/LIST, CPX) to NumPy data format (\*.npy files) and header information into a Python dictionary (saved on-disk as a \*.pickle file).
 
-![]({filename}/images/win10/GPIonWin10_18.png)
+![]({static}/images/win10/GPIonWin10_18.png)
 
 Running the data conversion networks and validating the output
 ==============================================================
@@ -357,7 +357,7 @@ Script
 ```
 gpi /home/sganji/gpi/philips/**readPhilips_Imaging_raw.net** --nogui -s filename:/mnt/v/zData_WorkingON01/20190425_SG_ProstatePhan/RAWDATA/20190425_155716_mDixon_3D_2echo.raw
 ```
-![]({filename}/images/win10/GPIonWin10_19.png)
+![]({static}/images/win10/GPIonWin10_19.png)
 
 Output files
 20190425_155716_mDixon_3D_2echo__data.npy
@@ -367,7 +367,7 @@ Output files
 20190425_155716_mDixon_3D_2echo__noise.npy
 -   Noise is a NumPy array with dimensions [27 x 19936] (this is 27 channels noise data)
 
-![]({filename}/images/win10/GPIonWin10_20.png)
+![]({static}/images/win10/GPIonWin10_20.png)
 
 Known issues and bugs
 =====================
