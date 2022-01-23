@@ -10,17 +10,17 @@
 
         <title>gpilab.com</title>
 
-            <link href="http://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
-            <link href="http://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
+            <link href="https://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="https://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="http://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="http://gpilab.com/theme/css/clean-blog.css" rel="stylesheet">
+        <link href="https://gpilab.com/theme/css/clean-blog.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="http://gpilab.com/theme/css/code_blocks/darkly.css" rel="stylesheet">
+            <link href="https://gpilab.com/theme/css/code_blocks/darkly.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -44,10 +44,10 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="http://gpilab.com/2015/06/installing-node-libraries/">
+	<meta property="og:url" content="https://gpilab.com/2015/06/installing-node-libraries/">
 	<meta property="og:title" content="Installing Node Libraries">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="http://gpilab.com/">
+	<meta property="og:image" content="https://gpilab.com/">
 	<meta property="article:published_time" content="2015-06-30 14:21:00-07:00">
 </head>
 
@@ -64,7 +64,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://gpilab.com/">gpilab.com</a>
+                <a class="navbar-brand" href="https://gpilab.com/">gpilab.com</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,11 +75,11 @@
                     <li><a href="/">Home</a></li>
 
 
-                            <li><a href="http://gpilab.com/downloads/">Install GPI</a></li>
-                            <li><a href="http://gpilab.com/screencasts/">Tutorials</a></li>
-                            <li><a href="http://gpilab.com/documentation/">Documentation</a></li>
-                            <li><a href="http://gpilab.com/community/">Community</a></li>
-                            <li><a href="http://gpilab.com/about/">About</a></li>
+                            <li><a href="https://gpilab.com/downloads/">Install GPI</a></li>
+                            <li><a href="https://gpilab.com/screencasts/">Tutorials</a></li>
+                            <li><a href="https://gpilab.com/documentation/">Documentation</a></li>
+                            <li><a href="https://gpilab.com/community/">Community</a></li>
+                            <li><a href="https://gpilab.com/about/">About</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -88,14 +88,14 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('http://gpilab.com/theme/images/post-bg.jpg')">
+        <header class="intro-header" style="background-image: url('https://gpilab.com/theme/images/post-bg.jpg')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>Installing Node Libraries</h1>
                         <span class="meta">Posted by
-                                <a href="http://gpilab.com/author/ashley-anderson.html">Ashley Anderson</a>
+                                <a href="https://gpilab.com/author/ashley-anderson.html">Ashley Anderson</a>
                              on Tue 30 June 2015
                         </span>
                         
@@ -116,9 +116,9 @@ using new nodes. Whether the library contains nodes and networks you created,
 or code from a collaborator or colleague, installation is the same simple
 process.</p>
 <p>Here we cover installing an updated version of the Core library. This will
-serve as a general demonstration of how to install additional node libraries.
+serve as a general demonstration of how to install additional node libraries.</p>
 <h2>The .gpirc File</h2>
-GPI searches for libraries (by default) in a <code>~/gpi/</code> directory
+<p>GPI searches for libraries (by default) in a <code>~/gpi/</code> directory
 within your home directory. On Mac OS X, the full path of this folder is
 <code>/Users/&lt;username&gt;/gpi/</code>, and on Ubuntu (and most flavors of
 Linux) it is <code>/home/&lt;username&gt;/gpi/</code>. Thus, to install a new
@@ -129,17 +129,16 @@ Since the file is hidden (begins with a <code>.</code>), you will not see it in
 a normal directory listing; use <code>ls -a</code> to see it. If this file does
 not exist on your system, you can generate a basic version from the GPI
 "Config" menu.</p>
-<p><img alt="fitw75" src="http://gpilab.com/images/Screenshot-2015-02-05-11.21.10-300x80.png"></p>
+<p><img alt="fitw75" src="https://gpilab.com/images/Screenshot-2015-02-05-11.21.10-300x80.png"></p>
 <p>Select "Generate Config File" to create a basic .gpirc file.</p>
 <p>The default GPI library path (<code>~/gpi/</code>) is stored in the
 <code>LIB_DIRS</code> variable within the <code>.gpirc</code> file. You can amend the
 <code>LIB_DIRS</code> in your <code>.gpirc</code> file to tell GPI to look for
 libraries in some other directories, if you prefer. Append (or prepend)
 directories to <code>LIB_DIRS</code> separated by colons.</p>
-<p><img alt="fitwidth" src="http://gpilab.com/images/Screenshot-2015-06-30-14.09.30.png"></p>
+<p><img alt="fitwidth" src="https://gpilab.com/images/Screenshot-2015-06-30-14.09.30.png"></p>
 <p>My .gpirc file with modified LIB_DIRS to include additional node libraries.</p>
 <h2>Installing the Updated Core Library</h2>
-
 <p>The GPI package includes a snapshot of the Core node library, but new versions
 of the Core nodes are maintained on <a title="GitHub"
 href="https://github.com/gpilab/core-nodes"
@@ -160,12 +159,10 @@ following commands (after installing Git if necessary):</p>
 <pre>% cd ~/gpi
 % git clone https://github.com/gpilab/core-nodes.git core
 </pre>
-
 <p><br></p>
 <p>This will create a copy of the remote <code>core-nodes</code> repository to
 your computer, inside your default GPI library directory.</p>
 <h3>Compiling the Core Library</h3>
-
 <p>GPI includes a Python/C++ interface called PyFI. The Core library uses PyFI to
 implement algorithms in a combination of C++ and Python code. GPI includes a
 script (<code>gpi_make</code>) to help compile C++ files associated with a GPI
@@ -173,20 +170,18 @@ library.</p>
 <p>Compiled binary objects are not included in the Git repository, so it's
 necessary to build the library after installation. Once you have downloaded or
 cloned the repository into <code>~/gpi/core/</code>, run the following commands
-to compile the C++ code:
+to compile the C++ code:</p>
 <pre>% cd ~/gpi/core
 % gpi_make --all
 </pre>
-<br></p>
+<p><br></p>
 <h3>Updating the Core Library</h3>
-
 <p>As mentioned, Git makes it easy to update the Core library with any new changes
 from the developers. If you cloned the repository using Git, you can update
 your copy of the Core library using the following commands:</p>
 <pre>% cd ~/gpi/core
 % git pull
 % gpi_make --all</pre>
-
 <p><br></p>
 <p>Running <code>git pull</code> fetches any new changes from the core-nodes
 repository on GitHub, and merges them into your local copy. To finish updating,
@@ -195,7 +190,6 @@ made. Note you may get some warnings or errors if you attempt to "pull" change
 after modifying the code yourself. If you have changes you'd like to keep (or
 contribute back!) please fork the project on GitHub, or just get in touch!</p>
 <h4>Branches in the <code>core-nodes</code> Repository</h4>
-
 <p>Development in the <code>core-nodes</code> repository follows the <a
 title="gitflow"
 href="http://nvie.com/posts/a-successful-git-branching-model/">gitflow</a> branching
@@ -212,8 +206,8 @@ again want to recompile (<code>gpi_make --all</code>) any time you change branch
 changes in your GPI node libraries. Check out the
 <a href="http://docs.gpilab.com">documentation</a> for more information, and please <a href="/community">get
 in touch</a> if you have questions or if you're
-interested in contributing to the project.
-<h2></h2></p>
+interested in contributing to the project.</p>
+<h2></h2>
     </article>
 
     <hr>
@@ -239,7 +233,7 @@ interested in contributing to the project.
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.youtube.com/user/gpilab">
+                            <a href="https://www.youtube.com/user/gpilab">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
@@ -247,7 +241,7 @@ interested in contributing to the project.
                             </a>
                         </li>
                         <li>
-                            <a href="http://docs.gpilab.com">
+                            <a href="https://docs.gpilab.com">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-book fa-stack-1x fa-inverse"></i>
@@ -266,7 +260,7 @@ interested in contributing to the project.
     </footer>
 
     <!-- jQuery -->
-    <!-- <script src="http://gpilab.com/theme/js/jquery.js"></script> -->
+    <!-- <script src="https://gpilab.com/theme/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
         /* banner fade */
@@ -282,10 +276,10 @@ interested in contributing to the project.
     </script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="http://gpilab.com/theme/js/bootstrap.min.js"></script>
+    <script src="https://gpilab.com/theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="http://gpilab.com/theme/js/clean-blog.min.js"></script>
+    <script src="https://gpilab.com/theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];

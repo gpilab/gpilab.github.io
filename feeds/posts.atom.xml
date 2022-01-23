@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com - posts</title><link href="http://gpilab.com/" rel="alternate"></link><link href="http://gpilab.com/feeds/posts.atom.xml" rel="self"></link><id>http://gpilab.com/</id><updated>2020-03-06T00:00:00-07:00</updated><subtitle>Graphical Programming Interface</subtitle><entry><title>Recent Updates to GPI</title><link href="http://gpilab.com/2020/03/recent-updates-to-gpi/" rel="alternate"></link><published>2020-03-06T00:00:00-07:00</published><updated>2020-03-06T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2020-03-06:/2020/03/recent-updates-to-gpi/</id><summary type="html">&lt;h3&gt;Interested in trying GPI? It's easier than ever to get started!&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>gpilab.com - posts</title><link href="https://gpilab.com/" rel="alternate"></link><link href="https://gpilab.com/feeds/posts.atom.xml" rel="self"></link><id>https://gpilab.com/</id><updated>2020-03-06T00:00:00-07:00</updated><subtitle>Graphical Programming Interface</subtitle><entry><title>Recent Updates to GPI</title><link href="https://gpilab.com/2020/03/recent-updates-to-gpi/" rel="alternate"></link><published>2020-03-06T00:00:00-07:00</published><updated>2020-03-06T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2020-03-06:/2020/03/recent-updates-to-gpi/</id><summary type="html">&lt;h3&gt;Interested in trying GPI? It's easier than ever to get started!&lt;/h3&gt;
 &lt;p&gt;We've been making some major behind-the-scenes upgrades to GPI in recent months! We've added the ability to run GPI natively on Windows, squashed a few bugs, and streamlined the installation process to help new users get up and running …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Interested in trying GPI? It's easier than ever to get started!&lt;/h3&gt;
 &lt;p&gt;We've been making some major behind-the-scenes upgrades to GPI in recent months! We've added the ability to run GPI natively on Windows, squashed a few bugs, and streamlined the installation process to help new users get up and running quickly. All of this means a smoother experience for new and existing users alike.&lt;/p&gt;
 &lt;p&gt;GPI can be used by anyone from a new Python coder to an experienced MRI reconstruction developer — and we want everyone to be able to install and run GPI without hassle. To facilitate this, we'll be supporting two methods of GPI installation going forward: one using the graphical "Anaconda Navigator", and the other using the command line. GPI will look and feel exactly the same regardless of which method you choose. For more details, visit the newly-updated &lt;a href="http://gpilab.com/downloads/"&gt;Install GPI&lt;/a&gt; page.&lt;/p&gt;
@@ -10,7 +10,7 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3&gt;Contributing to GPI&lt;/h3&gt;
-&lt;p&gt;We value community contributions highly and hope you'll consider pitching in to make GPI even better! All of our development work is carried out at &lt;a href="http://www.github.com/gpilab"&gt;www.github.com/gpilab&lt;/a&gt;. Feel free to have a look at the code, start a fork of any of the repositories, and communicate with us via &lt;code&gt;Issues&lt;/code&gt; for any bugs, feature requests, or general thoughts. We already have more feature ideas than we have time to implement them, so we'd love your help!&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI version 1.1 has arrived!</title><link href="http://gpilab.com/2019/08/gpi-version-11-has-arrived/" rel="alternate"></link><published>2019-08-14T00:00:00-07:00</published><updated>2019-08-14T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2019-08-14:/2019/08/gpi-version-11-has-arrived/</id><summary type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
+&lt;p&gt;We value community contributions highly and hope you'll consider pitching in to make GPI even better! All of our development work is carried out at &lt;a href="http://www.github.com/gpilab"&gt;www.github.com/gpilab&lt;/a&gt;. Feel free to have a look at the code, start a fork of any of the repositories, and communicate with us via &lt;code&gt;Issues&lt;/code&gt; for any bugs, feature requests, or general thoughts. We already have more feature ideas than we have time to implement them, so we'd love your help!&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI version 1.1 has arrived!</title><link href="https://gpilab.com/2019/08/gpi-version-11-has-arrived/" rel="alternate"></link><published>2019-08-14T00:00:00-07:00</published><updated>2019-08-14T00:00:00-07:00</updated><author><name>Daniel Borup &lt;borup.daniel@mayo.edu&gt;</name></author><id>tag:gpilab.com,2019-08-14:/2019/08/gpi-version-11-has-arrived/</id><summary type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
 &lt;p&gt;GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;A new release is here!&lt;/h3&gt;
 &lt;p&gt;GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that we hope will make GPI easier for users, developers, and maintainers going forward. Below you'll find a description of the major changes, upgrade process, and a list of changes to the core nodes.&lt;/p&gt;
 &lt;p&gt;As of this version, the recommended installation method is to use the installation script. All changes listed below will be accounted for by default when installing with the script, so if you're a new user you can just sit back, relax, and enjoy GPI.&lt;/p&gt;
@@ -26,28 +26,25 @@
 &lt;h2&gt;Upgrading&lt;/h2&gt;
 &lt;p&gt;To upgrade an existing GPI installation, you can take the following simple steps.&lt;/p&gt;
 &lt;p&gt;1) Remove the &lt;code&gt;gpi&lt;/code&gt; channel from your conda configuration, as it's no longer necessary. You can do this directly by modifying &lt;code&gt;~/.condarc&lt;/code&gt;. While various configurations may work, the &lt;code&gt;.condarc&lt;/code&gt; provided with a fresh GPI install is the following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;channels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
-  &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="k"&gt;defaults&lt;/span&gt;
-&lt;span class="n"&gt;channel_priority&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;strict&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;channels:
+  - conda-forge
+  - defaults
+channel_priority: strict
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This sets &lt;code&gt;conda-forge&lt;/code&gt; and &lt;code&gt;defaults&lt;/code&gt; as the two channels to search (in that order) and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.&lt;/p&gt;
 &lt;p&gt;2) Make a backup copy of any node libraries you may use outside of the GPI core nodes, as you may need to modify your nodes slightly to work with v1.1.&lt;/p&gt;
 &lt;p&gt;3) Run &lt;code&gt;conda update -n base conda&lt;/code&gt; to get the latest version of the package manager itself.&lt;/p&gt;
 &lt;p&gt;4) Install GPI and the core nodes. If you use conda exclusively for GPI, you can upgrade inside your existing gpi environment with:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
-&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="n"&gt;gpi_core&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;conda activate gpi
+conda install gpi gpi_core
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or, if you prefer a more conservative approach, make a new environment for GPI 1.1 and install there:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="k"&gt;create&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="n"&gt;gpi_core&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;conda create -n &amp;lt;new-env-name&amp;gt;
+conda activate &amp;lt;new-env-name&amp;gt;
+conda install gpi gpi_core
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;5) Make any necessary changes to other node libraries as described above.&lt;/p&gt;
 &lt;p&gt;6) Get started with GPI 1.1 -- and consider helping us make it even better!&lt;/p&gt;
@@ -65,7 +62,7 @@
 &lt;li&gt;Many trigonometric functions now have a "cycles" option in addition to degrees and radians.&lt;/li&gt;
 &lt;li&gt;Nodes with multiple functions will provide more information on the canvas about which function is active.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="http://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
+&lt;p&gt;Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata</title><link href="https://gpilab.com/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/" rel="alternate"></link><published>2019-07-23T00:00:00-07:00</published><updated>2019-07-23T00:00:00-07:00</updated><author><name>Sandeep Ganji &lt;sandeep.ganji@philips.com&gt;</name></author><id>tag:gpilab.com,2019-07-23:/2019/07/linux-on-windows-10-with-support-for-gpi-an-easy-way-for-reading-and-converting-philips-mr-rawdata/</id><summary type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
 &lt;p&gt;(Note: a video version of this tutorial is available at &lt;a href="https://www.youtube.com/watch?v=LWMhKDcEce0&amp;amp;feature=youtu.be"&gt;this link&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The installation of a Linux Distro on a Windows 10 operating system is outlined using Windows Subsystem for Linux (WSL …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Linux on Windows 10 with support for GPI: An Easy way for reading and converting Philips MR rawdata&lt;/h1&gt;
 &lt;p&gt;(Note: a video version of this tutorial is available at &lt;a href="https://www.youtube.com/watch?v=LWMhKDcEce0&amp;amp;feature=youtu.be"&gt;this link&lt;/a&gt;)&lt;/p&gt;
@@ -123,24 +120,23 @@
 &lt;p&gt;&lt;strong&gt;Method 1: Using “winver” command&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Press “Windows Key” + “R” simultaneously&lt;/p&gt;
 &lt;p&gt;Then type “winver” and hit “Enter Key” and note the output&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Method 2: Using “About PC” functionality&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;Press “Windows Key”, type “About your PC” in the search space and hit
 “Enter Key”.&lt;/p&gt;
 &lt;p&gt;A window with your system information will open showing you the Windows Edition and version number.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;Updating to the latest Windows Version&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Press “Windows Key”, type “Check for Updates” in the search space and hit “Enter Key”.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_3.png"&gt;&lt;/p&gt;
 &lt;p&gt;Checking if the WSL is enabled&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;First check if the WSL is already enabled in your Windows operating system&lt;/p&gt;
 &lt;p&gt;Step 1: Open Powershell as “Administrator” (right-click on the icon and select option “Run as Administrator”)&lt;/p&gt;
 &lt;p&gt;Step 2: Run the following command&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DISM&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;online&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;table&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="k"&gt;Select&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;Linux&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;DISM /online /get-features /format:table | Select-String -Pattern &amp;quot;Linux&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;If is output shows “&lt;strong&gt;Microsoft-Windows-Subsystem-Linux | Enabled&lt;/strong&gt;”, then WSL is &lt;strong&gt;enabled&lt;/strong&gt; in Windows.&lt;/p&gt;
 &lt;p&gt;If is output shows “&lt;strong&gt;Microsoft-Windows-Subsystem-Linux | Disabled&lt;/strong&gt;”, then WSL is &lt;strong&gt;not enabled&lt;/strong&gt; in the Windows and it must be enabled
@@ -149,11 +145,10 @@ manually. Follow the steps below to enable the WSL in Windows.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Step 1: Open PowerShell as “Administrator”&lt;/p&gt;
 &lt;p&gt;Step 2: Run the following command&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Enable&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;WindowsOptionalFeature&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Online&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;FeatureName&lt;/span&gt; &lt;span class="n"&gt;Microsoft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Windows&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Subsystem&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_4.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 3: Wait for the process to end and Restart the computer when prompted&lt;/p&gt;
 &lt;p&gt;Method 2: Enabling WSL using Windows Features (GUI)&lt;/p&gt;
 &lt;hr&gt;
@@ -162,8 +157,8 @@ manually. Follow the steps below to enable the WSL in Windows.&lt;/p&gt;
 &lt;p&gt;Step 3: Select “&lt;strong&gt;Turn Windows features on or off&lt;/strong&gt;”&lt;/p&gt;
 &lt;p&gt;(Note: If you don’t have Administrative rights on the PC, then try the above mentioned PowerShell method or contact your system administrator or IT)&lt;/p&gt;
 &lt;p&gt;Step 4: Enable “&lt;strong&gt;Windows Subsystem for Linux&lt;/strong&gt;”&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_5.png"&gt;
-&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_5.png"&gt;
+&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_6.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 5: Wait for the process to end and Restart the computer when prompted&lt;/p&gt;
 &lt;h1&gt;Installing X Server software (on Windows 10)&lt;/h1&gt;
 &lt;p&gt;The previous steps give access to only command line version of Ubuntu (or whatever distro you installed) natively on Windows. It can be used like most other apps in Windows. However, in order to run GUI applications in WSL, you need to first install an X Server on your
@@ -176,39 +171,34 @@ Windows machine. Microsoft Windows is not shipped with support for X server, but
 &lt;p&gt;Step 1: Open the Windows Store, search (top right corner) for “&lt;strong&gt;Linux&lt;/strong&gt;”&lt;/p&gt;
 &lt;p&gt;Step 2: Click on “&lt;strong&gt;Get the apps&lt;/strong&gt;”&lt;/p&gt;
 &lt;p&gt;Step 3: Download the Linux distribution you prefer for your work (Ubuntu 18.04 version is recommended if you do not have a reason to pick another distribution. If you choose a different Linux distribution, some of the following instructions may not completely apply)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_7.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_7.png"&gt;&lt;/p&gt;
 &lt;p&gt;If for some reason, the network you’re connected does not allow access to “Microsoft Store”, then you can manually download the Linux distro’s at &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual"&gt;https://docs.microsoft.com/en-us/windows/wsl/install-manual&lt;/a&gt; (e.g. Ubuntu 18.01 version is &lt;em&gt;CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2018.817.0_x64__79rhkp1fndgsc&lt;/em&gt;).&lt;/p&gt;
 &lt;h1&gt;Post Installation Setup (inside Linux)&lt;/h1&gt;
 &lt;p&gt;Step 1: Launch your distribution of Linux (via Start Menu or Microsoft Store)&lt;/p&gt;
 &lt;p&gt;Step 2: Wait for installation to finish, until it shows the following window&lt;/p&gt;
 &lt;p&gt;Step 3: When prompted create a &lt;strong&gt;username&lt;/strong&gt; and &lt;strong&gt;password&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_8.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_8.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 4: Check the Linux version installed (type into the terminal)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;release&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cat /etc/os-release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;For example, output for Ubuntu 18.04 Linux distro is shown below&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_9.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_9.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 5: Update the system with latest distro repositories by entering the following commands&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Step 6: Get the wget and unzip packages by using following command&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;unzip&lt;/span&gt; &lt;span class="n"&gt;wget&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install unzip wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Step 7: Get the build-essential tools (The build-essential package contains important development tools including the gcc compiler)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;essential&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install build-essential
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Step 8: Get latest ca-certificates&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ca&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;certificates&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install ca-certificates
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1&gt;GPI installation and testing&lt;/h1&gt;
 &lt;p&gt;In order to install GPI, first you need to get the installation script from the GPI website (&lt;a href="http://gpilab.com/downloads/"&gt;http://gpilab.com/downloads/&lt;/a&gt;) and then run the script in the Linux distro (this case it is Ubuntu) installed using the steps above.&lt;/p&gt;
@@ -217,41 +207,37 @@ Windows machine. Microsoft Windows is not shipped with support for X server, but
 &lt;p&gt;Step 1: Launch your distribution of Linux (via Start Menu)&lt;/p&gt;
 &lt;p&gt;Step 2: Get the latest GPI installation script from
 &lt;a href="http://gpilab.com/downloads/"&gt;http://gpilab.com/downloads/&lt;/a&gt; using&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;githubusercontent&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpilab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;distro&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;GPI_Install_Latest&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget https://raw.githubusercontent.com/gpilab/conda-distro/master/GPI_Install_Latest.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;(Note: this script will work only for Linux distros and macOS version 10.09 or above)&lt;/p&gt;
 &lt;p&gt;Installing GPI&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Step 1: Elevate the privileges of “GPI_Install_Latest.sh” shell script&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;GPI_Install_Latest&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;chmod +x GPI_Install_Latest.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Step 2: Execute the shell script “GPI_Install_Latest.sh”&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;GPI_Install_Latest&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;   &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi_stack&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./GPI_Install_Latest.sh   ~/gpi_stack
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;(Note: if you need help, you see the help text by ./GPI_Install_Latest.sh  -h)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_10.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_10.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 3: If the GPI install is successful you will get the following
 message in the terminal&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_11.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_11.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 4: Close the WSL terminal (by using exit command)&lt;/p&gt;
 &lt;p&gt;Testing the GPI GUI&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The main GPI workspace is the canvas, which can be loaded by running the following commands. It gives access to the core gpi nodes and can be used to build algorithms. Make sure the Xming server or your preferred Windows X Server is running.&lt;/p&gt;
 &lt;p&gt;Launch your distribution of Linux (via Start Menu). Run the following commands in the Ubuntu Terminal (see the screenshot below that shows the outputs)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
-&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_12.png"&gt;
-&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_13.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_12.png"&gt;
+&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_13.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Obtaining and configuring the readPhilips nodes&lt;/h1&gt;
 &lt;p&gt;Description&lt;/p&gt;
 &lt;hr&gt;
@@ -262,65 +248,59 @@ installed.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Download the latest release binary (pre-compiled) files corresponding to the installation of GPI platform (Linux or macOS X) to the default GPI library directory (or a directory that is in your LIB_PATH, as shown in the configuration documentation), unzip and restart GPI.&lt;/p&gt;
 &lt;p&gt;For example, from the Ubuntu terminal&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="cm"&gt;/**user**/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd /home/**user**/gpi/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;(here &lt;strong&gt;user&lt;/strong&gt; is the name of your user directory)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpilab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ReadPhilips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GPI&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Python36&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;
-&lt;span class="n"&gt;unzip&lt;/span&gt; &lt;span class="n"&gt;ReadPhilips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GPI&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Python36&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;wget&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpilab&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;releases&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;v1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;0.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ReadPhilips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GPI&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Python36&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;15.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;unzip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ReadPhilips&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;GPI&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Python36&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;15.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;(this will unzip a folder called ‘&lt;em&gt;philips&lt;/em&gt;’ in /home/&lt;strong&gt;user&lt;/strong&gt;/gpi, precise naming here is important for GPI to load the modules properly. Note that there may be new readphilips nodes or networks in the future)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_14.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_14.png"&gt;&lt;/p&gt;
 &lt;p&gt;Confirming the read philips nodes in GPI canvas&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;To confirm that the nodes are installed and working, you can do the following simple test.&lt;/p&gt;
 &lt;p&gt;Step 1: Start the X server application (Xming in this case)&lt;/p&gt;
 &lt;p&gt;Step 2: Start the Linux (Ubuntu 18.04 in this case) terminal and run the following commands in the terminal window&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
-&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Step 3: Once the GPI canvas is open, “Right Click” on the canvas to open a menu and it should show “philips” option under the “core”. Any other GPI libraries you create or install will also show up here.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_15.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_15.png"&gt;&lt;/p&gt;
 &lt;p&gt;Step 4: If you do not see the “philips” option, then in the Menu options at the top, click on “Config” and then click on “Scan for New Nodes” and then check the menu again for “philips” option&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_16.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_16.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Data conversion networks&lt;/h1&gt;
 &lt;p&gt;The latest GPI network files (*.net) for converting reading and converting the Philips MR data from GitHub are included in the
 readphilips nodes zip file (inside the \~/gpi/philips folder).&lt;/p&gt;
 &lt;p&gt;readPhilips_Imaging_raw.net&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;This network is designed to read and convert the Philips MR imaging data (LAB/RAW/SIN, DATA/LIST, CPX) to NumPy data format (*.npy files) and header information into a Python dictionary (saved on-disk as a *.pickle file).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_17.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_17.png"&gt;&lt;/p&gt;
 &lt;p&gt;readPhilips_Spectro_raw.net&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;This network is designed to read and convert the Philips MR spectroscopy data (LAB/RAW/SIN, DATA/LIST, CPX) to NumPy data format (*.npy files) and header information into a Python dictionary (saved on-disk as a *.pickle file).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_18.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_18.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Running the data conversion networks and validating the output&lt;/h1&gt;
 &lt;p&gt;Philips raw data conversion using Linux command line&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The rawdata that needs to be converted can be anywhere in the system (host or in the linux). For WSL, all the drives can be accessed by /mnt directory inside the Linux environment. Once you have the location of the data on the windows you can use that as a path in the Linux terminal.&lt;/p&gt;
 &lt;p&gt;Step 1: Start the X server application (Xming in this case)&lt;/p&gt;
 &lt;p&gt;Step 2: Start the Linux (in this case Ubuntu 18.04) terminal and run the following commands in the terminal window&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="n"&gt;gpi&lt;/span&gt;
-&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;conda&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Step 3: For imaging raw data you can use the readPhilips_Imaging_raw.net&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sganji&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;readPhilips_Imaging_raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt; &lt;span class="c1"&gt;--nogui -s filename:/mnt/drive_letter/path_of_rawdata_files/Filename.raw&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gpi /home/sganji/gpi/philips/readPhilips_Imaging_raw.net --nogui -s filename:/mnt/drive_letter/path_of_rawdata_files/Filename.raw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or&lt;/p&gt;
 &lt;p&gt;Step 3: For spectroscopy raw data you can use the readPhilips_Spectro_raw.net&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sganji&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;readPhilips_Spectro_raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt; &lt;span class="c1"&gt;--nogui -s filename:/mnt/drive_letter/path_of_rawdata_files/Filename.raw&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gpi /home/sganji/gpi/philips/readPhilips_Spectro_raw.net --nogui -s filename:/mnt/drive_letter/path_of_rawdata_files/Filename.raw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Validating the output NumPy files (checking the dimensions, and labels)&lt;/p&gt;
 &lt;hr&gt;
@@ -331,11 +311,10 @@ readphilips nodes zip file (inside the \~/gpi/philips folder).&lt;/p&gt;
 20190425_155716_mDixon_3D_2echo.lab
 20190425_155716_mDixon_3D_2echo.sin&lt;/p&gt;
 &lt;p&gt;Script&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sganji&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;philips&lt;/span&gt;&lt;span class="cm"&gt;/**readPhilips_Imaging_raw.net** --nogui -s filename:/mnt/v/zData_WorkingON01/20190425_SG_ProstatePhan/RAWDATA/20190425_155716_mDixon_3D_2echo.raw&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gpi /home/sganji/gpi/philips/**readPhilips_Imaging_raw.net** --nogui -s filename:/mnt/v/zData_WorkingON01/20190425_SG_ProstatePhan/RAWDATA/20190425_155716_mDixon_3D_2echo.raw
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_19.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_19.png"&gt;&lt;/p&gt;
 &lt;p&gt;Output files
 20190425_155716_mDixon_3D_2echo__data.npy
 -   Data is a NumPy array with dimensions [27 x 2 x 2 x 32 x 60 x 224]
@@ -343,7 +322,7 @@ readphilips nodes zip file (inside the \~/gpi/philips folder).&lt;/p&gt;
 -   Contains header information in the form of a dictionary (from both &lt;em&gt;.lab and &lt;/em&gt;.sin files)
 20190425_155716_mDixon_3D_2echo__noise.npy
 -   Noise is a NumPy array with dimensions [27 x 19936] (this is 27 channels noise data)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://gpilab.com/images/win10/GPIonWin10_20.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://gpilab.com/images/win10/GPIonWin10_20.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Known issues and bugs&lt;/h1&gt;
 &lt;p&gt;GPI and its Philips networks are constantly being developed and improved by GPI and Philips team. If you find any bugs or have questions, please reach out to GPI team on the GitHub (use the issue tracker) or email Sandeep Ganji (&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#83;&amp;#97;&amp;#110;&amp;#100;&amp;#101;&amp;#101;&amp;#112;&amp;#46;&amp;#71;&amp;#97;&amp;#110;&amp;#106;&amp;#105;&amp;#64;&amp;#112;&amp;#104;&amp;#105;&amp;#108;&amp;#105;&amp;#112;&amp;#115;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#83;&amp;#97;&amp;#110;&amp;#100;&amp;#101;&amp;#101;&amp;#112;&amp;#46;&amp;#71;&amp;#97;&amp;#110;&amp;#106;&amp;#105;&amp;#64;&amp;#112;&amp;#104;&amp;#105;&amp;#108;&amp;#105;&amp;#112;&amp;#115;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Multi-Nuclear MR Spectroscopy&lt;/p&gt;
@@ -353,15 +332,13 @@ for dimensionality and continency. If the data fails to convert at all, please l
 &lt;p&gt;Certificate issue when using wget&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;When downloading the installation script, if one gets the following ca-certificates error&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;certificate&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;githubusercontent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;certificate&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;githubusercontent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt; &lt;span class="n"&gt;hasn&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;got&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;known&lt;/span&gt; &lt;span class="n"&gt;issuer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;The&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;githubusercontent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;trusted&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;The&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;githubusercontent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;hasn&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;got&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;known&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;issuer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;They should install the latest &lt;strong&gt;ca-certificates&lt;/strong&gt; using the following command&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ca&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;certificates&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ca-certificates
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Atypical sequence data&lt;/p&gt;
 &lt;hr&gt;
@@ -388,7 +365,7 @@ Contributions from Daniel Borup and Ashley Anderson&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/gpilab"&gt;https://github.com/gpilab&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ismrm.github.io/mrhub/"&gt;https://ismrm.github.io/mrhub/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/gpilab/philips-data-reader/releases"&gt;https://github.com/gpilab/philips-data-reader/releases&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="posts"></category></entry><entry><title>ISMRM Demo: CS with BART in GPI</title><link href="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/" rel="alternate"></link><published>2019-05-07T08:59:00-07:00</published><updated>2019-05-07T08:59:00-07:00</updated><author><name>Ashley Anderson III &lt;aganders3@gmail.com&gt;</name></author><id>tag:gpilab.com,2019-05-07:/2019/05/ismrm-demo-cs-with-bart-in-gpi/</id><summary type="html">&lt;p&gt;As part of our GPI demo at at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for MR
+&lt;/ol&gt;</content><category term="posts"></category></entry><entry><title>ISMRM Demo: CS with BART in GPI</title><link href="https://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/" rel="alternate"></link><published>2019-05-07T08:59:00-07:00</published><updated>2019-05-07T08:59:00-07:00</updated><author><name>Ashley Anderson III &lt;aganders3@gmail.com&gt;</name></author><id>tag:gpilab.com,2019-05-07:/2019/05/ismrm-demo-cs-with-bart-in-gpi/</id><summary type="html">&lt;p&gt;As part of our GPI demo at at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for MR
 Pulse Design, Simulation &amp;amp; Reconstruction Weekend
 Course&lt;/a&gt;, we've revived an
 example of BART working inside GPI. This example is intended to demonstrate the
@@ -400,7 +377,7 @@ flexibility and capabilities of GPI to integrate other packages. This demo also
 highlights the use of GPI as a teaching tool; the example is based on &lt;a href="http://people.eecs.berkeley.edu/~mlustig/CS.html"&gt;this
 example from Professor
 Lustig&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Before getting started here, please see Nick's post on &lt;a href="http://gpilab.com/posts/2019-05-05-ISMRM-Demo-Primer.md"&gt;setting up GPI for the
+&lt;p&gt;Before getting started here, please see Nick's post on &lt;a href="{static}/posts/2019-05-05-ISMRM-Demo-Primer.md"&gt;setting up GPI for the
 ISMRM 2019 demo&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;Download and Compile BART for GPI&lt;/h1&gt;
@@ -408,27 +385,24 @@ ISMRM 2019 demo&lt;/a&gt;.&lt;/p&gt;
 project&lt;/a&gt;. We concede this fork is out of
 date, but it should suffice for a demonstation. Updating to a newer version
 would be fairly trivial for someone familiar with both BART and GPI. Check
-out Nick's &lt;em&gt;other&lt;/em&gt; post on &lt;a href="http://gpilab.com/posts/2016-02-16-GPI-and-the-BART.md"&gt;how BART was wrapped for use in
+out Nick's &lt;em&gt;other&lt;/em&gt; post on &lt;a href="{static}/posts/2016-02-16-GPI-and-the-BART.md"&gt;how BART was wrapped for use in
 GPI&lt;/a&gt; if you're interested in
 making this work.&lt;/p&gt;
 &lt;p&gt;First, prepare your virtual machine for BART compilation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;gcc&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;libfftw3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;liblapack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libpng&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; sudo apt-get install git gcc make libfftw3-dev liblapack-dev libpng-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;If you're using the GPI ISMRM 2019 demo VM or AMI on EC2, the password for the
 &lt;code&gt;ubuntu&lt;/code&gt; user is &lt;code&gt;gpilab&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Next clone the BART for GPI fork into your &lt;code&gt;gpi&lt;/code&gt; library folder:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; git clone https://github.com/nckz/bart.git /home/&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;USER&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/gpi/bart
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; git clone https://github.com/nckz/bart.git /home/&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;USER&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/gpi/bart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally, build and test BART:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt; &lt;span class="n"&gt;bench&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; cd ~/gpi/bart
+&amp;gt; make
+&amp;gt; ./bart bench
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;If you're not working in the GPI VM, instead follow the instructions in the
 BART for GPI README.&lt;/p&gt;
@@ -438,18 +412,18 @@ the canvas and you should see a new Library in the menu called &lt;code&gt;bart&
 Libraries can contain both nodes and networks. Most BART functions should have
 corresponding nodes here, but for now go ahead and select the &lt;code&gt;brain_cs_example
 (net)&lt;/code&gt; near the bottom of the menu.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://gpilab.com/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://gpilab.com/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/&gt;&lt;/p&gt;
 &lt;p&gt;The demo network will be loaded on the canvas, and the &lt;code&gt;DownloadFile&lt;/code&gt; node
 should begin downloading the example data. This data (about 5 MB) will be
 stored in a temporary file.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://gpilab.com/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://gpilab.com/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/&gt;&lt;/p&gt;
 &lt;h1&gt;Configure and Run the Network&lt;/h1&gt;
 &lt;p&gt;Note the three &lt;code&gt;ReadMatlab&lt;/code&gt; nodes. Each is reading data from the same file (the
 one downloaded by the &lt;code&gt;DownloadFile&lt;/code&gt; node) which contains several arrays.
 Right-click on each of these nodes to open their node menus. In the menu you
 will be able to select which array is output. From left to right we need to
 select the sampling mask, the image, and the sampling pdf.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://gpilab.com/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://gpilab.com/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/&gt;&lt;/p&gt;
 &lt;p&gt;Right-click on a few of the &lt;code&gt;ImageDisplay&lt;/code&gt; nodes to probe the algorithm at
 various points. The &lt;code&gt;ImageDisplay&lt;/code&gt; node labeled &lt;code&gt;CS Image&lt;/code&gt; is the
 compressed-sensing reconstruction (though at this point it is only the inital
@@ -458,9 +432,9 @@ condition based on zero-filling).&lt;/p&gt;
 reconstruction. The &lt;code&gt;CS Image&lt;/code&gt; will be updated with each iteration, and you can
 watch as the undersampling artifacts are removed by the wavelet-based
 soft-thresholding constraint.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/&gt;&lt;/p&gt;
 &lt;p&gt;There you have it! Explore the rest of the BART tools in GPI and let us know if
-you come up with any cool examples.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>ISMRM Demo Primer</title><link href="http://gpilab.com/2019/05/ismrm-demo-primer/" rel="alternate"></link><published>2019-05-05T12:29:00-07:00</published><updated>2019-05-05T12:29:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2019-05-05:/2019/05/ismrm-demo-primer/</id><summary type="html">&lt;p&gt;GPI is going to be presented at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for
+you come up with any cool examples.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>ISMRM Demo Primer</title><link href="https://gpilab.com/2019/05/ismrm-demo-primer/" rel="alternate"></link><published>2019-05-05T12:29:00-07:00</published><updated>2019-05-05T12:29:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2019-05-05:/2019/05/ismrm-demo-primer/</id><summary type="html">&lt;p&gt;GPI is going to be presented at the &lt;a href="https://www.ismrm.org/19/program_files/WE21.htm"&gt;ISMRM 2019 Open-Source Software Tools for
 MR Pulse Design, Simulation &amp;amp; Reconstruction Weekend Course&lt;/a&gt;.
 The format of this session will be to allow developers to pitch their designs
 and then provide a break-out tutorial session to give participants a chance to
@@ -517,10 +491,9 @@ focus.&lt;/p&gt;
 &lt;h3&gt;Ubuntu Linux&lt;/h3&gt;
 &lt;p&gt;I prefer &lt;a href="https://www.tightvnc.com/"&gt;tightVNC&lt;/a&gt; since it has nice compression
 features and has been available nearly for ever.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;
-   &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;xtightvncviewer&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;   $ sudo apt-get update
+   $ sudo apt-get install xtightvncviewer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Windows&lt;/h3&gt;
 &lt;p&gt;Find and install a VNC client.  It appears that
@@ -566,34 +539,32 @@ final "Launch" button and then hit the "View Instance" button.&lt;/p&gt;
 &lt;p&gt;Almost connected!  Within the "EC2 Instance" view right click on your newly
 running instance to get a popup-dialog, from there hit connect for another
 popup that shows the following information:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;To&lt;/span&gt; &lt;span class="nv"&gt;access&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;instance&lt;/span&gt;:
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;To&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="mi"&gt;1&lt;/span&gt;. &lt;span class="nv"&gt;Open&lt;/span&gt; &lt;span class="nv"&gt;an&lt;/span&gt; &lt;span class="nv"&gt;SSH&lt;/span&gt; &lt;span class="nv"&gt;client&lt;/span&gt;. &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;find&lt;/span&gt; &lt;span class="nv"&gt;out&lt;/span&gt; &lt;span class="nv"&gt;how&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="k"&gt;connect&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;PuTTY&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
-&lt;span class="mi"&gt;2&lt;/span&gt;. &lt;span class="nv"&gt;Locate&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;private&lt;/span&gt; &lt;span class="nv"&gt;key&lt;/span&gt; &lt;span class="nv"&gt;file&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;GPILAB_Demo&lt;/span&gt;.&lt;span class="nv"&gt;pem&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;. &lt;span class="nv"&gt;The&lt;/span&gt; &lt;span class="nv"&gt;wizard&lt;/span&gt; &lt;span class="nv"&gt;automatically&lt;/span&gt; &lt;span class="nv"&gt;detects&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;key&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;used&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;launch&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;instance&lt;/span&gt;.
-&lt;span class="mi"&gt;3&lt;/span&gt;. &lt;span class="nv"&gt;Your&lt;/span&gt; &lt;span class="nv"&gt;key&lt;/span&gt; &lt;span class="nv"&gt;must&lt;/span&gt; &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;publicly&lt;/span&gt; &lt;span class="nv"&gt;viewable&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;SSH&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;work&lt;/span&gt;. &lt;span class="nv"&gt;Use&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;command&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;needed&lt;/span&gt;:
+&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Open&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SSH&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;out&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;connect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PuTTY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Locate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GPILAB_Demo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;The&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;wizard&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;automatically&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;detects&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;used&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;launch&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mf"&gt;3.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;must&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;publicly&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;viewable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SSH&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;work&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;needed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-    &lt;span class="nv"&gt;chmod&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt; &lt;span class="nv"&gt;GPILAB_DEMO&lt;/span&gt;.&lt;span class="nv"&gt;pem&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;chmod&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GPILAB_DEMO&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="mi"&gt;4&lt;/span&gt;. &lt;span class="k"&gt;Connect&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;instance&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;its&lt;/span&gt; &lt;span class="nv"&gt;Public&lt;/span&gt; &lt;span class="nv"&gt;DNS&lt;/span&gt;:
+&lt;span class="mf"&gt;4.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Connect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;its&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;DNS&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-    &lt;span class="nv"&gt;ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt;.&lt;span class="nv"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;.&lt;span class="nv"&gt;compute&lt;/span&gt;.&lt;span class="nv"&gt;amazonaws&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;92.&lt;/span&gt;&lt;span class="n"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="k"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;amazonaws&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="nv"&gt;Example&lt;/span&gt;:
+&lt;span class="nl"&gt;Example&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-    &lt;span class="nv"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;GPILAB_DEMO.pem&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;root&lt;/span&gt;@&lt;span class="nv"&gt;ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt;.&lt;span class="nv"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;.&lt;span class="nv"&gt;compute&lt;/span&gt;.&lt;span class="nv"&gt;amazonaws&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;GPILAB_DEMO.pem&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="nv"&gt;@ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;92.&lt;/span&gt;&lt;span class="n"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="k"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;amazonaws&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="nv"&gt;Please&lt;/span&gt; &lt;span class="nv"&gt;note&lt;/span&gt; &lt;span class="nv"&gt;that&lt;/span&gt; &lt;span class="nv"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;most&lt;/span&gt; &lt;span class="nv"&gt;cases&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;username&lt;/span&gt; &lt;span class="nv"&gt;above&lt;/span&gt; &lt;span class="nv"&gt;will&lt;/span&gt; &lt;span class="nv"&gt;be&lt;/span&gt; &lt;span class="nv"&gt;correct&lt;/span&gt;, &lt;span class="nv"&gt;however&lt;/span&gt; &lt;span class="nv"&gt;please&lt;/span&gt; &lt;span class="nv"&gt;ensure&lt;/span&gt; &lt;span class="nv"&gt;that&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;AMI&lt;/span&gt; &lt;span class="nv"&gt;usage&lt;/span&gt; &lt;span class="nv"&gt;instructions&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;ensure&lt;/span&gt; &lt;span class="nv"&gt;that&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;AMI&lt;/span&gt; &lt;span class="nv"&gt;owner&lt;/span&gt; &lt;span class="nv"&gt;has&lt;/span&gt; &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;changed&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;default&lt;/span&gt; &lt;span class="nv"&gt;AMI&lt;/span&gt; &lt;span class="nv"&gt;username&lt;/span&gt;.
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;span class="n"&gt;Please&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;note&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cases&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;above&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;correct&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;however&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;please&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ensure&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;AMI&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;usage&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;instructions&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ensure&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;AMI&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;owner&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;changed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;AMI&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;You'll need to take that information to parameterize your ssh client (with your
 instances domain and the user 'ubuntu').&lt;/p&gt;
 &lt;h3&gt;MacOS and Linux&lt;/h3&gt;
 &lt;p&gt;In a terminal enter the following command (after you replace the relevant parts
 with your instance information):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;GPILAB_DEMO.pem&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="nl"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ubuntu&lt;/span&gt;&lt;span class="nv"&gt;@ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;92.&lt;/span&gt;&lt;span class="n"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="k"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;amazonaws&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;GPILAB_DEMO.pem&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="nl"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ubuntu&lt;/span&gt;&lt;span class="nv"&gt;@ec2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;92.&lt;/span&gt;&lt;span class="n"&gt;us&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;east&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="k"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;amazonaws&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The &lt;code&gt;-L 5900:localhost:5900&lt;/code&gt; is used to forward the VNC port over the ssh
 connection.&lt;/p&gt;
@@ -608,16 +579,14 @@ that Putty and VNC are setup correctly.&lt;/p&gt;
 You can fire up your VNC client and enter the following information:&lt;/p&gt;
 &lt;h3&gt;MacOS&lt;/h3&gt;
 &lt;p&gt;Focus the &lt;code&gt;Finder.app&lt;/code&gt; and hit &lt;code&gt;Command-k&lt;/code&gt;.  In the dialog box labelled 'server address' type:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;vnc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    vnc://localhost:5900
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then press connect.&lt;/p&gt;
 &lt;h3&gt;Linux&lt;/h3&gt;
 &lt;p&gt;In a terminal enter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;xtightvncviewer&lt;/span&gt; &lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5900&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    $ xtightvncviewer localhost:5900
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Windows&lt;/h3&gt;
 &lt;p&gt;Follow &lt;a href="https://crl.ucsd.edu/handbook/vnc/index.php"&gt;this guide&lt;/a&gt; to ensuring
@@ -652,7 +621,7 @@ release page or directly:&lt;/p&gt;
 After a few dialog boxes you should be able to start your VM directly.&lt;/p&gt;
 &lt;h2&gt;Start GPI&lt;/h2&gt;
 &lt;p&gt;There is a script on the desktop called &lt;code&gt;startGPI&lt;/code&gt;, just double click to get
-started.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI on Windows?!</title><link href="http://gpilab.com/2016/09/gpi-on-windows/" rel="alternate"></link><published>2016-09-27T15:28:00-07:00</published><updated>2016-09-27T15:28:00-07:00</updated><author><name>Akshay Bakhru</name></author><id>tag:gpilab.com,2016-09-27:/2016/09/gpi-on-windows/</id><summary type="html">&lt;blockquote&gt;
+started.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI on Windows?!</title><link href="https://gpilab.com/2016/09/gpi-on-windows/" rel="alternate"></link><published>2016-09-27T15:28:00-07:00</published><updated>2016-09-27T15:28:00-07:00</updated><author><name>Akshay Bakhru</name></author><id>tag:gpilab.com,2016-09-27:/2016/09/gpi-on-windows/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;GPI is developed at the BNI on Mac and Linux platforms.  We typically don't
 develop our MR methods on Windows and therefore have limited experience
 with this.  Fortunately, the nice folks at Philips who develop in GPI have
@@ -678,13 +647,13 @@ exciting step forward for GPI users and developers.&lt;/p&gt;
    version type “About your PC” in the start menu and press “Enter”. Version
    should be 1607 or higher (shown in the about window below)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_1_settings.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_1_settings.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Enable developer mode&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Open the Settings app and head to Update &amp;amp; Security &amp;gt; For Developers&lt;/li&gt;
 &lt;li&gt;Enable Developer Mode&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_2_devmode.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_2_devmode.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Enable the “Windows Subsystem for Linux (Beta)”&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Open the Control Panel, click “Programs,” and click “Turn Windows Features
@@ -694,7 +663,7 @@ exciting step forward for GPI users and developers.&lt;/p&gt;
 &lt;li&gt;After you do, you’ll be prompted to reboot your computer. Click “Restart
    Now” to reboot your computer and Windows 10 will install the new feature.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_3_subsys.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_3_subsys.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Install&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;After your computer restarts, click the Start button (or press the Windows
@@ -706,14 +675,14 @@ exciting step forward for GPI users and developers.&lt;/p&gt;
 &lt;li&gt;You’ll be asked to create a user account and password for use in the Bash
    environment.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_5_useradd.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_5_useradd.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Run the bash shell&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Now you have a full command-line bash shell based on Ubuntu.&lt;/li&gt;
 &lt;li&gt;To open the Bash shell, just open your Start menu and search for “bash” or
    “Ubuntu.”&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_6_bash.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_6_bash.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Some tips (Installing packages and accessing windows dirs.)&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;You can use Ubuntu’s apt-get command to install software from Ubuntu’s
@@ -722,7 +691,7 @@ exciting step forward for GPI users and developers.&lt;/p&gt;
    “packagename” with the package’s name.)&lt;/li&gt;
 &lt;li&gt;Windows drives will be available in the “mnt” folder&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_7_mnt.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_7_mnt.jpg"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;Enable GUI app support for Linux Shell&lt;/h1&gt;
 &lt;p&gt;Microsoft still does not support graphical applications in Bash on Windows.
@@ -741,7 +710,7 @@ works great with GPI.&lt;/p&gt;
 &lt;li&gt;Launch Xming and it will appear in your system tray, running in the
    background and waiting for you to launch a graphical Linux program.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_8_xming.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_8_xming.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Try a graphical application&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -754,7 +723,7 @@ works great with GPI.&lt;/p&gt;
 &lt;code&gt;firefox&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_9_firefox.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_9_firefox.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Install Anaconda&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -777,7 +746,7 @@ works great with GPI.&lt;/p&gt;
 &lt;li&gt;Check that python 3.x is installed in the packages&lt;/li&gt;
 &lt;li&gt;Check if conda is also available&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_10_conda.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_10_conda.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Install GPI via Conda&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -786,7 +755,7 @@ works great with GPI.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;If you get the below errors, follow the sub steps&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_11_error.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_11_error.jpg"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;This error is also shown if higher versions of numpy and python are
   installed&lt;/li&gt;
@@ -803,12 +772,12 @@ works great with GPI.&lt;/p&gt;
    &lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;http://docs.gpilab.com/en/develop/config.html&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_12_gpiconf.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_12_gpiconf.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Launch the GPI GUI&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;export DISPLAY=:0&lt;/code&gt; &lt;br&gt;
 &lt;code&gt;gpi&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/win_13_gpi.jpg"&gt;
-&lt;img alt="fitw75" src="http://gpilab.com/images/win_14_gpi.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/win_13_gpi.jpg"&gt;
+&lt;img alt="fitw75" src="https://gpilab.com/images/win_14_gpi.jpg"&gt;&lt;/p&gt;
 &lt;h1&gt;Troubleshooting&lt;/h1&gt;
 &lt;p&gt;If you've encountered any bugs or issues during the installation or when
 running GPI, check out the &lt;a href="https://github.com/gpilab/framework/issues"&gt;issue
@@ -816,7 +785,7 @@ tracker&lt;/a&gt; for potential solutions or
 help. If you have encountered any solutions to those problems or would like to
 share an issue that you've fixed, a post on the &lt;a href="https://github.com/gpilab/framework/issues"&gt;issue
 tracker&lt;/a&gt; would be much appreciated
-:).&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI and the BART</title><link href="http://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><published>2016-02-16T12:56:00-07:00</published><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:/2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
+:).&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI and the BART</title><link href="https://gpilab.com/2016/02/gpi-and-the-bart/" rel="alternate"></link><published>2016-02-16T12:56:00-07:00</published><updated>2016-02-16T12:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-02-16:/2016/02/gpi-and-the-bart/</id><summary type="html">&lt;p&gt;Recently, the &lt;a href="https://en.wikipedia.org/wiki/Borg_(Star_Trek)"&gt;BORG&lt;/a&gt;
 has been used to wrap the &lt;a href="http://mrirecon.github.io/bart/"
 target="_blank"&gt;Berkeley Advanced Reconstruction Toolbox (BART)&lt;/a&gt; into a GPI
 node library for the purpose of allowing GPI users to easily explore and
@@ -851,7 +820,7 @@ for the command-line tool.  In this case the BART comes with a Python library
 that translates their CFL/HDR file format to Numpy complex float arrays.  This
 can be observed in the following code snippet of a GPI node that wraps the
 BART's &lt;code&gt;traj&lt;/code&gt; command.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# load commandline tools&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# load commandline tools&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bart.gpi.borg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;IFilePath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;OFilePath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Command&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bart.python.cfl&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cfl&lt;/span&gt; &lt;span class="c1"&gt;# BART file format&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -877,14 +846,13 @@ BART's &lt;code&gt;traj&lt;/code&gt; command.&lt;/p&gt;
     &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
     &lt;span class="c1"&gt;# run commandline and echo full command string&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
     &lt;span class="c1"&gt;# set GPI node output&lt;/span&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setData&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;trajectory&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The example above starts with a local import of the BORG tools, which were
 developed in tandem with this node library.  The GPI widgets values are then
@@ -920,7 +888,7 @@ convey numeric arrays and k-space coordinates.  In order to pass the data
 between nodes from each library, the data need to be manipulated to fit the
 each node's requirements. This is easily accomplished with the core GPI nodes.
 Lets start with an example of the worst case scenario: the &lt;code&gt;traj&lt;/code&gt; node.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/BARTDataConvention.png"&gt;&lt;/p&gt;
 &lt;p&gt;The image above shows an example gridded 2D radial trajectory (via the BART
 node library) and a gridded 2D spiral trajectory (via the GPI core library).
 Starting from the top nodes, you can see that the &lt;code&gt;Traj&lt;/code&gt; node produces radial
@@ -960,7 +928,7 @@ nodes in the core library.  The conventions for data between these two
 libraries are different as would be expected between any two libraries that are
 developed independently.  The goal for this example is to show that a cross
 library data transfer may require some extra attention.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/BARTDataConvention_BNI2BART.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/BARTDataConvention_BNI2BART.png"&gt;&lt;/p&gt;
 &lt;p&gt;Another approach to this problem would be to integrate these differences into
 the nodes themselves.  An example of this can be seen in the image above.  The
 &lt;code&gt;SpiralCoords&lt;/code&gt; node is generating a trajectory that is reformatted using the
@@ -973,19 +941,17 @@ target="_blank"&gt;GPI-BART node library&lt;/a&gt; installation: the BART compil
 and the GPI node library installation.  Before starting download or clone the
 GPI-BART fork:&lt;/p&gt;
 &lt;p&gt;First (if you haven't already), make a 'gpi' directory in your home directory.
-If you're not sure why you'd do this, checkout the post &lt;a href="http://gpilab.com/posts/2015-06-30-Installing-Node-Libraries.md"&gt;Installing Node
+If you're not sure why you'd do this, checkout the post &lt;a href="{static}/posts/2015-06-30-Installing-Node-Libraries.md"&gt;Installing Node
 Libraries&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;
-    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;
-    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    $ cd ~/
+    $ mkdir ~/gpi
+    $ cd ~/gpi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Next, use &lt;a href="https://git-scm.com/"&gt;git&lt;/a&gt; to clone the node library project into a
 directory called 'bart'.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nckz&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;bart&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    $ git clone https://github.com/nckz/bart.git bart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;BART Compilation&lt;/h3&gt;
 &lt;p&gt;The BART compilation instructions can be found in the
@@ -995,10 +961,9 @@ third party library dependencies that are specific to each OS (e.g. &lt;a href="
 OSX&lt;/a&gt;).  For OSX, the Xcode and the
 gcc compiler must be installed before the &lt;code&gt;make&lt;/code&gt; command can be issued.  Once
 you've installed the dependencies, make the BART.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;gpi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;
-    &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    $ cd ~/gpi/bart
+    $ make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This will make the BART command-line executables, which will be accessible from
 the &lt;code&gt;~/gpi/bart&lt;/code&gt; directory.&lt;/p&gt;
@@ -1014,7 +979,7 @@ the default paths then GPI-BART library is ready to go.&lt;/p&gt;
 &lt;p&gt;If you have path modifications in your &lt;code&gt;~/.gpirc&lt;/code&gt; file or the nodes are not
 visible in your library menu, consult the
 &lt;a href="http://docs.gpilab.com/en/develop/config.html"&gt;Configuration&lt;/a&gt; docs or check out the
-post on &lt;a href="http://gpilab.com/posts/2015-06-30-Installing-Node-Libraries.md"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
+post on &lt;a href="{static}/posts/2015-06-30-Installing-Node-Libraries.md"&gt;Installing Node Libraries&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Events&lt;/h2&gt;
 &lt;p&gt;This work has been presented at the &lt;a href="http://www.ismrm.org/workshops/Data16/"&gt;ISMRM Workshop on Data Sampling &amp;amp; Image
 Reconstruction&lt;/a&gt; in Sedona Arizona this
@@ -1023,7 +988,7 @@ Exhibition&lt;/a&gt; in Singapore
 this March.&lt;/p&gt;
 &lt;h2&gt;Thanks&lt;/h2&gt;
 &lt;p&gt;We'd like to thanks the BART developers at UC Berkeley for their help in
-building these nodes.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI v1 Release</title><link href="http://gpilab.com/2016/01/gpi-v1-release/" rel="alternate"></link><published>2016-01-13T13:56:00-07:00</published><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-01-13:/2016/01/gpi-v1-release/</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
+building these nodes.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI v1 Release</title><link href="https://gpilab.com/2016/01/gpi-v1-release/" rel="alternate"></link><published>2016-01-13T13:56:00-07:00</published><updated>2016-01-13T13:56:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2016-01-13:/2016/01/gpi-v1-release/</id><summary type="html">&lt;p&gt;The GPI version 1-beta is available for download!  This version marks some
 major framework changes with the transition to &lt;a
 href="https://docs.python.org/3/" target="_blank"&gt;Python 3&lt;/a&gt;, packaging via
 &lt;a href="http://anaconda.org" target="_blank"&gt;Anaconda.org&lt;/a&gt;, PyFI API
@@ -1087,7 +1052,7 @@ Software Library)&lt;/a&gt; projects.&lt;/p&gt;
 &lt;h3&gt;Download&lt;/h3&gt;
 &lt;p&gt;For more information about the updates check out the
 &lt;a href="http://docs.gpilab.com/en/develop/CHANGELOG.html"&gt;changelog&lt;/a&gt; or
-just download the latest release at &lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Editor's Pick!</title><link href="http://gpilab.com/2015/12/editors-pick/" rel="alternate"></link><published>2015-12-18T20:30:00-07:00</published><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-12-18:/2015/12/editors-pick/</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
+just download the latest release at &lt;a href="/downloads"&gt;gpilab.com/downloads&lt;/a&gt;.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Editor's Pick!</title><link href="https://gpilab.com/2015/12/editors-pick/" rel="alternate"></link><published>2015-12-18T20:30:00-07:00</published><updated>2015-12-18T20:30:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-12-18:/2015/12/editors-pick/</id><summary type="html">&lt;p&gt;The GPI article entitled &lt;a
 href="http://onlinelibrary.wiley.com/doi/10.1002/mrm.25528/abstract"
 target="_blank"&gt;"Graphical programming interface: A development environment for
 MRI methods"&lt;/a&gt; has been chosen as one of the &lt;a
@@ -1105,7 +1070,7 @@ target="_blank"&gt;MRM Editor's Picks&lt;/a&gt; for November!  There is also a s
 interview with Jim Pipe and myself from the folks at &lt;a
 href="http://www.ismrm.org/qa-with-nicholas-zwart-and-james-pipe/"
 target="_blank"&gt;MRM Highlights&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Installing Node Libraries</title><link href="http://gpilab.com/2015/06/installing-node-libraries/" rel="alternate"></link><published>2015-06-30T14:21:00-07:00</published><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.com,2015-06-30:/2015/06/installing-node-libraries/</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
+&lt;p&gt;This mentioning is coming a little late, but thats better than never ;).&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Installing Node Libraries</title><link href="https://gpilab.com/2015/06/installing-node-libraries/" rel="alternate"></link><published>2015-06-30T14:21:00-07:00</published><updated>2015-06-30T14:21:00-07:00</updated><author><name>Ashley Anderson</name></author><id>tag:gpilab.com,2015-06-30:/2015/06/installing-node-libraries/</id><summary type="html">&lt;p&gt;One of the nicest features of GPI is how easy it is to add a library and begin
 using new nodes. Whether the library contains nodes and networks you created,
 or code from a collaborator or colleague, installation is the same simple
 process.&lt;/p&gt;
@@ -1114,9 +1079,9 @@ using new nodes. Whether the library contains nodes and networks you created,
 or code from a collaborator or colleague, installation is the same simple
 process.&lt;/p&gt;
 &lt;p&gt;Here we cover installing an updated version of the Core library. This will
-serve as a general demonstration of how to install additional node libraries.
+serve as a general demonstration of how to install additional node libraries.&lt;/p&gt;
 &lt;h2&gt;The .gpirc File&lt;/h2&gt;
-GPI searches for libraries (by default) in a &lt;code&gt;~/gpi/&lt;/code&gt; directory
+&lt;p&gt;GPI searches for libraries (by default) in a &lt;code&gt;~/gpi/&lt;/code&gt; directory
 within your home directory. On Mac OS X, the full path of this folder is
 &lt;code&gt;/Users/&amp;lt;username&amp;gt;/gpi/&lt;/code&gt;, and on Ubuntu (and most flavors of
 Linux) it is &lt;code&gt;/home/&amp;lt;username&amp;gt;/gpi/&lt;/code&gt;. Thus, to install a new
@@ -1127,17 +1092,16 @@ Since the file is hidden (begins with a &lt;code&gt;.&lt;/code&gt;), you will no
 a normal directory listing; use &lt;code&gt;ls -a&lt;/code&gt; to see it. If this file does
 not exist on your system, you can generate a basic version from the GPI
 "Config" menu.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/Screenshot-2015-02-05-11.21.10-300x80.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/Screenshot-2015-02-05-11.21.10-300x80.png"&gt;&lt;/p&gt;
 &lt;p&gt;Select "Generate Config File" to create a basic .gpirc file.&lt;/p&gt;
 &lt;p&gt;The default GPI library path (&lt;code&gt;~/gpi/&lt;/code&gt;) is stored in the
 &lt;code&gt;LIB_DIRS&lt;/code&gt; variable within the &lt;code&gt;.gpirc&lt;/code&gt; file. You can amend the
 &lt;code&gt;LIB_DIRS&lt;/code&gt; in your &lt;code&gt;.gpirc&lt;/code&gt; file to tell GPI to look for
 libraries in some other directories, if you prefer. Append (or prepend)
 directories to &lt;code&gt;LIB_DIRS&lt;/code&gt; separated by colons.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="fitwidth" src="http://gpilab.com/images/Screenshot-2015-06-30-14.09.30.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitwidth" src="https://gpilab.com/images/Screenshot-2015-06-30-14.09.30.png"&gt;&lt;/p&gt;
 &lt;p&gt;My .gpirc file with modified LIB_DIRS to include additional node libraries.&lt;/p&gt;
 &lt;h2&gt;Installing the Updated Core Library&lt;/h2&gt;
-
 &lt;p&gt;The GPI package includes a snapshot of the Core node library, but new versions
 of the Core nodes are maintained on &lt;a title="GitHub"
 href="https://github.com/gpilab/core-nodes"
@@ -1158,12 +1122,10 @@ following commands (after installing Git if necessary):&lt;/p&gt;
 &lt;pre&gt;% cd ~/gpi
 % git clone https://github.com/gpilab/core-nodes.git core
 &lt;/pre&gt;
-
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;This will create a copy of the remote &lt;code&gt;core-nodes&lt;/code&gt; repository to
 your computer, inside your default GPI library directory.&lt;/p&gt;
 &lt;h3&gt;Compiling the Core Library&lt;/h3&gt;
-
 &lt;p&gt;GPI includes a Python/C++ interface called PyFI. The Core library uses PyFI to
 implement algorithms in a combination of C++ and Python code. GPI includes a
 script (&lt;code&gt;gpi_make&lt;/code&gt;) to help compile C++ files associated with a GPI
@@ -1171,20 +1133,18 @@ library.&lt;/p&gt;
 &lt;p&gt;Compiled binary objects are not included in the Git repository, so it's
 necessary to build the library after installation. Once you have downloaded or
 cloned the repository into &lt;code&gt;~/gpi/core/&lt;/code&gt;, run the following commands
-to compile the C++ code:
+to compile the C++ code:&lt;/p&gt;
 &lt;pre&gt;% cd ~/gpi/core
 % gpi_make --all
 &lt;/pre&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h3&gt;Updating the Core Library&lt;/h3&gt;
-
 &lt;p&gt;As mentioned, Git makes it easy to update the Core library with any new changes
 from the developers. If you cloned the repository using Git, you can update
 your copy of the Core library using the following commands:&lt;/p&gt;
 &lt;pre&gt;% cd ~/gpi/core
 % git pull
 % gpi_make --all&lt;/pre&gt;
-
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Running &lt;code&gt;git pull&lt;/code&gt; fetches any new changes from the core-nodes
 repository on GitHub, and merges them into your local copy. To finish updating,
@@ -1193,7 +1153,6 @@ made. Note you may get some warnings or errors if you attempt to "pull" change
 after modifying the code yourself. If you have changes you'd like to keep (or
 contribute back!) please fork the project on GitHub, or just get in touch!&lt;/p&gt;
 &lt;h4&gt;Branches in the &lt;code&gt;core-nodes&lt;/code&gt; Repository&lt;/h4&gt;
-
 &lt;p&gt;Development in the &lt;code&gt;core-nodes&lt;/code&gt; repository follows the &lt;a
 title="gitflow"
 href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;gitflow&lt;/a&gt; branching
@@ -1210,8 +1169,8 @@ again want to recompile (&lt;code&gt;gpi_make --all&lt;/code&gt;) any time you c
 changes in your GPI node libraries. Check out the
 &lt;a href="http://docs.gpilab.com"&gt;documentation&lt;/a&gt; for more information, and please &lt;a href="/community"&gt;get
 in touch&lt;/a&gt; if you have questions or if you're
-interested in contributing to the project.
-&lt;h2&gt;&lt;/h2&gt;&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>Philips Raw Data Reader</title><link href="http://gpilab.com/2015/04/philips-raw-data-reader/" rel="alternate"></link><published>2015-04-06T13:27:00-07:00</published><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-04-06:/2015/04/philips-raw-data-reader/</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
+interested in contributing to the project.&lt;/p&gt;
+&lt;h2&gt;&lt;/h2&gt;</content><category term="posts"></category></entry><entry><title>Philips Raw Data Reader</title><link href="https://gpilab.com/2015/04/philips-raw-data-reader/" rel="alternate"></link><published>2015-04-06T13:27:00-07:00</published><updated>2015-04-06T13:27:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-04-06:/2015/04/philips-raw-data-reader/</id><summary type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
 release. Users of the Philips raw data formats can directly import the raw data
 into GPI and start investigating. Thanks to the tenacious efforts of Ryan
 Robison, the reader node supports a plethora of file …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Philips raw data reader node, for MR data, is now available as a binary
@@ -1223,7 +1182,7 @@ levels.  The package releases are available for download on &lt;a
 href="https://github.com/gpilab/philips-data-reader"
 target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/Screen-Shot-2015-04-03-at-4.55.34-PM-300x226.png"&gt;&lt;/p&gt;
 &lt;p&gt;The ReadPhilips node parses the file contents for MR data, converts the data to
 a numpy numeric array and makes it available as an output port.  Depending on
 the input files and application, there may be multiple output datasets
@@ -1233,7 +1192,7 @@ populates a python-dictionary object which is also pushed to an output port.  
 This header information can be viewed via the 'dictionquery' node which
 displays python-dictionary information as a simple list.&lt;/p&gt;
 &lt;h2&gt;Widgets&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="fitw75" src="http://gpilab.com/images/ReadPhilipsUI_ex_head-240x300.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fitw75" src="https://gpilab.com/images/ReadPhilipsUI_ex_head-240x300.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;The ReadPhilips menu provides an interface to browse for the desired files and
 displays basic file system information and a summary of the header information
 (when available).  The interface also provides options for various minor data
@@ -1250,12 +1209,11 @@ maintained by developers, who have vendor specific access, allowing the tool to
 be updated with product changes.  The end users benefit by moving forward with
 their research without getting tangled up in the proprietary code.&lt;/p&gt;
 &lt;p&gt;If you have a GPI node project, you are welcome to submit a link for listing on
-the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI v½ Release</title><link href="http://gpilab.com/2015/02/gpi-v-12-release/" rel="alternate"></link><published>2015-02-27T15:39:00-07:00</published><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-02-27:/2015/02/gpi-v-12-release/</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
+the &lt;a href="/community"&gt;community&lt;/a&gt; page.&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>GPI v½ Release</title><link href="https://gpilab.com/2015/02/gpi-v12-release/" rel="alternate"></link><published>2015-02-27T15:39:00-07:00</published><updated>2015-02-27T15:39:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2015-02-27:/2015/02/gpi-v12-release/</id><summary type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
 &lt;div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;"&gt;
-&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.com/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
-&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="http://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
+&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="https://gpilab.com/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
+&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="https://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
 &lt;/div&gt;
-
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;The GPI project has been able to develop into a robust first release thanks to
 the efforts of the &lt;a
@@ -1264,10 +1222,9 @@ target="_blank"&gt;Keller Center for Imaging Innovation&lt;/a&gt; group in Phoen
 sponsorship from Philips Healthcare and the collaboration with Phoenix
 Children's …&lt;/p&gt;</summary><content type="html">&lt;p&gt;GPI v0.5 is now available for download in its first public release!&lt;/p&gt;
 &lt;div style="display: block; margin-left: auto; margin-right: auto; position: relative; width: 100%; height: 100px;"&gt;
-&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="http://gpilab.com/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
-&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="http://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
+&lt;div id="image1_ban" style="position: relative; top: 0px; left: 0px; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-5" src="https://gpilab.com/images/logo_subtitle.png" alt="logo" width="300" height="113" /&gt;&lt;/div&gt;
+&lt;div id="image2_conf" style="background: none repeat scroll 0% 0% transparent; outline: medium none; text-align: center; vertical-align: middle; position: relative; top: -200px; left: -200px; z-index: 2; padding: 10px;"&gt;&lt;img class="noborder aligncenter size-medium wp-image-324" src="https://gpilab.com/images/confetti.gif" alt="confetti" width="300" /&gt;&lt;/div&gt;
 &lt;/div&gt;
-
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;The GPI project has been able to develop into a robust first release thanks to
 the efforts of the &lt;a
@@ -1293,11 +1250,10 @@ community support.&lt;/p&gt;
     &lt;li&gt;Improved HDF5 reader node&lt;/li&gt;
     &lt;li&gt;Added a new Matlab file reader (for old and new HDF5 formats)&lt;/li&gt;
     &lt;li&gt;&lt;strong&gt;Left-mouse-button port-edge-connect!&lt;/strong&gt;&lt;/li&gt;
-    &lt;li&gt;Right-click downstream ports to delete an edge &lt;br&gt;&lt;img class=" size-full wp-image-184 aligncenter" src="http://gpilab.com/images/rightclickdelete.gif" alt="rightclickdelete" width="244" height="202" /&gt;&lt;br&gt;&lt;/li&gt;
+    &lt;li&gt;Right-click downstream ports to delete an edge &lt;br&gt;&lt;img class=" size-full wp-image-184 aligncenter" src="https://gpilab.com/images/rightclickdelete.gif" alt="rightclickdelete" width="244" height="202" /&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;ul&gt;
-    &lt;li&gt;Node reload; just select a node (or multiple nodes), press Ctrl+R and the node will update and reconnect to up and downstream nodes&lt;br&gt;&lt;img class="alignnone size-full wp-image-182 aligncenter" src="http://gpilab.com/images/node_reload.gif" alt="node_reload" width="262" height="212" /&gt;&lt;br&gt;&lt;/li&gt;
+    &lt;li&gt;Node reload; just select a node (or multiple nodes), press Ctrl+R and the node will update and reconnect to up and downstream nodes&lt;br&gt;&lt;img class="alignnone size-full wp-image-182 aligncenter" src="https://gpilab.com/images/node_reload.gif" alt="node_reload" width="262" height="212" /&gt;&lt;br&gt;&lt;/li&gt;
     &lt;li&gt;Auto generate the user library (via the main menu)&lt;/li&gt;
     &lt;li&gt;&lt;code&gt;gpi_make&lt;/code&gt; now does a force recompile on all node .py files&lt;/li&gt;
     &lt;li&gt;&lt;code&gt;LIB_DIRS&lt;/code&gt;, in the &lt;code&gt;.gpirc&lt;/code&gt;, will now search the parent directory for libraries, so now you can easily setup your custom library directory and new libraries will be loaded as they are added
@@ -1314,32 +1270,31 @@ community support.&lt;/p&gt;
     &lt;li&gt;Updated numpy to qimage conversions with the qimage2ndarray library&lt;/li&gt;
     &lt;li&gt;Removed zlib string compression on StringBox widgets to prevent nodes from segfaulting when using the StringBox in Linux&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p style="text-align: center;"&gt;&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>New Tutorial Screencasts</title><link href="http://gpilab.com/2014/10/new-tutorial-screencasts/" rel="alternate"></link><published>2014-10-10T15:06:00-07:00</published><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-10-10:/2014/10/new-tutorial-screencasts/</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;/p&gt;</content><category term="posts"></category></entry><entry><title>New Tutorial Screencasts</title><link href="https://gpilab.com/2014/10/new-tutorial-screencasts/" rel="alternate"></link><published>2014-10-10T15:06:00-07:00</published><updated>2014-10-10T15:06:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-10-10:/2014/10/new-tutorial-screencasts/</id><summary type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
 &lt;table style="width:100%"&gt;
   &lt;tr&gt;
 &lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/X9ddBrbFAWU?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-71" 
-src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
+src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
 
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;  
   &lt;tr&gt;
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
 
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1 …&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1 …&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;New screencasts have been added to help users get started.  There is now a quick-start guide that covers the user interface as well as exercise units that introduce the functionality of the most commonly used GPI nodes.&lt;/p&gt;
 &lt;table style="width:100%"&gt;
   &lt;tr&gt;
 &lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/X9ddBrbFAWU?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-71" 
-src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
+src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.53.17-PM-300x225.png" alt="Screen Shot 2014-10-10 at 2.53.17 PM" width="300" height="224" /&gt;&lt;br&gt;QuickStart&lt;/a&gt;&lt;/td&gt;
 
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/XKCml0Z_HD4?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-68" src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.49.17-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.49.17 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.1: Cross Sections&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;  
   &lt;tr&gt;
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/AL7FPOPCcfY?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-69" src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.51.10-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.51.10 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.2: k-Space Filter&lt;/a&gt;&lt;/td&gt;
 
-&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="http://gpilab.com/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.3: SoS Coil Combine&lt;/a&gt;&lt;/td&gt;
+&lt;td style="background-color:white; border: 0px;"&gt;&lt;a href="http://youtu.be/6nUXaXlP4Ss?list=UUg8BPyZL30zyCIz1jJVAL1A"&gt;&lt;img class="alignnone size-medium wp-image-70" src="https://gpilab.com/images/Screen-Shot-2014-10-10-at-2.52.18-PM-300x224.png" alt="Screen Shot 2014-10-10 at 2.52.18 PM" width="300" height="224" /&gt;&lt;br&gt;Module 1.3: SoS Coil Combine&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;/table&gt;</content><category term="posts"></category></entry><entry><title>Whats New in Version 0.2</title><link href="http://gpilab.com/2014/09/whats-new-in-version-02/" rel="alternate"></link><published>2014-09-29T21:42:00-07:00</published><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-09-29:/2014/09/whats-new-in-version-02/</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
+&lt;/table&gt;</content><category term="posts"></category></entry><entry><title>Whats New in Version 0.2</title><link href="https://gpilab.com/2014/09/whats-new-in-version-02/" rel="alternate"></link><published>2014-09-29T21:42:00-07:00</published><updated>2014-09-29T21:42:00-07:00</updated><author><name>Nicholas Zwart</name></author><id>tag:gpilab.com,2014-09-29:/2014/09/whats-new-in-version-02/</id><summary type="html">&lt;p&gt;This release is available in native packages for OSX and Linux as well as a
 Linux virtual machine. The package is built upon the multi-platform Python
 distribution “Anaconda”, from Continuum Analytics. The packages also contains
 an installer for maximum convenience.&lt;/p&gt;
@@ -1362,9 +1317,9 @@ matplotlib. Pyopencl has been included in the OSX package.&lt;/p&gt;
 &lt;li&gt;The status bar now contains the canvas walltime and total port memory held by
   the canvas.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.com/images/walltime1-300x39.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="https://gpilab.com/images/walltime1-300x39.jpg"&gt;&lt;img
 class="size-medium wp-image-55"
-src="http://gpilab.com/images/walltime1-300x39.jpg"
+src="https://gpilab.com/images/walltime1-300x39.jpg"
 alt="More canvas info." width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;More canvas info.&lt;/p&gt;
 &lt;ul&gt;
@@ -1377,9 +1332,9 @@ alt="More canvas info." width="500" /&gt;&lt;/a&gt;&lt;/p&gt;
   currently available as an estimate based on previous runtimes.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.com/images/pdone-300x1161.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="https://gpilab.com/images/pdone-300x1161.jpg"&gt;&lt;img
 class="size-full wp-image-54"
-src="http://gpilab.com/images/pdone-300x1161.jpg"
+src="https://gpilab.com/images/pdone-300x1161.jpg"
 alt="Percent done." width="300" height="116" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Percent done.&lt;/p&gt;
 &lt;ul&gt;
@@ -1388,14 +1343,14 @@ alt="Percent done." width="300" height="116" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;li&gt;Node menus now have a corner grip (arguably one of the most important updates
   in Aughty) and a “Close-all” feature located in the main menu.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.com/images/grip-300x1951.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="https://gpilab.com/images/grip-300x1951.jpg"&gt;&lt;img
 class="size-full wp-image-53"
-src="http://gpilab.com/images/grip-300x1951.jpg" alt="The
+src="https://gpilab.com/images/grip-300x1951.jpg" alt="The
 corner grip." width="300" height="195" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The corner grip.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://gpilab.com/images/closeall-300x49.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="https://gpilab.com/images/closeall-300x49.jpg"&gt;&lt;img
 class="size-full wp-image-50"
-src="http://gpilab.com/images/closeall-300x49.jpg"
+src="https://gpilab.com/images/closeall-300x49.jpg"
 alt="Close all menu option." width="350" /&gt;&lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;Close all menu option.&lt;/p&gt;
 &lt;h2&gt;Commandline Interface&lt;/h2&gt;
@@ -1418,9 +1373,9 @@ alt="Close all menu option." width="350" /&gt;&lt;/a&gt; &lt;/p&gt;
 &lt;li&gt;Nodes are now searched for by scope allowing multiple nodes to have the same
   name.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://gpilab.com/images/library-300x186.jpg"&gt;&lt;img
+&lt;p&gt;&lt;a href="https://gpilab.com/images/library-300x186.jpg"&gt;&lt;img
 class="size-full wp-image-51"
-src="http://gpilab.com/images/library-300x186.jpg"
+src="https://gpilab.com/images/library-300x186.jpg"
 alt="2-level library scope." width="400" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2-level library scope.&lt;/p&gt;
 &lt;h2&gt;Network File Upgrade (v2)&lt;/h2&gt;

@@ -10,17 +10,17 @@
 
         <title>gpilab.com</title>
 
-            <link href="http://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
-            <link href="http://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
+            <link href="https://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="https://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
-        <link href="http://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="http://gpilab.com/theme/css/clean-blog.css" rel="stylesheet">
+        <link href="https://gpilab.com/theme/css/clean-blog.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="http://gpilab.com/theme/css/code_blocks/darkly.css" rel="stylesheet">
+            <link href="https://gpilab.com/theme/css/code_blocks/darkly.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -44,10 +44,10 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="http://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/">
+	<meta property="og:url" content="https://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/">
 	<meta property="og:title" content="ISMRM Demo: CS with BART in GPI">
 	<meta property="og:description" content="">
-	<meta property="og:image" content="http://gpilab.com//images/ismrm2019_bart.png">
+	<meta property="og:image" content="https://gpilab.com//images/ismrm2019_bart.png">
 	<meta property="article:published_time" content="2019-05-07 08:59:00-07:00">
 </head>
 
@@ -64,7 +64,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://gpilab.com/">gpilab.com</a>
+                <a class="navbar-brand" href="https://gpilab.com/">gpilab.com</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,11 +75,11 @@
                     <li><a href="/">Home</a></li>
 
 
-                            <li><a href="http://gpilab.com/downloads/">Install GPI</a></li>
-                            <li><a href="http://gpilab.com/screencasts/">Tutorials</a></li>
-                            <li><a href="http://gpilab.com/documentation/">Documentation</a></li>
-                            <li><a href="http://gpilab.com/community/">Community</a></li>
-                            <li><a href="http://gpilab.com/about/">About</a></li>
+                            <li><a href="https://gpilab.com/downloads/">Install GPI</a></li>
+                            <li><a href="https://gpilab.com/screencasts/">Tutorials</a></li>
+                            <li><a href="https://gpilab.com/documentation/">Documentation</a></li>
+                            <li><a href="https://gpilab.com/community/">Community</a></li>
+                            <li><a href="https://gpilab.com/about/">About</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -95,7 +95,7 @@
                     <div class="post-heading">
                         <h1>ISMRM Demo: CS with BART in GPI</h1>
                         <span class="meta">Posted by
-                                <a href="http://gpilab.com/author/ashley-anderson-iii.html">Ashley Anderson III <aganders3@gmail.com></a>
+                                <a href="https://gpilab.com/author/ashley-anderson-iii.html">Ashley Anderson III <aganders3@gmail.com></a>
                              on Tue 07 May 2019
                         </span>
                         
@@ -119,7 +119,7 @@ flexibility and capabilities of GPI to integrate other packages. This demo also
 highlights the use of GPI as a teaching tool; the example is based on <a href="http://people.eecs.berkeley.edu/~mlustig/CS.html">this
 example from Professor
 Lustig</a>.</p>
-<p>Before getting started here, please see Nick's post on <a href="http://gpilab.com/posts/2019-05-05-ISMRM-Demo-Primer.md">setting up GPI for the
+<p>Before getting started here, please see Nick's post on <a href="{static}/posts/2019-05-05-ISMRM-Demo-Primer.md">setting up GPI for the
 ISMRM 2019 demo</a>.</p>
 <hr>
 <h1>Download and Compile BART for GPI</h1>
@@ -127,27 +127,24 @@ ISMRM 2019 demo</a>.</p>
 project</a>. We concede this fork is out of
 date, but it should suffice for a demonstation. Updating to a newer version
 would be fairly trivial for someone familiar with both BART and GPI. Check
-out Nick's <em>other</em> post on <a href="http://gpilab.com/posts/2016-02-16-GPI-and-the-BART.md">how BART was wrapped for use in
+out Nick's <em>other</em> post on <a href="{static}/posts/2016-02-16-GPI-and-the-BART.md">how BART was wrapped for use in
 GPI</a> if you're interested in
 making this work.</p>
 <p>First, prepare your virtual machine for BART compilation:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="n">git</span> <span class="n">gcc</span> <span class="n">make</span> <span class="n">libfftw3</span><span class="o">-</span><span class="n">dev</span> <span class="n">liblapack</span><span class="o">-</span><span class="n">dev</span> <span class="n">libpng</span><span class="o">-</span><span class="n">dev</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>&gt; sudo apt-get install git gcc make libfftw3-dev liblapack-dev libpng-dev
+</code></pre></div>
 
 <p>If you're using the GPI ISMRM 2019 demo VM or AMI on EC2, the password for the
 <code>ubuntu</code> user is <code>gpilab</code>.</p>
 <p>Next clone the BART for GPI fork into your <code>gpi</code> library folder:</p>
-<div class="highlight"><pre><span></span>&gt; git clone https://github.com/nckz/bart.git /home/<span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/gpi/bart
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>&gt; git clone https://github.com/nckz/bart.git /home/<span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/gpi/bart
+</code></pre></div>
 
 <p>Finally, build and test BART:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">cd</span> <span class="o">~/</span><span class="n">gpi</span><span class="o">/</span><span class="n">bart</span>
-<span class="o">&gt;</span> <span class="n">make</span>
-<span class="o">&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">bart</span> <span class="n">bench</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>&gt; cd ~/gpi/bart
+&gt; make
+&gt; ./bart bench
+</code></pre></div>
 
 <p>If you're not working in the GPI VM, instead follow the instructions in the
 BART for GPI README.</p>
@@ -157,18 +154,18 @@ the canvas and you should see a new Library in the menu called <code>bart</code>
 Libraries can contain both nodes and networks. Most BART functions should have
 corresponding nodes here, but for now go ahead and select the <code>brain_cs_example
 (net)</code> near the bottom of the menu.</p>
-<p><img src="http://gpilab.com/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/></p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/></p>
 <p>The demo network will be loaded on the canvas, and the <code>DownloadFile</code> node
 should begin downloading the example data. This data (about 5 MB) will be
 stored in a temporary file.</p>
-<p><img src="http://gpilab.com/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/></p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/></p>
 <h1>Configure and Run the Network</h1>
 <p>Note the three <code>ReadMatlab</code> nodes. Each is reading data from the same file (the
 one downloaded by the <code>DownloadFile</code> node) which contains several arrays.
 Right-click on each of these nodes to open their node menus. In the menu you
 will be able to select which array is output. From left to right we need to
 select the sampling mask, the image, and the sampling pdf.</p>
-<p><img src="http://gpilab.com/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/></p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/></p>
 <p>Right-click on a few of the <code>ImageDisplay</code> nodes to probe the algorithm at
 various points. The <code>ImageDisplay</code> node labeled <code>CS Image</code> is the
 compressed-sensing reconstruction (though at this point it is only the inital
@@ -177,7 +174,7 @@ condition based on zero-filling).</p>
 reconstruction. The <code>CS Image</code> will be updated with each iteration, and you can
 watch as the undersampling artifacts are removed by the wavelet-based
 soft-thresholding constraint.</p>
-<p><img src="http://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/></p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/></p>
 <p>There you have it! Explore the rest of the BART tools in GPI and let us know if
 you come up with any cool examples.</p>
     </article>
@@ -205,7 +202,7 @@ you come up with any cool examples.</p>
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.youtube.com/user/gpilab">
+                            <a href="https://www.youtube.com/user/gpilab">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
@@ -213,7 +210,7 @@ you come up with any cool examples.</p>
                             </a>
                         </li>
                         <li>
-                            <a href="http://docs.gpilab.com">
+                            <a href="https://docs.gpilab.com">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-book fa-stack-1x fa-inverse"></i>
@@ -232,7 +229,7 @@ you come up with any cool examples.</p>
     </footer>
 
     <!-- jQuery -->
-    <!-- <script src="http://gpilab.com/theme/js/jquery.js"></script> -->
+    <!-- <script src="https://gpilab.com/theme/js/jquery.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
         /* banner fade */
@@ -248,10 +245,10 @@ you come up with any cool examples.</p>
     </script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="http://gpilab.com/theme/js/bootstrap.min.js"></script>
+    <script src="https://gpilab.com/theme/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="http://gpilab.com/theme/js/clean-blog.min.js"></script>
+    <script src="https://gpilab.com/theme/js/clean-blog.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
