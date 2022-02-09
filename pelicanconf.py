@@ -40,7 +40,7 @@ YOUTUBE_URL = "https://www.youtube.com/user/gpilab"
 DOCUMENTATION_URL = "https://docs.gpilab.com"
 
 # footer
-COPYRIGHT = "2016 Nicholas Zwart, Jim Pipe, Ashley Anderson"
+COPYRIGHT = "2022 Nicholas Zwart, Jim Pipe, Ashley Anderson, Daniel Borup, Abdulrahman Alfayad"
 # FOOTER_TEXT = 'hello'
 
 # favicon
