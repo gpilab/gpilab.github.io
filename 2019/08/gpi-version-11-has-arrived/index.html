@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>gpilab.com - Tags</title>
+        <title>gpilab.com</title>
 
             <link href="https://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="https://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="https://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +34,21 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-		<meta property="og:locale" content="en">
+
+
+
+
+
+			<meta property="og:locale" content="en">
 		<meta property="og:site_name" content="gpilab.com">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://gpilab.com/2019/08/gpi-version-11-has-arrived/">
+	<meta property="og:title" content="GPI version 1.1 has arrived!">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://gpilab.com/">
+	<meta property="article:published_time" content="2019-08-14 00:00:00-07:00">
 </head>
 
 <body>
@@ -74,12 +88,17 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/images/banner.jpg')">
+        <header class="intro-header" style="background-image: url('https://gpilab.com/theme/images/post-bg.jpg')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>gpilab.com - Tags</h1>
+                        <h1>GPI version 1.1 has arrived!</h1>
+                        <span class="meta">Posted by
+                                <a href="https://gpilab.com/author/daniel-borup.html">Daniel Borup <borup.daniel@mayo.edu></a>
+                             on Wed 14 August 2019
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -90,7 +109,65 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <h1>Tags for gpilab.com</h1>            </div>
+    <!-- Post Content -->
+    <article>
+        <h3>A new release is here!</h3>
+<p>GPI version 1.1 is now available, along with version 2.0 of the GPI core nodes. For the most part, the look and feel of GPI should remain unchanged to the end user. But we’ve made some significant improvements under the hood that we hope will make GPI easier for users, developers, and maintainers going forward. Below you'll find a description of the major changes, upgrade process, and a list of changes to the core nodes.</p>
+<p>As of this version, the recommended installation method is to use the installation script. All changes listed below will be accounted for by default when installing with the script, so if you're a new user you can just sit back, relax, and enjoy GPI.</p>
+<h2>Major changes</h2>
+<p>Two main changes come as part of this release.</p>
+<h3>Qt5</h3>
+<p>We've added support for Qt5 thanks to a contribution from community member Gregory Lee. Support is now provided using the QtPy wrapper, which is technically compatible with Qt4 — however, because Qt4 has been end-of-life for some time now, we're no longer supporting it in GPI.</p>
+<p>For most users, this change will show up as nothing more than a slightly different look to menus. However, if you were developing your own nodes and making use of Qt libraries imported from GPI, you may need to update your import statements to reference the new "QtWidgets" module -- for an example, see the changes made to the core nodes library as part of this update (https://github.com/gpilab/core-nodes/pull/10).</p>
+<h3>Conda-forge packaging</h3>
+<p>GPI, and the core nodes, are now packaged on conda-forge! This is another "under the hood" change for most users, but one that we're very excited about as it will make our development, testing, and release process much more streamlined and reliable. Since GPI already relied on numerous packages from conda-forge, it made sense to add our work to this community ecosystem, too.</p>
+<p>If you're a new user or otherwise installing GPI from scratch, this change should be completely invisible. </p>
+<p>If you want to upgrade an existing GPI installation, there are a few minor differences. First, the core nodes are now packaged and distributed under the name <code>gpi_core</code>. At the surface level, this means these nodes will appear under the heading <code>gpi_core</code> in the node selection menu. More critically, if you've written nodes that import or include modules from the core library, you'll need to change those import/include statements to reference <code>gpi_core</code> instead of <code>core</code> after upgrading.</p>
+<h2>Upgrading</h2>
+<p>To upgrade an existing GPI installation, you can take the following simple steps.</p>
+<p>1) Remove the <code>gpi</code> channel from your conda configuration, as it's no longer necessary. You can do this directly by modifying <code>~/.condarc</code>. While various configurations may work, the <code>.condarc</code> provided with a fresh GPI install is the following:</p>
+<div class="highlight"><pre><span></span><code>channels:
+  - conda-forge
+  - defaults
+channel_priority: strict
+</code></pre></div>
+
+<p>This sets <code>conda-forge</code> and <code>defaults</code> as the two channels to search (in that order) and sets "strict channel priority" as currently recommended for in the conda-forge ecosystem.</p>
+<p>2) Make a backup copy of any node libraries you may use outside of the GPI core nodes, as you may need to modify your nodes slightly to work with v1.1.</p>
+<p>3) Run <code>conda update -n base conda</code> to get the latest version of the package manager itself.</p>
+<p>4) Install GPI and the core nodes. If you use conda exclusively for GPI, you can upgrade inside your existing gpi environment with:</p>
+<div class="highlight"><pre><span></span><code>conda activate gpi
+conda install gpi gpi_core
+</code></pre></div>
+
+<p>Or, if you prefer a more conservative approach, make a new environment for GPI 1.1 and install there:</p>
+<div class="highlight"><pre><span></span><code>conda create -n &lt;new-env-name&gt;
+conda activate &lt;new-env-name&gt;
+conda install gpi gpi_core
+</code></pre></div>
+
+<p>5) Make any necessary changes to other node libraries as described above.</p>
+<p>6) Get started with GPI 1.1 -- and consider helping us make it even better!</p>
+<h2>Core Node Library Changes</h2>
+<p>Minor changes to the core nodes themselves include two new nodes:</p>
+<ul>
+<li><code>Int_Math</code>, which works just like <code>Float_Math</code> for integer values.</li>
+<li><code>Switch</code>, which allows you to toggle between a left and right input without re-drawing connections.</li>
+</ul>
+<p>And some modifications to existing nodes:</p>
+<ul>
+<li>In the <code>Collapse</code> node, you can now use the "non-zero" option for collapsing in a single dimension, not just with "collapse all" selected</li>
+<li>The <code>shapes</code> node now allows for the generation of complex-valued noise, as well as repeatable noise using a user-specified seed.</li>
+<li><code>Calc_101</code> now allows for more granular control over the scheme used for derivatives and integrals.</li>
+<li>Many trigonometric functions now have a "cycles" option in addition to degrees and radians.</li>
+<li>Nodes with multiple functions will provide more information on the canvas about which function is active.</li>
+</ul>
+<p>Development of both the GPI framework and core nodes library is ongoing, and we welcome community contributions of any kind!</p>
+    </article>
+
+    <hr>
+
+            </div>
         </div>
     </div>
 

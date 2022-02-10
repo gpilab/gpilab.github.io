@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>gpilab.com</title>
+
+            <link href="https://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="https://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
+
+        <!-- Bootstrap Core CSS -->
+        <link href="https://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://gpilab.com/theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://gpilab.com/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+
+
+			<meta property="og:locale" content="en">
+		<meta property="og:site_name" content="gpilab.com">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://gpilab.com/2016/09/gpi-on-windows/">
+	<meta property="og:title" content="GPI on Windows?!">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://gpilab.com//images/win_banner.jpeg">
+	<meta property="article:published_time" content="2016-09-27 15:28:00-07:00">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://gpilab.com/">gpilab.com</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <!-- NRZ manually added -->
+                    <li><a href="/">Home</a></li>
+
+
+                            <li><a href="https://gpilab.com/downloads/">Install GPI</a></li>
+                            <li><a href="https://gpilab.com/screencasts/">Tutorials</a></li>
+                            <li><a href="https://gpilab.com/documentation/">Documentation</a></li>
+                            <li><a href="https://gpilab.com/community/">Community</a></li>
+                            <li><a href="https://gpilab.com/about/">About</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('/images/win_banner.jpeg')">
+        <div class="container intro-header-overlay">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>GPI on Windows?!</h1>
+                        <span class="meta">Posted by
+                                <a href="https://gpilab.com/author/akshay-bakhru.html">Akshay Bakhru</a>
+                             on Tue 27 September 2016
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <blockquote>
+<p>GPI is developed at the BNI on Mac and Linux platforms.  We typically don't
+develop our MR methods on Windows and therefore have limited experience
+with this.  Fortunately, the nice folks at Philips who develop in GPI have
+taken it upon themselves to forge a path.  These instructions represent a
+first step onto the Windows platform, so we are interested in getting
+feedback about your experience with this.  Let us know at gpi@gpilab.com.</p>
+<p>-- Nick Zwart</p>
+</blockquote>
+<p>This is a quick step by step guide for getting GPI installed for native use on
+Windows!  This capability is made possible through the new "Windows
+Subsystem for Linux".  The guide starts with the installation and verification
+of Ubuntu Linux and then provides steps for installing GPI.  This is an
+exciting step forward for GPI users and developers.</p>
+<h1>Installing the Linux Bash Shell on Windows</h1>
+<h2>Ensure you are running the right Windows 10 version</h2>
+<ol>
+<li>You have to have the 64-bit build of Windows 10</li>
+<li>You should have the Windows 10 anniversary update or higher. To check the
+   version type “About your PC” in the start menu and press “Enter”. Version
+   should be 1607 or higher (shown in the about window below)</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_1_settings.jpg"></p>
+<h2>Enable developer mode</h2>
+<ol>
+<li>Open the Settings app and head to Update &amp; Security &gt; For Developers</li>
+<li>Enable Developer Mode</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_2_devmode.jpg"></p>
+<h2>Enable the “Windows Subsystem for Linux (Beta)”</h2>
+<ol>
+<li>Open the Control Panel, click “Programs,” and click “Turn Windows Features
+   On or Off”</li>
+<li>Enable the “Windows Subsystem for Linux (Beta)” option in the list here and
+   click “OK.”</li>
+<li>After you do, you’ll be prompted to reboot your computer. Click “Restart
+   Now” to reboot your computer and Windows 10 will install the new feature.</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_3_subsys.jpg"></p>
+<h2>Install</h2>
+<ol>
+<li>After your computer restarts, click the Start button (or press the Windows
+   key), type “bash”, and press “Enter.”</li>
+<li>The first time you run the bash.exe file, you’ll be prompted to accept the
+   terms of service.</li>
+<li>The command will then download the “Bash on Ubuntu on Windows” application
+   from the Windows Store.</li>
+<li>You’ll be asked to create a user account and password for use in the Bash
+   environment.</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_5_useradd.jpg"></p>
+<h2>Run the bash shell</h2>
+<ol>
+<li>Now you have a full command-line bash shell based on Ubuntu.</li>
+<li>To open the Bash shell, just open your Start menu and search for “bash” or
+   “Ubuntu.”</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_6_bash.jpg"></p>
+<h2>Some tips (Installing packages and accessing windows dirs.)</h2>
+<ol>
+<li>You can use Ubuntu’s apt-get command to install software from Ubuntu’s
+   repositories.</li>
+<li>Install an Application Package: sudo apt-get install packagename (Replace
+   “packagename” with the package’s name.)</li>
+<li>Windows drives will be available in the “mnt” folder</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_7_mnt.jpg"></p>
+<hr>
+<h1>Enable GUI app support for Linux Shell</h1>
+<p>Microsoft still does not support graphical applications in Bash on Windows.
+However, Microsoft built an entire “Windows Subsystem for Linux” that allows
+Windows 10 to natively run Linux applications, even graphical ones. The only
+missing piece is an X server that allows those graphical applications to appear
+on your Windows desktop. This is basically the same technique people would use
+to run graphical Linux desktop applications over a network. Please note: Not
+all Linux GUI applications might work with this, but it works for most, and it
+works great with GPI.</p>
+<h2>Download and install “Xming X server” for windows</h2>
+<ol>
+<li>The installer is available here: https://sourceforge.net/projects/xming/</li>
+<li>Download and install it on your Windows 10 PC</li>
+<li>Just use the default settings and it’ll work fine</li>
+<li>Launch Xming and it will appear in your system tray, running in the
+   background and waiting for you to launch a graphical Linux program.</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_8_xming.jpg"></p>
+<h2>Try a graphical application</h2>
+<ol>
+<li>
+<p>Install Firefox using below command</p>
+<p><code>sudo apt-get install firefox</code></p>
+</li>
+<li>
+<p>After installation launch Firefox using the below commands</p>
+<p><code>export DISPLAY=:0</code> <br>
+<code>firefox</code></p>
+</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_9_firefox.jpg"></p>
+<h2>Install Anaconda</h2>
+<ol>
+<li>
+<p>In Firefox launched above, download the Linux installer from here</p>
+<p><a href="https://www.continuum.io/downloads#linux">https://www.continuum.io/downloads#linux</a></p>
+</li>
+<li>
+<p>Run below command</p>
+<p><code>bash ~/Downloads/Anaconda3-4.1.1-Linux-x86_64.sh</code></p>
+</li>
+<li>
+<p>Select a location to install</p>
+</li>
+<li>Accept the option to add the Anaconda directory to your bash shell <code>PATH</code>
+   environment variable</li>
+</ol>
+<h2>Verify the Install</h2>
+<ol>
+<li>Navigate to the Anaconda folder</li>
+<li>Check that python 3.x is installed in the packages</li>
+<li>Check if conda is also available</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_10_conda.jpg"></p>
+<h2>Install GPI via Conda</h2>
+<ol>
+<li>
+<p>Run the below command</p>
+<p><code>conda install -c https://conda.anaconda.org/GPI gpi</code></p>
+</li>
+<li>
+<p>If you get the below errors, follow the sub steps</p>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_11_error.jpg"></p>
+<ul>
+<li>This error is also shown if higher versions of numpy and python are
+  installed</li>
+<li>Remove the bottleneck package using below command conda remove bottleneck</li>
+<li>Repeat step a to install GPI</li>
+</ul>
+</li>
+<li>
+<p>Also install any other packages like core nodes</p>
+<p><code>conda install -c https://conda.anaconda.org/GPI gpi-core-nodes</code></p>
+</li>
+<li>
+<p>Check GPI config as shown here:
+   <a href="http://docs.gpilab.com/en/develop/config.html">http://docs.gpilab.com/en/develop/config.html</a></p>
+</li>
+</ol>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_12_gpiconf.jpg"></p>
+<h2>Launch the GPI GUI</h2>
+<p><code>export DISPLAY=:0</code> <br>
+<code>gpi</code></p>
+<p><img alt="fitw75" src="https://gpilab.com/images/win_13_gpi.jpg">
+<img alt="fitw75" src="https://gpilab.com/images/win_14_gpi.jpg"></p>
+<h1>Troubleshooting</h1>
+<p>If you've encountered any bugs or issues during the installation or when
+running GPI, check out the <a href="https://github.com/gpilab/framework/issues">issue
+tracker</a> for potential solutions or
+help. If you have encountered any solutions to those problems or would like to
+share an issue that you've fixed, a post on the <a href="https://github.com/gpilab/framework/issues">issue
+tracker</a> would be much appreciated
+:).</p>
+    </article>
+
+    <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://github.com/gpilab">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/gpilab">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.gpilab.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright text-muted">
+                    &copy; Copyright 2016 Nicholas Zwart, Jim Pipe, Ashley Anderson
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <!-- <script src="https://gpilab.com/theme/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        /* banner fade */
+        var src = $(".intro-header").css('background-image');
+        var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+
+        var img = new Image();
+        img.onload = function() {
+            $( ".intro-header-overlay" ).fadeTo(700, 1)
+        }
+        img.src = url;
+        if (img.complete) img.onload();
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://gpilab.com/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://gpilab.com/theme/js/clean-blog.min.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55259609-4']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+
+</html>

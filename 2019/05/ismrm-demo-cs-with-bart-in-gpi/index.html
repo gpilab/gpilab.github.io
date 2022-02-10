@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>gpilab.com - Tags</title>
+        <title>gpilab.com</title>
 
             <link href="https://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="https://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
 
         <!-- Bootstrap Core CSS -->
         <link href="https://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +34,21 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-		<meta property="og:locale" content="en">
+
+
+
+
+
+			<meta property="og:locale" content="en">
 		<meta property="og:site_name" content="gpilab.com">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://gpilab.com/2019/05/ismrm-demo-cs-with-bart-in-gpi/">
+	<meta property="og:title" content="ISMRM Demo: CS with BART in GPI">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://gpilab.com//images/ismrm2019_bart.png">
+	<meta property="article:published_time" content="2019-05-07 08:59:00-07:00">
 </head>
 
 <body>
@@ -74,12 +88,17 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/images/banner.jpg')">
+        <header class="intro-header" style="background-image: url('/images/ismrm2019_bart.png')">
         <div class="container intro-header-overlay">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>gpilab.com - Tags</h1>
+                        <h1>ISMRM Demo: CS with BART in GPI</h1>
+                        <span class="meta">Posted by
+                                <a href="https://gpilab.com/author/ashley-anderson-iii.html">Ashley Anderson III <aganders3@gmail.com></a>
+                             on Tue 07 May 2019
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -90,7 +109,79 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <h1>Tags for gpilab.com</h1>            </div>
+    <!-- Post Content -->
+    <article>
+        <p>As part of our GPI demo at at the <a href="https://www.ismrm.org/19/program_files/WE21.htm">ISMRM 2019 Open-Source Software Tools for MR
+Pulse Design, Simulation &amp; Reconstruction Weekend
+Course</a>, we've revived an
+example of BART working inside GPI. This example is intended to demonstrate the
+flexibility and capabilities of GPI to integrate other packages. This demo also
+highlights the use of GPI as a teaching tool; the example is based on <a href="http://people.eecs.berkeley.edu/~mlustig/CS.html">this
+example from Professor
+Lustig</a>.</p>
+<p>Before getting started here, please see Nick's post on <a href="{static}/posts/2019-05-05-ISMRM-Demo-Primer.md">setting up GPI for the
+ISMRM 2019 demo</a>.</p>
+<hr>
+<h1>Download and Compile BART for GPI</h1>
+<p><a href="https://github.com/nckz/bart">BART for GPI</a> is a fork of the <a href="https://github.com/mrirecon/bart">BART
+project</a>. We concede this fork is out of
+date, but it should suffice for a demonstation. Updating to a newer version
+would be fairly trivial for someone familiar with both BART and GPI. Check
+out Nick's <em>other</em> post on <a href="{static}/posts/2016-02-16-GPI-and-the-BART.md">how BART was wrapped for use in
+GPI</a> if you're interested in
+making this work.</p>
+<p>First, prepare your virtual machine for BART compilation:</p>
+<div class="highlight"><pre><span></span><code>&gt; sudo apt-get install git gcc make libfftw3-dev liblapack-dev libpng-dev
+</code></pre></div>
+
+<p>If you're using the GPI ISMRM 2019 demo VM or AMI on EC2, the password for the
+<code>ubuntu</code> user is <code>gpilab</code>.</p>
+<p>Next clone the BART for GPI fork into your <code>gpi</code> library folder:</p>
+<div class="highlight"><pre><span></span><code>&gt; git clone https://github.com/nckz/bart.git /home/<span class="cp">${</span><span class="n">USER</span><span class="cp">}</span>/gpi/bart
+</code></pre></div>
+
+<p>Finally, build and test BART:</p>
+<div class="highlight"><pre><span></span><code>&gt; cd ~/gpi/bart
+&gt; make
+&gt; ./bart bench
+</code></pre></div>
+
+<p>If you're not working in the GPI VM, instead follow the instructions in the
+BART for GPI README.</p>
+<h1>Launch GPI and Open the Example</h1>
+<p>Open GPI using the startup script or from a terminal. Right click anywhere on
+the canvas and you should see a new Library in the menu called <code>bart</code>. GPI
+Libraries can contain both nodes and networks. Most BART functions should have
+corresponding nodes here, but for now go ahead and select the <code>brain_cs_example
+(net)</code> near the bottom of the menu.</p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/network_select.png" width="75%" class="center-block img-responsive"/></p>
+<p>The demo network will be loaded on the canvas, and the <code>DownloadFile</code> node
+should begin downloading the example data. This data (about 5 MB) will be
+stored in a temporary file.</p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/network_overview.png" width="75%" class="center-block img-responsive"/></p>
+<h1>Configure and Run the Network</h1>
+<p>Note the three <code>ReadMatlab</code> nodes. Each is reading data from the same file (the
+one downloaded by the <code>DownloadFile</code> node) which contains several arrays.
+Right-click on each of these nodes to open their node menus. In the menu you
+will be able to select which array is output. From left to right we need to
+select the sampling mask, the image, and the sampling pdf.</p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/ReadMatlab_select.png" class="center-block img-responsive"/></p>
+<p>Right-click on a few of the <code>ImageDisplay</code> nodes to probe the algorithm at
+various points. The <code>ImageDisplay</code> node labeled <code>CS Image</code> is the
+compressed-sensing reconstruction (though at this point it is only the inital
+condition based on zero-filling).</p>
+<p>Open the <code>Iter</code> node and click the "Start/Stop" button to begin the iterative
+reconstruction. The <code>CS Image</code> will be updated with each iteration, and you can
+watch as the undersampling artifacts are removed by the wavelet-based
+soft-thresholding constraint.</p>
+<p><img src="https://gpilab.com/images/ismrm2019_bart/cs_example_animated.gif" class="center-block img-responsive"/></p>
+<p>There you have it! Explore the rest of the BART tools in GPI and let us know if
+you come up with any cool examples.</p>
+    </article>
+
+    <hr>
+
+            </div>
         </div>
     </div>
 

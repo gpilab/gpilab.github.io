@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>gpilab.com</title>
+
+            <link href="https://gpilab.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Full Atom Feed" />
+            <link href="https://gpilab.com/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="gpilab.com Categories Atom Feed" />
+
+        <!-- Bootstrap Core CSS -->
+        <link href="https://gpilab.com/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://gpilab.com/theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://gpilab.com/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+
+
+			<meta property="og:locale" content="en">
+		<meta property="og:site_name" content="gpilab.com">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://gpilab.com/2015/06/installing-node-libraries/">
+	<meta property="og:title" content="Installing Node Libraries">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://gpilab.com/">
+	<meta property="article:published_time" content="2015-06-30 14:21:00-07:00">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://gpilab.com/">gpilab.com</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <!-- NRZ manually added -->
+                    <li><a href="/">Home</a></li>
+
+
+                            <li><a href="https://gpilab.com/downloads/">Install GPI</a></li>
+                            <li><a href="https://gpilab.com/screencasts/">Tutorials</a></li>
+                            <li><a href="https://gpilab.com/documentation/">Documentation</a></li>
+                            <li><a href="https://gpilab.com/community/">Community</a></li>
+                            <li><a href="https://gpilab.com/about/">About</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://gpilab.com/theme/images/post-bg.jpg')">
+        <div class="container intro-header-overlay">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Installing Node Libraries</h1>
+                        <span class="meta">Posted by
+                                <a href="https://gpilab.com/author/ashley-anderson.html">Ashley Anderson</a>
+                             on Tue 30 June 2015
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>One of the nicest features of GPI is how easy it is to add a library and begin
+using new nodes. Whether the library contains nodes and networks you created,
+or code from a collaborator or colleague, installation is the same simple
+process.</p>
+<p>Here we cover installing an updated version of the Core library. This will
+serve as a general demonstration of how to install additional node libraries.</p>
+<h2>The .gpirc File</h2>
+<p>GPI searches for libraries (by default) in a <code>~/gpi/</code> directory
+within your home directory. On Mac OS X, the full path of this folder is
+<code>/Users/&lt;username&gt;/gpi/</code>, and on Ubuntu (and most flavors of
+Linux) it is <code>/home/&lt;username&gt;/gpi/</code>. Thus, to install a new
+library, simply move its root directory into this folder. New libraries are
+imported automatically any time GPI is started.</p>
+<p>The <code>~/.gpirc</code> file contains per-user configuration options for GPI.
+Since the file is hidden (begins with a <code>.</code>), you will not see it in
+a normal directory listing; use <code>ls -a</code> to see it. If this file does
+not exist on your system, you can generate a basic version from the GPI
+"Config" menu.</p>
+<p><img alt="fitw75" src="https://gpilab.com/images/Screenshot-2015-02-05-11.21.10-300x80.png"></p>
+<p>Select "Generate Config File" to create a basic .gpirc file.</p>
+<p>The default GPI library path (<code>~/gpi/</code>) is stored in the
+<code>LIB_DIRS</code> variable within the <code>.gpirc</code> file. You can amend the
+<code>LIB_DIRS</code> in your <code>.gpirc</code> file to tell GPI to look for
+libraries in some other directories, if you prefer. Append (or prepend)
+directories to <code>LIB_DIRS</code> separated by colons.</p>
+<p><img alt="fitwidth" src="https://gpilab.com/images/Screenshot-2015-06-30-14.09.30.png"></p>
+<p>My .gpirc file with modified LIB_DIRS to include additional node libraries.</p>
+<h2>Installing the Updated Core Library</h2>
+<p>The GPI package includes a snapshot of the Core node library, but new versions
+of the Core nodes are maintained on <a title="GitHub"
+href="https://github.com/gpilab/core-nodes"
+target="_blank">GitHub</a>. Installing the updated Core library will <em>not</em>
+override the default installation of the Core library, so you need to remove
+its path (<code>/opt/gpi/node/core/</code>) from the <code>LIB_DIRS</code> variable in
+your <code>.gpirc</code> file. A current snapshot of the Core library can be downloaded as
+a zip archive from main GitHub page. To install this snapshot, simply unzip the
+archive into <code>~/gpi/core/</code> as described above.</p>
+<p>To stay up-to-date with the latest changes, it is recommended to link your
+local Core library with the remote repository by cloning it using <a
+title="Git" href="http://git-scm.com" target="_blank">Git</a>. Git is a popular
+version control system, available on all platforms. Using Git makes it easy to
+update your local copy of the source code, and to contribute back your own
+enhancements and bug fixes.</p>
+<p>To install the Core library using Git, open a terminal session and execute the
+following commands (after installing Git if necessary):</p>
+<pre>% cd ~/gpi
+% git clone https://github.com/gpilab/core-nodes.git core
+</pre>
+<p><br></p>
+<p>This will create a copy of the remote <code>core-nodes</code> repository to
+your computer, inside your default GPI library directory.</p>
+<h3>Compiling the Core Library</h3>
+<p>GPI includes a Python/C++ interface called PyFI. The Core library uses PyFI to
+implement algorithms in a combination of C++ and Python code. GPI includes a
+script (<code>gpi_make</code>) to help compile C++ files associated with a GPI
+library.</p>
+<p>Compiled binary objects are not included in the Git repository, so it's
+necessary to build the library after installation. Once you have downloaded or
+cloned the repository into <code>~/gpi/core/</code>, run the following commands
+to compile the C++ code:</p>
+<pre>% cd ~/gpi/core
+% gpi_make --all
+</pre>
+<p><br></p>
+<h3>Updating the Core Library</h3>
+<p>As mentioned, Git makes it easy to update the Core library with any new changes
+from the developers. If you cloned the repository using Git, you can update
+your copy of the Core library using the following commands:</p>
+<pre>% cd ~/gpi/core
+% git pull
+% gpi_make --all</pre>
+<p><br></p>
+<p>Running <code>git pull</code> fetches any new changes from the core-nodes
+repository on GitHub, and merges them into your local copy. To finish updating,
+it's also good idea to re-compile the C++ code in case any changes were
+made. Note you may get some warnings or errors if you attempt to "pull" changes
+after modifying the code yourself. If you have changes you'd like to keep (or
+contribute back!) please fork the project on GitHub, or just get in touch!</p>
+<h4>Branches in the <code>core-nodes</code> Repository</h4>
+<p>Development in the <code>core-nodes</code> repository follows the <a
+title="gitflow"
+href="http://nvie.com/posts/a-successful-git-branching-model/">gitflow</a> branching
+model. There are two main branches in this model: <em>master</em>, which
+contains stable releases; and <em>develop</em>, which contains newer,
+untested changes. Most likely you will want to keep your local copy on
+the <em>master</em> branch, unless you are planning to make changes to the
+library and contribute them back to the community.</p>
+<p>Use <code>git branch</code> to see which branch you are on, and <code>git
+checkout &lt;branch name&gt;</code> to switch to a different branch. You will
+again want to recompile (<code>gpi_make --all</code>) any time you change branches.</p>
+<hr>
+<p>Hopefully this will help you collaborate and stay up-to-date with the latest
+changes in your GPI node libraries. Check out the
+<a href="http://docs.gpilab.com">documentation</a> for more information, and please <a href="/community">get
+in touch</a> if you have questions or if you're
+interested in contributing to the project.</p>
+<h2></h2>
+    </article>
+
+    <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://github.com/gpilab">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/gpilab">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.gpilab.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright text-muted">
+                    &copy; Copyright 2016 Nicholas Zwart, Jim Pipe, Ashley Anderson
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <!-- <script src="https://gpilab.com/theme/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        /* banner fade */
+        var src = $(".intro-header").css('background-image');
+        var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+
+        var img = new Image();
+        img.onload = function() {
+            $( ".intro-header-overlay" ).fadeTo(700, 1)
+        }
+        img.src = url;
+        if (img.complete) img.onload();
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://gpilab.com/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://gpilab.com/theme/js/clean-blog.min.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55259609-4']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+
+</html>
