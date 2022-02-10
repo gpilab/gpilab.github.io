@@ -14,6 +14,7 @@ $ pip install -r requirements.txt
 $ make html
 $ make serve
 ```
+The website should now be running on [localhost:8000](http://localhost:8000).
 
 ## Publish
 
