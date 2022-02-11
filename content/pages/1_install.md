@@ -38,13 +38,14 @@ GPI is built and distributed on [PyPI](https://pypi.org), the official third-par
 2. Launch a new terminal instance. Windows users with Anaconda can launch "Anaconda Prompt" from the Start Menu, or any other terminal (cmd.exe, PowerShell, or MinGW) for which conda has been configured. Next, choose a name for the environment that will hold GPI. We will use `gpi_env` for this tutorial. Finally, run the following commands to set up and configure the new environment:
 
     ```
-    conda create -n gpi_env fftw eigen
+    conda create -n gpi_env python=3.9 fftw eigen
     ```
     
     ```
     conda activate gpi_env
     ```
     
+    Python 3.9 currently provides the "smoothest" running GPI, but you can also install with Python 3.7 or 3.8.  
   
   
 3. Install GPI and the core nodes. In the same terminal as above (making sure `gpi_env` is still the active environment), run the following command:
@@ -53,7 +54,6 @@ GPI is built and distributed on [PyPI](https://pypi.org), the official third-par
     pip install gpilab
     ```
   
-    Python 3.9 currently provides the "smoothest" running GPI, but you can also install with Python 3.7 or 3.8.
 
 4. **Running GPI** - GPI is now installed and ready to use. Run it with the command `gpi`. When starting from a new terminal, remember that you will first need to activate the environment `gpi_env` using `conda activate gpi_env`.
 
