@@ -114,7 +114,10 @@ conditions</a>.</p>
 </li>
 <li>
 <p>Launch a new terminal instance. Windows users with Anaconda can launch "Anaconda Prompt" from the Start Menu, or any other terminal (cmd.exe, PowerShell, or MinGW) for which conda has been configured. Next, choose a name for the environment that will hold GPI. We will use <code>gpi_env</code> for this tutorial. Finally, run the following commands to set up and configure the new environment:</p>
-<p><code>conda create -n gpi_env python=3.9 fftw eigen</code></p>
+<p>On Mac &amp; Linux: 
+<code>conda create -n gpi_env python=3.9 fftw eigen</code></p>
+<p>On Windows: 
+<code>conda create -n gpi_env python=3.9 fftw eigen pthreads-win32 –c defaults –c conda-forge</code></p>
 <p><code>conda activate gpi_env</code></p>
 <p>Python 3.9 currently provides the "smoothest" running GPI, but you can also install with Python 3.7 or 3.8.  </p>
 </li>
